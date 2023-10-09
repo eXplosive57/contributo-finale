@@ -1,0 +1,401 @@
+/* Stile dei campi del form */
+input[type="text"],
+input[type="password"] {
+    padding: 10px;
+    margin: 5px 0;
+    border: none;
+    border-radius: 5px;
+    background-color: #e6e6e6;
+    color: #333;
+    font-size: 16px;
+    width: 100%;
+}
+
+/* Stile del pulsante di invio del form */
+button[type="submit"] {
+    background-color: rgb(71, 70, 70);
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    justify-content: center; /* Allineamento orizzontale */
+    align-items: center;
+    margin-bottom: 20px;
+}
+.nascosto{
+  background-color: red;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    justify-content: center; /* Allineamento orizzontale */
+    align-items: center;
+    margin-bottom: 20px;
+    opacity: 20%;
+    
+}
+
+.rosso[type="submit"] {
+    background-color:red;
+    color: #fff;
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+    font-size: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.blu[type="submit"] {
+    background-color:rgb(29, 127, 214);
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.blu[type="submit"]:hover {
+    background-color:rgb(210, 186, 27);
+}
+
+
+
+body {
+    font-family: Arial, sans-serif;
+    background: url('foto/wallpaper3.jpg') no-repeat;
+    background-size:contain;
+  }
+
+/*CSS PER LO STILE DEL DIV DELLE FORM*/
+.wrapper {
+    width: 500px;
+    height: auto;
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, .5);
+    border-radius: 20px;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 30px rgba(0, 0, 0, .5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    margin-top: 100px;
+}
+
+.input-box {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-bottom: 2px solid #162938;
+    margin: 30px 0;
+}
+
+.input-box label{
+    position: relative;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    font-size: 1em;
+    color: #162938;
+    font-weight: 500;
+    pointer-events: none;
+}
+
+.input-box input{
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+}
+
+.titolo2{
+    font-size: 2em;
+    text-align: center;
+}
+
+.text {
+    float: right;
+  }
+.alert {
+    padding: 6px;
+    background-color: green;
+    color: white;
+    margin-top: 20px;
+    border-radius: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.closebtn {
+    margin-left: 15px;
+    color: white;
+    font-weight: bold;
+    float: right;
+    font-size: 22px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.closebtn:hover {
+    color: black;
+}
+
+.titolo {
+    text-align: center;
+    background-color: #38444d;
+    padding: 20px;
+    color: #333333;
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 50px;
+    border-radius: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+    color: white;
+  }
+
+
+  
+
+.centrato-totale {
+    text-align: center; 
+    vertical-align: middle;
+  }
+
+  /*test navbar */
+
+  .header{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: auto;
+    margin-top: 10px;
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+  }
+
+  b.green{
+    margin-right:750px;
+    font-size: 18px;
+    font-family: 'Archivo Black', cursive;
+    text-shadow: 3px 3px 3px solid black;
+    
+  }
+  .logo{
+  width: 80px; /* Imposta la larghezza del logo */
+  height: auto; /* Imposta l'altezza in modo che l'immagine mantenga le proporzioni originali */
+  margin-left: 30px;
+  }
+
+  .navbar a{
+    font-size: 18px;
+    position: relative;
+    color: #fff;
+    font-weight: 500;
+    text-decoration: none;
+    margin-left: 40px;
+    margin-right: 25px;
+  }
+  
+  .navbar a::before{
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background: #fff;
+    transition: .3s;
+  }
+
+  .navbar a:hover::before{
+    width: 100%;
+  }
+
+  .centro{
+    margin-top: 130px;
+  }
+
+
+  /*DI SEGUITO TROVIAMO TUTTE LE PROPRIETA PER RAPPRESENTARE LE SCHEDE NELLA HOMEPAGE (CARD)*/
+
+
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 1000px;
+    flex-direction:row;
+    margin-left: 20px;
+    margin-right: -50px;
+    margin-bottom: 40px;
+    
+}
+
+.card {
+    width: 18%;
+    margin-right: 30px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
+    border-radius: 15px;
+    flex-basis: calc(4 - 10px);
+    margin-top: 15px;
+    background-color: white;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card {
+    transition: all 0.3s ease;
+}
+
+.card:last-child {
+    margin-right: 0;
+}
+
+.card img {
+    width: 70%;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    margin-left: 50px;
+    border-radius: 20px;
+}
+
+.card h1 {
+    font-size: 30px;
+    margin-bottom: 15px;
+    text-align: center;
+    align-items: center;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+.card h2 {
+  font-size: 30px;
+  margin-bottom: 15px;
+  text-align: center;
+  align-items: center;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.card p {
+    font-size: 10px;
+    color: black;
+    margin-bottom: 15px;
+    text-align: center;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.card a{
+  text-align: center;
+  font-size: 40px;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.headline{
+  position: absolute;
+  width: 100%;
+  top: 10%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: white;
+  text-shadow: 3px 3px 3px solid black;
+}
+
+.headline h1{
+  font-size: 10rem;
+  font-family: 'Archivo Black', sans-serif;
+  text-align: center;
+  
+}
+
+.headline p {
+  font-size: 1.2rem;
+  letter-spacing: .3rem;
+  margin-top: -5.5rem;
+}
+
+.secondo {
+  width: auto;
+  height: auto;
+  background-color: white;
+  border-radius: 20px;
+  flex-wrap: wrap;
+}
+
+html{
+  scroll-behavior: smooth;
+}
+/*CSS PER TABELLAAAA TESTTTTTTTTTTT*/
+
+.centro_tab{
+  margin-top: 130px;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  backdrop-filter: blur(5px);
+
+}
+td img{
+  width:36px;
+  height:36px;
+  margin-right: .5rem;
+  border-radius: 50%;
+  vertical-align: middle;
+}
+
+table, th, td{
+  padding: 1rem;
+  border-collapse:collapse ;
+  text-align: center;
+}
+
+main.table{
+  width: 82vw;
+  height: 90vh;
+  background-color: #fff5;
+  border-radius: .9rem;
+  box-shadow: 0 .4rem .8rem #0005;
+}
+
+.table_header{
+  width: auto;
+  height: 10%;
+  background-color: #fff4;
+  padding: .8rem 1rem;
+  text-align: center;
+}
+
+.table__body{
+  width:45%;
+  max-height: 89%;
+  background-color: #fffb;
+  margin: 8rem auto;
+  border-radius: .6rem;
+  margin-top: 30px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+
+tbody tr:nth-child(even){
+  background-color: #0000000b;
+}

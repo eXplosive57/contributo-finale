@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<categorie xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="catalogo.xsd">
+    <categoria>
+        <foto>foto_categorie/grasse.jpg</foto>
+        <nome>Piante grasse</nome>
+        <pianta>
+            <nome_pianta>Sansevieria</nome_pianta>
+            <descrizione>La Sansevieria, appartenente alla famiglia delle Liliaceae, è una pianta ornamentale per interni molto diffusa. È conosciuta anche come lingua di suocera, per la punta acuminata delle foglie. Queste, infatti, hanno una bellissima forma allungata verticalmente di colore verde scuro con bordi tendenti al giallo.</descrizione>
+            <prezzo>32.99</prezzo>
+            <img>foto_piante/nagini.jpg</img>
+        </pianta>
+        <pianta>
+            <nome_pianta>Aloe Vera</nome_pianta>
+            <descrizione>L’Aloe vera ha origini africane e cresce spontaneamente in diverse parti del mondo.
+                Un must che tutti dovremmo avere in casa: oltre alla sua bellezza e all’autonomia tipica delle piante succulenti, il gel che si può estrarre dalle sue foglie ha innumerevoli benefici. Tra i più rinomati, l’azione cicatrizzante che permette di diminuire i tempi di ricostituzione dei tessuti. Proprio per queste sue proprietà terapeutiche, l’Aloe vera è chiamata anche “pianta dei miracoli” e per questo è simbolo di guarigione, salute e vita.</descrizione>
+            <prezzo>37.99</prezzo>
+            <img>foto_piante/aloe.jpg</img>
+        </pianta>
+        <pianta>
+            <nome_pianta>Sansevieria Velvet Rosa</nome_pianta>
+            <descrizione>La Sansevieria Velvet è una tipologia di Sanseviera che si distingue per le sue punte colorate e vellutate al tatto. Queste ultime non solo le conferiscono un’aria allegra ma anche elegante e originale.
+                        Ovviamente la particolarità dell’estremità delle sue foglie non è un dono di madre natura, ma di due aziende olandesi: la prima si occupa di coltivazione di sansevierie, la seconda è specializzata nell’apporto di valore aggiunto ai fiori tramite decorazioni. In realtà quest’idea ha anche una sua utilità, infatti evitano che la Sansevieria velvet con la sua forma allungata si rovini sulle punte.</descrizione>
+            <prezzo>44.99</prezzo>
+            <img>foto_piante/velvet.jpg</img>
+        </pianta>
+        <pianta>
+            <nome_pianta>Sansevieria Velvet Azzurra</nome_pianta>
+            <descrizione>La Sansevieria Velvet è una tipologia di Sanseviera che si distingue per le sue punte colorate e vellutate al tatto. Queste ultime non solo le conferiscono un’aria allegra ma anche elegante e originale.
+                        Ovviamente la particolarità dell’estremità delle sue foglie non è un dono di madre natura, ma di due aziende olandesi: la prima si occupa di coltivazione di sansevierie, la seconda è specializzata nell’apporto di valore aggiunto ai fiori tramite decorazioni. In realtà quest’idea ha anche una sua utilità, infatti evitano che la Sansevieria velvet con la sua forma allungata si rovini sulle punte.</descrizione>
+            <prezzo>44.99</prezzo>
+            <img>foto_piante/velvetblu.jpg</img>
+        </pianta>
+        <pianta>
+            <nome_pianta>Sansevieria Velvet Gialla</nome_pianta>
+            <descrizione>La Sansevieria Velvet è una tipologia di Sanseviera che si distingue per le sue punte colorate e vellutate al tatto. Queste ultime non solo le conferiscono un’aria allegra ma anche elegante e originale.
+                        Ovviamente la particolarità dell’estremità delle sue foglie non è un dono di madre natura, ma di due aziende olandesi: la prima si occupa di coltivazione di sansevierie, la seconda è specializzata nell’apporto di valore aggiunto ai fiori tramite decorazioni. In realtà quest’idea ha anche una sua utilità, infatti evitano che la Sansevieria velvet con la sua forma allungata si rovini sulle punte.</descrizione>
+            <prezzo>44.99</prezzo>
+            <img>foto_piante/velvetgiallo.jpg</img>
+        </pianta>
+        <pianta>
+            <nome_pianta>Sansevieria Velvet Arancione</nome_pianta>
+            <descrizione>La Sansevieria Velvet è una tipologia di Sanseviera che si distingue per le sue punte colorate e vellutate al tatto. Queste ultime non solo le conferiscono un’aria allegra ma anche elegante e originale.
+                        Ovviamente la particolarità dell’estremità delle sue foglie non è un dono di madre natura, ma di due aziende olandesi: la prima si occupa di coltivazione di sansevierie, la seconda è specializzata nell’apporto di valore aggiunto ai fiori tramite decorazioni. In realtà quest’idea ha anche una sua utilità, infatti evitano che la Sansevieria velvet con la sua forma allungata si rovini sulle punte.</descrizione>
+            <prezzo>44.99</prezzo>
+            <img>foto_piante/velvetaran.jpg</img>
+        </pianta>
+        <pianta>
+            <nome_pianta>Ficus Elastica Robusta</nome_pianta>
+            <descrizione>Il ficus elastica robusta è resistente, incredibilmente decorativo e in grado di depurare l’ambiente. Tutte le caratteristiche più ricercate racchiuse in una meravigliosa pianta con grandi foglie verdi e lucide, simbolo di prosperità e abbondanza.</descrizione>
+            <prezzo>39.99</prezzo>
+            <img>foto_piante/pluto.jpg</img>
+        </pianta>
+    </categoria>
+    <categoria>
+        <foto>foto_categorie/bonsai.jpg</foto>
+        <nome>Bonsai</nome>
+        <pianta>
+            <nome_pianta>bonsaspdjsapdjn</nome_pianta>
+            <descrizione>La calathea e una pianta sempreverde di origine tropicale.
+            La particolarità di questa pianta sono le sue foglie, la parte superiore è caratterizzata dalle
+             varie sfumature dei verdi, gialli, bianco e argento; la parte inferiore nei toni del rosso.</descrizione>
+            <prezzo>20</prezzo>
+            <img>foto/Calathea.avif</img>
+        </pianta>
+        <pianta>
+            <nome_pianta>Calathea</nome_pianta>
+            <descrizione>La calathea e una pianta sempreverde di origine tropicale.
+            La particolarità di questa pianta sono le sue foglie, la parte superiore è caratterizzata dalle
+             varie sfumature dei verdi, gialli, bianco e argento; la parte inferiore nei toni del rosso.</descrizione>
+            <prezzo>20</prezzo>
+            <img>foto/Calathea.avif</img>
+        </pianta>
+    </categoria>
+    <categoria>
+        <foto>foto_categorie/orchidea.jpg</foto>
+        <nome>Orchidee</nome>
+        <pianta>
+            <nome_pianta>Calathea</nome_pianta>
+            <descrizione>La calathea e una pianta sempreverde di origine tropicale.
+            La particolarità di questa pianta sono le sue foglie, la parte superiore è caratterizzata dalle
+             varie sfumature dei verdi, gialli, bianco e argento; la parte inferiore nei toni del rosso.</descrizione>
+            <prezzo>20</prezzo>
+            <img>foto/Calathea.avif</img>
+        </pianta>
+        <pianta>
+            <nome_pianta>Calathea</nome_pianta>
+            <descrizione>La calathea e una pianta sempreverde di origine tropicale.
+            La particolarità di questa pianta sono le sue foglie, la parte superiore è caratterizzata dalle
+             varie sfumature dei verdi, gialli, bianco e argento; la parte inferiore nei toni del rosso.</descrizione>
+            <prezzo>20</prezzo>
+            <img>foto/Calathea.avif</img>
+        </pianta>
+    </categoria>
+    <categoria>
+        <foto>foto_categorie/esterno.jpg</foto>
+        <nome>Piante da Esterno</nome>
+        <pianta>
+            <nome_pianta>Calathea</nome_pianta>
+            <descrizione>La calathea e una pianta sempreverde di origine tropicale.
+            La particolarità di questa pianta sono le sue foglie, la parte superiore è caratterizzata dalle
+             varie sfumature dei verdi, gialli, bianco e argento; la parte inferiore nei toni del rosso.</descrizione>
+            <prezzo>20</prezzo>
+            <img>foto/Calathea.avif</img>
+        </pianta>
+        <pianta>
+            <nome_pianta>Calathea</nome_pianta>
+            <descrizione>La calathea e una pianta sempreverde di origine tropicale.
+            La particolarità di questa pianta sono le sue foglie, la parte superiore è caratterizzata dalle
+             varie sfumature dei verdi, gialli, bianco e argento; la parte inferiore nei toni del rosso.</descrizione>
+            <prezzo>20</prezzo>
+            <img>foto/Calathea.avif</img>
+        </pianta>
+    </categoria>
+     <categoria>
+        <foto>foto_categorie/fiori.jpg</foto>
+        <nome>Fiori</nome>
+        <pianta>
+            <nome_pianta>Calathea</nome_pianta>
+            <descrizione>La calathea e una pianta sempreverde di origine tropicale.
+            La particolarità di questa pianta sono le sue foglie, la parte superiore è caratterizzata dalle
+             varie sfumature dei verdi, gialli, bianco e argento; la parte inferiore nei toni del rosso.</descrizione>
+            <prezzo>20</prezzo>
+            <img>foto/Calathea.avif</img>
+        </pianta>
+        <pianta>
+            <nome_pianta>Calathea</nome_pianta>
+            <descrizione>La calathea e una pianta sempreverde di origine tropicale.
+            La particolarità di questa pianta sono le sue foglie, la parte superiore è caratterizzata dalle
+             varie sfumature dei verdi, gialli, bianco e argento; la parte inferiore nei toni del rosso.</descrizione>
+            <prezzo>20</prezzo>
+            <img>foto/Calathea.avif</img>
+        </pianta>
+    </categoria>
+    
+    
+  </categorie>

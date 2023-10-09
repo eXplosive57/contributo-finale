@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<storico_acq xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="catalogo.xsd">
+  <acq>
+    <id>1</id>
+    <id_utente>3</id_utente>
+    <nome_prodotto>Calathea</nome_prodotto>
+    <data_acquisto>03-07-2022</data_acquisto>
+  </acq>
+    <acq>
+    <id>2</id>
+    <id_utente>3</id_utente>
+    <nome_prodotto>Crassula ovata</nome_prodotto>
+    <data_acquisto>03-07-2022</data_acquisto>
+  </acq>
+</storico_acq>

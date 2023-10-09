@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xsd:element name="categorie">
+    <xsd:complexType>
+      <xsd:sequence>
+      <xsd:element name="categoria" maxOccurs="unbounded">
+          <xsd:complexType>
+            <xsd:sequence>
+        <xsd:element name="foto" type="xs:string"/>
+        <xsd:element name="nome" type="xs:string"/>
+        <xsd:element name="pianta" maxOccurs="unbounded">
+          <xsd:complexType>
+            <xsd:sequence>
+              <xsd:element name="nome_pianta" type="xs:string"/>
+              <xsd:element name="descrizione" type="xs:string"/>
+              <xsd:element name="prezzo" type="xs:decimal"/>
+              <xsd:element name="img" type="xs:string"/>
+            </xsd:sequence>
+          </xsd:complexType>
+        </xsd:element>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+</xsd:schema>

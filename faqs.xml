@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<faqs xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="catalogo.xsd">
+  <faq>
+    <id>1</id>
+    <domanda>Quanta acqua serve per le piante da fiore?</domanda>
+    <risposta>devono essere bagnate ogni giorno perché, a differenza delle piante in giardino, non possono sviluppare radici profonde</risposta>
+    <creata_da>Mario Rossi</creata_da>
+    <data>21-04-2023</data>
+  </faq>
+</faqs>

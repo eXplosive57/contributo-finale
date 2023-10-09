@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<storico_cre xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="catalogo.xsd">
+  <richiesta>
+    <id>1</id>
+    <id_utente>3</id_utente>
+    <qnt>56</qnt>
+  </richiesta>
+    <richiesta>
+    <id>2</id>
+    <id_utente>6</id_utente>
+    <qnt>10</qnt>
+  </richiesta>
+</storico_cre>

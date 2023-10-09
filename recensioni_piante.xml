@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<recensioni_piante>
+    <pianta>
+        <nome>Pianta1</nome>
+        <recensioni>
+            <recensione>
+                <autore>Utente1</autore>
+                <utilita> </utilita>
+                <supporto> </supporto>
+                <commento>Questa pianta è stupenda! Cresce molto bene in giardino.</commento>
+            </recensione>
+            <recensione>
+                <autore>Utente2</autore>
+                <utilita> </utilita>
+                <supporto> </supporto>
+                <commento>Una pianta robusta ma richiede molta acqua.</commento>
+            </recensione>
+        </recensioni>
+    </pianta>
+    <pianta>
+        <nome>Pianta2</nome>
+        <recensioni>
+            <recensione>
+                <autore>Utente3</autore>
+                <utilita> </utilita>
+                <supporto> </supporto>
+                <commento>Non sono rimasto molto soddisfatto di questa pianta, ha avuto problemi di parassiti.</commento>
+            </recensione>
+            <recensione>
+                <autore>Utente4</autore>
+                <utilita> </utilita>
+                <supporto> </supporto>
+                <commento>Una delle migliori piante che ho mai coltivato. Bellissimi fiori!</commento>
+            </recensione>
+        </recensioni>
+    </pianta>
+</recensioni_piante>
