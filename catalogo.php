@@ -28,12 +28,6 @@ $con = new mysqli($host,$userName,$password,$dbName);
 <body>
   <?php
   session_start();
-  //query per prendere il numero di crediti ogni volta che si accede alla pagina
-  $nome_= $_SESSION['nome'];
-  $sql5 = "SELECT crediti FROM utenti WHERE nome = '$nome_'";
-  $result5 = $con->query($sql5);
-  $row5 = mysqli_fetch_array($result5);
-  $_SESSION['crediti'] = $row5['crediti'];
 
 //controllo sulla variabile 'loggato'
 if(!isset($_SESSION['loggato']) || $_SESSION['loggato'] !== true){
@@ -54,6 +48,12 @@ if(!isset($_SESSION['loggato']) || $_SESSION['loggato'] !== true){
   //caso in cui sono loggato
       }
   else{
+      //query per prendere il numero di crediti ogni volta che si accede alla pagina
+  $nome_= $_SESSION['nome'];
+  $sql5 = "SELECT crediti FROM utenti WHERE nome = '$nome_'";
+  $result5 = $con->query($sql5);
+  $row5 = mysqli_fetch_array($result5);
+  $_SESSION['crediti'] = $row5['crediti'];
 
 $count = 0;
 if(isset($_SESSION['carrello']))
