@@ -81,20 +81,19 @@ if (isset($_SESSION['reg'])) {
     
 
 <div class="wrapper">
-<form action="login.php" method="post" name="form1">
-<input type="hidden" name="form_name" value="form1">
+<form action="login.php" method="post" name="form2">
+<input type="hidden" name="form_name" value="form2">
     <h1 class="titolo2">ACCEDI</h1>
     <div class="input-box">
-    <label for="mail">Mail</label>
-    <input type="text" name="mail" id="mail" required>
+    <label for="nome">Nome</label>
+    <input type="text" name="nome2" id="nome2" required>
     </div>
     <div class="input-box">
     <label for="password">Password</label>
     <input type="password" name="password" id="username" required>
     </div>
     <button type="submit" value="invia">Invia</button>
-    <p class='text'>Ancora non sei registrato? <a href="reg.php">Registrati</p>
-    <p class='text'><a href="formloginadmin.php">admin</p>
+    <p class='text'>Se sei un utente clicca? <a href="accesso.php">qui</p>
 
 </form>
     

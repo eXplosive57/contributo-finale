@@ -3,13 +3,14 @@
 require_once('config.php');
 $con = new mysqli($host,$userName,$password,$dbName);
 
+$nome = $con->real_escape_string($_POST['nome2']);
 $mail = $con->real_escape_string($_POST['mail']);
 $password = $con->real_escape_string($_POST['password']);
 session_start();
 
 
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
-
+    if (isset($_POST['form_name']) && $_POST['form_name'] === 'form1') {
     $sql_select = "SELECT * FROM Utenti WHERE mail = '$mail'";
     if ($result = $con->query($sql_select)) {
         if ($result->num_rows == 1) {
@@ -62,9 +63,36 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         echo "Errore login.";
 
     }
+    }elseif (isset($_POST['form_name']) && $_POST['form_name'] === 'form2'){
+        $sql_select = "SELECT * FROM Utenti WHERE nome = '$nome'";
+    if ($result = $con->query($sql_select)) {
+        if ($result->num_rows == 1) {
+            $row = $result->fetch_array(MYSQLI_ASSOC);
+            if (password_verify($password, $row['password'])) {
+                
 
+                $_SESSION['loggato'] = true;
+                $_SESSION['log'] = 'Benvenuto al portale!';
 
+                $sql2 = "SELECT Tipo FROM utenti WHERE nome = '$nome' ";
+                $result2 = $con->query($sql2);
+                $row2 = mysqli_fetch_array($result2);
+                $_SESSION['tipo'] = $row2['Tipo'];
+
+                header("location: index.php");
+                
+                
+            } else {
+                $_SESSION['pass'] = 'Password errata!';
+                header("location: accesso.php");
+                
+
+            }
+    }
+    }
     $con->close();
+
+}
 }
 
 ?>

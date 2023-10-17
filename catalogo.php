@@ -49,11 +49,13 @@ if(!isset($_SESSION['loggato']) || $_SESSION['loggato'] !== true){
       }
   else{
       //query per prendere il numero di crediti ogni volta che si accede alla pagina
+  if ($_SESSION['tipo'] == 1) {
   $nome_= $_SESSION['nome'];
   $sql5 = "SELECT crediti FROM utenti WHERE nome = '$nome_'";
   $result5 = $con->query($sql5);
   $row5 = mysqli_fetch_array($result5);
   $_SESSION['crediti'] = $row5['crediti'];
+  }
 
 $count = 0;
 if(isset($_SESSION['carrello']))

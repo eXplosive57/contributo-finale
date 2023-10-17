@@ -44,22 +44,29 @@ if(isset($_SESSION['carrello']))
     <b class='green'>GREEN HOUSE</b>
   
       <nav class='navbar'>
-    <a href="#catalogo">CATALOGO</a>
-    <a href="richiesta_cre.php">RICHIEDI CREDITI</a>
-  
+        <?php
+          if ($_SESSION['tipo'] == 1) {
+          ?>
+        <a href="#catalogo">CATALOGO</a>
+        <a href="richiesta_cre.php">RICHIEDI CREDITI</a>
+
+            <?php } ?>
+    
+
     <?php
             
             if ($_SESSION['tipo'] == 0) {
-        
-        ?>
-        <a href="inserimento.php">INSERISCI PIANTA</a>
-        <?php } ?>
+    
+    ?>
+       <a href="inserimento.php">INSERISCI PIANTA</a>
+<?php } ?>
         
         <a href="logout.php">LOGOUT</a>
-        <a>Sei loggato come, <?php echo $_SESSION['nome'] . ' ' . $_SESSION['cognome'] ?></a>
-        <?php if($_SESSION['tipo'] == 1) {
-          ?>
-        <a href="carrello.php">CARRELLO (<?php echo $count ?>)</a><?php
+        <?php
+        if ($_SESSION['tipo'] == 1) {
+        ?>
+            <a>Sei loggato come, <?php echo $_SESSION['nome'] . ' ' . $_SESSION['cognome'] ?></a>
+            <a href="carrello.php">CARRELLO (<?php echo $count ?>)</a><?php
         }
         ?> 
       </nav>
@@ -80,7 +87,7 @@ $categorie = $xmlDoc->getElementsByTagName("categoria");
 
 
 
-  <div id='catalogo'class='secondo'>
+<div id='catalogo'class='secondo'>
     <div class="container">
     <?php
   foreach ($categorie as $categoria) {
@@ -98,8 +105,8 @@ $categorie = $xmlDoc->getElementsByTagName("categoria");
         </div>
     </div>
   <?php
-    }
-    
+      }
+
   ?>
     </div> 
   </div>

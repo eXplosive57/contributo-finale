@@ -32,14 +32,18 @@ $richiesta = $xmlDoc->createElement("richiesta");
 
 $id = $xmlDoc->createElement("id", $idaggiornato);
 $idUtente = $xmlDoc->createElement("id_utente", $_SESSION['id']);
+$nome = $xmlDoc->createElement("nome", $_SESSION['nome']);
+$cognome = $xmlDoc->createElement("cognome", $_SESSION['cognome']);
 $qnt = $xmlDoc->createElement("qnt", $cre);
 
 $richiesta->appendChild($id);
 $richiesta->appendChild($idUtente);
+$richiesta->appendChild($nome);
+$richiesta->appendChild($cognome);
 $richiesta->appendChild($qnt);
 
 $storicoCre->appendChild($richiesta);
 $xmlDoc->formatOutput = true;
 $xmlDoc->save("storico_cre.xml");
 
-echo "Nuovo elemento <richiesta> aggiunto con successo.";
+header("location: richiesta_cre.php");
