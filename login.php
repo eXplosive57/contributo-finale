@@ -42,6 +42,12 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                 $row4 = mysqli_fetch_array($result4);
                 $_SESSION['cognome'] = $row4['cognome'];
 
+                $nome_= $_SESSION['nome'];
+                $sql5 = "SELECT crediti FROM utenti WHERE nome = '$nome_'";
+                $result5 = $con->query($sql5);
+                $row5 = mysqli_fetch_array($result5);
+                $_SESSION['crediti'] = $row5['crediti'];
+
                 
 
  

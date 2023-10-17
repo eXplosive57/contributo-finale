@@ -28,6 +28,12 @@ $con = new mysqli($host,$userName,$password,$dbName);
 <body>
   <?php
   session_start();
+  
+$nome_= $_SESSION['nome'];
+$sql5 = "SELECT crediti FROM utenti WHERE nome = '$nome_'";
+$result5 = $con->query($sql5);
+$row5 = mysqli_fetch_array($result5);
+$_SESSION['crediti'] = $row5['crediti'];
 
 //controllo sulla variabile 'loggato'
 if(!isset($_SESSION['loggato']) || $_SESSION['loggato'] !== true){
@@ -48,14 +54,7 @@ if(!isset($_SESSION['loggato']) || $_SESSION['loggato'] !== true){
   //caso in cui sono loggato
       }
   else{
-      //query per prendere il numero di crediti ogni volta che si accede alla pagina
-  if ($_SESSION['tipo'] == 1) {
-  $nome_= $_SESSION['nome'];
-  $sql5 = "SELECT crediti FROM utenti WHERE nome = '$nome_'";
-  $result5 = $con->query($sql5);
-  $row5 = mysqli_fetch_array($result5);
-  $_SESSION['crediti'] = $row5['crediti'];
-  }
+      
 
 $count = 0;
 if(isset($_SESSION['carrello']))
@@ -135,13 +134,13 @@ $categorie = $xmlDoc->getElementsByTagName("categoria");
               <input type="number" name="qty" id="qty" required pattern="[0-99]+" title="Inserisci un quantita numerica">
             <br>
             <?php 
-              if($prezzo > $_SESSION['crediti'])
+              if($prezzo > ($_SESSION['crediti']))
               {?>
-                <button class='nascosto'style=margin-top:10px;type="submit" name="aggiungi" title="cadadaada" disabled >AGGIUNGI</button>
+                <button class='nascosto'style=margin-top:10px;type="submit" name="aggiungi" title="" disabled >Crediti Insufficienti</button>
                 <?php
               }
               else{?>
-                <button style=margin-top:10px; type="submit" name="aggiungi" title="click here">AGGIUNGI</button>
+                <button style=margin-top:10px; type="submit" name="aggiungi" title="">AGGIUNGI</button>
                 <?php
               }
               ?>

@@ -1,3 +1,8 @@
+<?php
+session_start();
+?>
+
+
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 
@@ -11,7 +16,6 @@
 
 <body>
 <?php
-  session_start();
 //controllo sulla variabile 'loggato'
 if(!isset($_SESSION['loggato']) || $_SESSION['loggato'] !== true){ //inverti i corpi!!!!
   //se non sono loggato mpstro una navbar diversa
@@ -42,6 +46,9 @@ if(isset($_SESSION['carrello']))
     <img src="foto/leaf.png" alt="Logo" class="logo" >
   </a>
     <b class='green'>GREEN HOUSE</b>
+    <?php if($_SESSION['tipo'] == 1){?>
+    <a>CREDITI <?php echo $_SESSION['crediti']?></a>
+    <?php }?>
   
       <nav class='navbar'>
         <?php
@@ -59,6 +66,7 @@ if(isset($_SESSION['carrello']))
     
     ?>
        <a href="inserimento.php">INSERISCI PIANTA</a>
+       <a href="loadrichieste.php">VISUALIZZA RICHIESTE</a>
 <?php } ?>
         
         <a href="logout.php">LOGOUT</a>

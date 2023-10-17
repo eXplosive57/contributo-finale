@@ -22,6 +22,7 @@
 include('config.php');
 $con = new mysqli($host,$userName,$password,$dbName);
 session_start();
+
 if (isset($_SESSION['pass'])) {
     
     ?>
@@ -37,48 +38,6 @@ if (isset($_SESSION['pass'])) {
     unset($_SESSION['pass']);
 }
 ?>
-
-<?php
-
-
-if (isset($_SESSION['ko'])) {
-
-    ?>
-
-    <div class="alert">
-        <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
-        <h3>
-            <?php echo $_SESSION['ko']?>
-        </h3>
-    </div>
-    <?php
-
-    unset($_SESSION['ko']);
-}
-?>
-
-<?php
-
-
-if (isset($_SESSION['reg'])) {
-
-    ?>
-
-    <div class="alert">
-        <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
-        <h3>
-            <?php echo $_SESSION['reg']?>
-        </h3>
-    </div>
-    <?php
-
-    unset($_SESSION['reg']);
-}
-?>
-
-
-
-    
 
 <div class="wrapper">
 <form action="login.php" method="post" name="form2">
@@ -98,9 +57,5 @@ if (isset($_SESSION['reg'])) {
 </form>
     
 </div>
-
-
-
-
 </body>
 <html>
