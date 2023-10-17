@@ -25,13 +25,13 @@ $con = new mysqli($host, $userName, $password, $dbName);
 $utente = "CREATE TABLE IF NOT EXISTS `Utenti` (
     `id` int(11) NOT NULL AUTO_INCREMENT,               
     `nome` varchar(30) NOT NULL,
-    `cognome` varchar(30) NOT NULL,
-    `mail` varchar(30) NOT NULL,
-    `cf` varchar(30) NOT NULL,
-    `telefono` varchar(30) NOT NULL,
-    `indirizzo` varchar(30) NOT NULL,
+    `cognome` varchar(30) ,
+    `mail` varchar(30) ,
+    `cf` varchar(30) ,
+    `telefono` varchar(30) ,
+    `indirizzo` varchar(30) ,
     `crediti` int(255) NULL,
-    `password` varchar(255) NOT NULL,
+    `password` varchar(255),
     `Tipo` int(11) NOT NULL,
     PRIMARY KEY (id)
 )";
@@ -43,8 +43,8 @@ if ($con->query($utente) === FALSE) {
 
 
 
-$insert_utente = "INSERT INTO `Utenti` (`username`, `password`, `Tipo`) VALUES
-('Admin', '" . password_hash('Admin', PASSWORD_DEFAULT) . "', 0)";
+$insert_utente = "INSERT INTO `Utenti` (`id`,`nome`, `cognome`,`mail`,`cf`,`telefono`,`indirizzo`, `crediti`,`password`, `Tipo`) VALUES
+('1','Admin', NULL, NULL,NULL,NULL,NULL,NULL,'" . password_hash('Admin', PASSWORD_DEFAULT) . "', 0)";
 
 if ($con->query($insert_utente) === FALSE) {
     echo "Errore nell'inserimento degli utenti " . $con->error;

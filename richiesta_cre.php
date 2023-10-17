@@ -5,12 +5,12 @@
 
 <head>
 
-    <title>LOGIN</title>
+    <title>Richiesta Crediti</title>
     <link rel="stylesheet" href="index.css" />
     <style>
         body{
 
-            background: url('foto/wallpaper4.jpg') no-repeat;
+            background: url('foto/wallpaper2.jpg') no-repeat;
             background-size: cover;
         }
     </style>
@@ -28,18 +28,14 @@ if(!isset($_SESSION['loggato']) || $_SESSION['loggato'] !== true){
 ?>   
 
 <div class="wrapper">
-<form action="insert.php" method="post">
-    <h1 class="titolo2">ACCEDI</h1>
+<form action="script_richiestacre.php" method="post">
+    <h1 class="titolo2">RICHIEDI CREDITI</h1>
     <div class="input-box">
-    <label for="mail">Mail</label>
-    <input type="text" name="mail" id="mail" required>
-    </div>
-    <div class="input-box">
-    <label for="password">Password</label>
-    <input type="password" name="password" id="username" required>
+    <label for="mail">Numero crediti richiesti</label>
+    <input type="number" name="cre" id="cre" required>
     </div>
     <button type="submit" value="invia">Invia</button>
-    <p class='text'>Ancora non sei registrato? <a href="reg.php">Registrati</p>
+    <p class='text'>Torna alla <a href="index.php">home</p>
 
 </form>
     

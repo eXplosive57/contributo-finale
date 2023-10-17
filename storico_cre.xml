@@ -10,4 +10,4 @@
     <id_utente>6</id_utente>
     <qnt>10</qnt>
   </richiesta>
-</storico_cre>
+<richiesta><id>3</id><id_utente>2</id_utente><qnt>66</qnt></richiesta></storico_cre>
