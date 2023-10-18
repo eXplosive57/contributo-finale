@@ -46,7 +46,13 @@ if(isset($_SESSION['carrello']))
     <img src="foto/leaf.png" alt="Logo" class="logo" >
   </a>
     <b class='green'>GREEN HOUSE</b>
-    <?php if($_SESSION['tipo'] == 1){?>
+    <?php if($_SESSION['tipo'] == 1){
+      $nome_= $_SESSION['nome'];
+      $sql5 = "SELECT crediti FROM utenti WHERE nome = '$nome_'";
+      $result5 = $con->query($sql5);
+      $row5 = mysqli_fetch_array($result5);
+      $_SESSION['crediti'] = $row5['crediti'];
+      ?>
     <a>CREDITI <?php echo $_SESSION['crediti']?></a>
     <?php }?>
   

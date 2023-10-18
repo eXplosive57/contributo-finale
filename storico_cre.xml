@@ -1,10 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <storico_cre xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="catalogo.xsd">
-  <richiesta>
-    <id>1</id>
-    <id_utente>3</id_utente>
-    <nome>Mario</nome>
-    <cognome>Rossi</cognome>
-    <qnt>56</qnt>
-  </richiesta>
-<richiesta><id>2</id><id_utente>2</id_utente><nome>real</nome><cognome>vinnt</cognome><qnt>7</qnt></richiesta><richiesta><id>3</id><id_utente>2</id_utente><nome>real</nome><cognome>vinnt</cognome><qnt>2323</qnt></richiesta><richiesta><id>4</id><id_utente>3</id_utente><nome>Luca</nome><cognome>Verdi</cognome><qnt>67</qnt></richiesta></storico_cre>
+  
+<richiesta><id>1</id><id_utente>2</id_utente><nome>real</nome><cognome>vinnt</cognome><qnt>1</qnt></richiesta><richiesta><id>2</id><id_utente>2</id_utente><nome>real</nome><cognome>vinnt</cognome><qnt>222222222</qnt></richiesta></storico_cre>

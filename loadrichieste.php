@@ -73,6 +73,7 @@ foreach ($richieste as $richiesta) {
     $nome = $richiesta->getElementsByTagName("nome")->item(0)->textContent;
     $cognome = $richiesta->getElementsByTagName("cognome")->item(0)->textContent;
     $qnt = $richiesta->getElementsByTagName("qnt")->item(0)->textContent;
+    $id = $richiesta->getElementsByTagName("id")->item(0)->textContent;
 
 ?>
 
@@ -80,8 +81,20 @@ foreach ($richieste as $richiesta) {
     <tr>
       <td><?php echo $nome . " " .  $cognome ?></td>
       <td><?php echo $qnt ?> Crediti</td>
-      <td>BOTTONE ACCETTA</td>
-      <td>BOTTONE RIFIUTA</td>
+      <td><form action="accetta_cre.php" method="POST"name="form1   ">
+            <input type="hidden" name="form_name" value="form1">
+            <input type="hidden" id="qnt" name="qnt" value="<?php echo $qnt; ?>">
+            <input type="hidden" id="nome" name="nome" value="<?php echo $nome; ?>">
+            <input type="hidden" id="id" name="id" value="<?php echo $id; ?>">
+            <button class="blu" type="submit">ACCETTA</button></button></td>
+          </form>
+      <td><form action="accetta_cre.php" method="POST" name="form2">
+            <input type="hidden" name="form_name" value="form2">
+            <input type="hidden" id="qnt" name="qnt" value="<?php echo $qnt; ?>">
+            <input type="hidden" id="nome" name="nome" value="<?php echo $nome; ?>">
+            <input type="hidden" id="id" name="id" value="<?php echo $id; ?>">
+            <button class="blu" type="submit">RIFIUTA</button></button></td>
+          </form></td>
     </tr>
 <?php }?>
 </div>

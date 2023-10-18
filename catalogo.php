@@ -136,7 +136,7 @@ $categorie = $xmlDoc->getElementsByTagName("categoria");
             <?php 
               if($prezzo > ($_SESSION['crediti']))
               {?>
-                <button class='nascosto'style=margin-top:10px;type="submit" name="aggiungi" title="" disabled >Crediti Insufficienti</button>
+                <button class='nascosto'style=margin-top:10px; type="submit" name="aggiungi" title="" disabled >Crediti Insufficienti</button>
                 <?php
               }
               else{?>
