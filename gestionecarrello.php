@@ -18,6 +18,7 @@ if(isset($_SESSION['id']) && isset($_POST['aggiungi']))
     {
         if(isset($_SESSION['carrello']))
         {
+            //controllo se l'elemento gia esiste nel carrello
             $miei_elementi = array_column($_SESSION['carrello'],'Nome');
             if(in_array($_POST['nome'], $miei_elementi))
             {
@@ -28,7 +29,7 @@ if(isset($_SESSION['id']) && isset($_POST['aggiungi']))
             }
             else{
 
-            
+            //se non esiste aggiungo l'elemento
             $count=count($_SESSION['carrello']);
             $_SESSION['carrello'][$count] = array('Nome' =>$_POST['nome'], 'Prezzo' =>$_POST['prezzo'],'Foto' =>$_POST['foto'], 'Quantita'=>$_POST['qty']);
             header("location: carrello.php");
@@ -37,6 +38,7 @@ if(isset($_SESSION['id']) && isset($_POST['aggiungi']))
         }
         else
         {
+            //se il carrello non é stato ancora creato allora lo creo
             $_SESSION['carrello'][0]= array('Nome' =>$_POST['nome'], 'Prezzo' =>$_POST['prezzo'],'Foto' =>$_POST['foto'], 'Quantita'=>$_POST['qty']);
             header("location: carrello.php");
         }

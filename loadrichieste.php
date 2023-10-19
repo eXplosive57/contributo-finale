@@ -2,6 +2,10 @@
 
 include('config.php');
 $con = new mysqli($host,$userName,$password,$dbName);
+session_start();
+if(!isset($_SESSION['loggato']) || $_SESSION['loggato'] !== true){
+  header('location:accesso.php');
+}
 ?>
 
 <?xml version="1.0" encoding="UTF-8"?>
@@ -38,7 +42,7 @@ $con = new mysqli($host,$userName,$password,$dbName);
     </div>
 
 <?php 
-session_start();
+
 
 
 

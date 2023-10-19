@@ -19,10 +19,7 @@ $con = new mysqli($host,$userName,$password,$dbName);
 
     <title>HOME</title>
     <link rel="stylesheet" href="index.css" />
-    <style>
-      body{
-      }
-    </style>
+    
 </head>
 
 <body>
@@ -120,11 +117,15 @@ $categorie = $xmlDoc->getElementsByTagName("categoria");
           $prezzo = $pianta->getElementsByTagName('prezzo')->item(0)->nodeValue;
       
     ?>
+
+
     <div class="card">
         <img src="<?php echo $foto ?>" alt="">
-        <div class="card-body">
+        
+        
             <h1><?php echo $nomePianta?></h1>
-            <p><?php echo $descrizione?></p>
+            <p class="descrizione-testo"><?php echo $descrizione?></p>
+            
             <h2><?php echo $prezzo?> Cr</h2>
             <form style=text-align:center; action="gestionecarrello.php" method="POST">
               <input name="nome" hidden value = "<?php echo $nomePianta; ?>">
@@ -149,7 +150,6 @@ $categorie = $xmlDoc->getElementsByTagName("categoria");
           
             </form>
         </div>
-    </div>
   <?php
     }
   }

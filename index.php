@@ -1,4 +1,6 @@
 <?php
+include('config.php');
+$con = new mysqli($host,$userName,$password,$dbName);
 session_start();
 ?>
 
@@ -17,7 +19,7 @@ session_start();
 <body>
 <?php
 //controllo sulla variabile 'loggato'
-if(!isset($_SESSION['loggato']) || $_SESSION['loggato'] !== true){ //inverti i corpi!!!!
+if(!isset($_SESSION['loggato']) || $_SESSION['loggato'] !== true){
   //se non sono loggato mpstro una navbar diversa
   ?>
   <div class='header'>
@@ -73,6 +75,7 @@ if(isset($_SESSION['carrello']))
     ?>
        <a href="inserimento.php">INSERISCI PIANTA</a>
        <a href="loadrichieste.php">VISUALIZZA RICHIESTE</a>
+       <a href="utenti.php">LISTA UTENTI</a>
 <?php } ?>
         
         <a href="logout.php">LOGOUT</a>
