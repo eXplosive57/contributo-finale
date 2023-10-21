@@ -80,7 +80,11 @@ if ($result->num_rows > 0) {
       <td><?php echo $row["nome"] ?></td>
       <td><?php echo $row["cognome"] ?></td>
       <td>
-          <button class="blu" type="submit"><a href='form_modifica_profilo.php'>MODIFICA</a></button></button>
+        <form action='form_modifica_profilo.php' method='post'>
+        <input type="hidden" id="nome" name="nome" value="<?php echo $row['nome']; ?>">
+        <input type="hidden" id="cognome" name="cognome" value="<?php echo $row['cognome']; ?>">
+          <button class="blu" type="submit">MODIFICA</button>
+        </form>
       </td>
     </tr>
 <?php }}?>

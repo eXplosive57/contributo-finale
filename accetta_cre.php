@@ -33,8 +33,6 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
             header("location: loadrichieste.php");
             
-        } else {
-            echo "REGISTRAZIONE FALLITA $sql. ";
         }
     }
 }
@@ -42,7 +40,6 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
     if (isset($_POST['form_name']) && $_POST['form_name'] === 'form2') {
 
-            $_SESSION['cre'] = "CREDITI CARICATI!";
 
             $xmlDoc = new DOMDocument();
             $xmlDoc->load("storico_cre.xml");
@@ -59,8 +56,6 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
             header("location: loadrichieste.php");
             
-        } else {
-            echo "REGISTRAZIONE FALLITA $sql. ";
         }
     }
 
