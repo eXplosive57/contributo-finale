@@ -28,14 +28,17 @@ if(!isset($_SESSION['loggato']) || $_SESSION['loggato'] !== true){
 </head>
 
 <body>
-    <div class='header'>
+<div class='header'>
   <a href="index.php">
     <img src="foto/leaf.png" alt="Logo" class="logo" >
   </a>
-    <b class='green'>GREEN HOUSE</b>
+    <b style='margin-left:-600px' class='green'>GREEN HOUSE</b>
   
       <nav class='navbar'>
         <a href="inserimento.php">INSERISCI PIANTA</a>
+        <a href="loadrichieste.php">VISUALIZZA RICHIESTE</a>
+        
+        <a href="utenti.php">LISTA UTENTI</a>
         <a href="index.php">CATEGORIE</a>
         <a href="logout.php">LOGOUT</a>
       </nav>
@@ -63,8 +66,8 @@ $richieste = $xmlDoc->getElementsByTagName("richiesta");
                       <table>
                           <thead>
                               <tr>
-                                  <th> NOME UTENTE <span class="icon-arrow">&UpArrow;</span></th>
-                                  <th> QUANTITA <span class="icon-arrow">&UpArrow;</span></th>
+                                  <th>NOME UTENTE</th>
+                                  <th>QUANTITA</th>
                                   <th></th>
                                   <th></th>
                               </tr>

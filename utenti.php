@@ -33,10 +33,13 @@ if(!isset($_SESSION['loggato']) || $_SESSION['loggato'] !== true){
   <a href="index.php">
     <img src="foto/leaf.png" alt="Logo" class="logo" >
   </a>
-    <b class='green'>GREEN HOUSE</b>
+    <b style='margin-left:-600px' class='green'>GREEN HOUSE</b>
   
       <nav class='navbar'>
         <a href="inserimento.php">INSERISCI PIANTA</a>
+        <a href="loadrichieste.php">VISUALIZZA RICHIESTE</a>
+        
+        <a href="utenti.php">LISTA UTENTI</a>
         <a href="index.php">CATEGORIE</a>
         <a href="logout.php">LOGOUT</a>
       </nav>
@@ -54,14 +57,15 @@ if ($result->num_rows > 0) {
   <div class='centro_tab'>
     <main class='table'>
       <section class='table_header'>
-        <h1>UTENTI</h1>
+        <h1>GESTIONE UTENTI</h1>
       </section>
           <section class="table__body">
                       <table>
                           <thead>
                               <tr>
-                                  <th> NOME <span class="icon-arrow">&UpArrow;</span></th>
-                                  <th> COGNOME <span class="icon-arrow">&UpArrow;</span></th>
+                                  <th>NOME</th>
+                                  <th>COGNOME</th>
+                                  <th></th>
                                   <th></th>
                               </tr>
                           </thead>
@@ -86,6 +90,7 @@ if ($result->num_rows > 0) {
           <button class="blu" type="submit">MODIFICA</button>
         </form>
       </td>
+      <td><button class="rosso" type="submit">BAN</button></td>
     </tr>
 <?php }}?>
 </div>

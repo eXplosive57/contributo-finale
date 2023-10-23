@@ -41,7 +41,7 @@
 
 
 <div class="wrapper">
-<form action="registrazione.php" method="post">
+<form action="script_registrazione.php" method="post">
     <h1 class='titolo2'>REGISTRATI</h1>
     <div class="input-box">
     <label for="nome">Nome</label>

@@ -24,7 +24,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
     if (mysqli_num_rows($result) > 0) {
         $_SESSION['errore'] = "Utente già presente!";
-        header("location: index.php");
+        header("location: reg.php");
 
 
     } else {
