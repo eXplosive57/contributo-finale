@@ -50,7 +50,7 @@
             <prezzo>39.99</prezzo>
             <img>foto_piante/pluto.jpg</img>
         </pianta>
-    </categoria>
+    <pianta><nome_pianta>asas</nome_pianta><descrizione>aas</descrizione><prezzo>2</prezzo><img>as</img></pianta></categoria>
     <categoria>
         <foto>foto_categorie/bonsai.jpg</foto>
         <nome>Bonsai</nome>

@@ -1,4 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <storico_cre xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="catalogo.xsd">
   
-<richiesta><id>2</id><id_utente>2</id_utente><nome>real</nome><cognome>vinnt</cognome><qnt>222222222</qnt></richiesta></storico_cre>
+<richiesta><id>2</id><id_utente>2</id_utente><nome>real</nome><cognome>vinnt</cognome><qnt>222222222</qnt></richiesta><richiesta><id>3</id><id_utente/><nome/><cognome/><qnt/></richiesta></storico_cre>

@@ -24,19 +24,26 @@ button[type="submit"] {
     align-items: center;
     margin-bottom: 20px;
 }
-.nascosto{
-  background-color: red;
-    color: #fff;
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
-    cursor: pointer;
-    justify-content: center; /* Allineamento orizzontale */
-    align-items: center;
-    margin-bottom: 20px;
-    opacity: 20%;
-    
+
+.verde {
+  background-color:green;
+  color: #fff;
+  padding: 5px;
+  border: none;
+  border-radius: 5px;
+  font-size: 15px;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+.verde span{
+  margin-left: 10px;
+  width: 0px;
+  overflow: hidden;
+  transition: width 0.5s;
+  display: inline-block;
+}
+.verde:hover span{
+  width: 30px;
 }
 
 .rosso[type="submit"] {
@@ -63,8 +70,6 @@ button[type="submit"] {
 .blu[type="submit"]:hover {
     background-color:rgb(210, 186, 27);
 }
-
-
 
 body {
     font-family: Arial, sans-serif;
@@ -344,6 +349,19 @@ body {
 html{
   scroll-behavior: smooth;
 }
+.freccia {
+    background-color: rgb(71, 70, 70);
+    color: #10a034;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    justify-content: center; /* Allineamento orizzontale */
+    align-items: center;
+    margin-bottom: 20px;
+}
+
 /*CSS PER TABELLAAAA TESTTTTTTTTTTT*/
 
 .centro_tab{

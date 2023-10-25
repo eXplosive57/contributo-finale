@@ -16,7 +16,7 @@ $xmlDoc->load("storico_cre.xml");
 
 $storicoCre = $xmlDoc->getElementsByTagName("storico_cre")->item(0);
 
-//le seguenti righe mi servono per contare quanti id ho in modo la prossima richiesta di crediti
+//le seguenti righe mi servono per contare quanti id ho in modo che la prossima richiesta di crediti
 //abbia id sequenziale
 $ultimarichiestaid = 0;
 $richiestaelem = $xmlDoc->getElementsByTagName("richiesta");

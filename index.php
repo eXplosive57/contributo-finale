@@ -42,13 +42,22 @@ $count = 0;
 if(isset($_SESSION['carrello']))
 {
   $count=count($_SESSION['carrello']);
-}?>
-    <div class='header'>
-    <a href="index.php">
-    <img src="foto/leaf.png" alt="Logo" class="logo" >
-  </a>
-    <b class='green'>GREEN HOUSE</b>
-    <?php if($_SESSION['tipo'] == 1){
+}?><?php if($_SESSION['tipo'] == 1){
+?><div class='header'>
+<a href="index.php">
+<img src="foto/leaf.png" alt="Logo" class="logo" >
+</a>
+<b class='green'>GREEN HOUSE</b>
+<?php
+}else if($_SESSION['tipo'] == 0){
+  ?><div class='header'>
+<a href="index.php">
+<img src="foto/leaf.png" alt="Logo" class="logo" >
+</a>
+<b style='margin-left:-600px' class='green'>GREEN HOUSE</b>
+<?php }
+    
+     if($_SESSION['tipo'] == 1){
       $nome_= $_SESSION['nome'];
       $sql5 = "SELECT crediti FROM utenti WHERE nome = '$nome_'";
       $result5 = $con->query($sql5);
@@ -116,18 +125,19 @@ $categorie = $xmlDoc->getElementsByTagName("categoria");
         <div class="card-body">
             <h1><?php echo $nome ?></h1>
             <p>descrizione!!!!</p>
-            <form style=text-align:center; action="catalogo.php" method="post">
-              <button type="submit" name='valore' value='<?php echo$nome?>'>Esplora</button>
+            <form style='text-align:center;' action="catalogo.php" method="post">
+              <button class="verde" name='valore' value='<?php echo$nome?>'>Esplora<span>&#10230;</span></button>
             </form>
         </div>
     </div>
+    
   <?php
       }
 
   ?>
     </div> 
+    
   </div>
-  
   </div>
 
 </body>

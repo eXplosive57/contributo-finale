@@ -25,12 +25,13 @@ $con = new mysqli($host,$userName,$password,$dbName);
 <body>
   <?php
   session_start();
-  
+if($_SESSION['tipo'] == 1){
 $nome_= $_SESSION['nome'];
 $sql5 = "SELECT crediti FROM utenti WHERE nome = '$nome_'";
 $result5 = $con->query($sql5);
 $row5 = mysqli_fetch_array($result5);
 $_SESSION['crediti'] = $row5['crediti'];
+}
 
 //controllo sulla variabile 'loggato'
 if(!isset($_SESSION['loggato']) || $_SESSION['loggato'] !== true){
@@ -76,9 +77,9 @@ if(isset($_SESSION['carrello']))
         <?php } ?>
         
         <a href="logout.php">LOGOUT</a>
-        <a>Sei loggato come, <?php echo $_SESSION['nome'] . ' ' . $_SESSION['cognome'] ?></a>
         <?php if($_SESSION['tipo'] == 1) {
           ?>
+        <a>Sei loggato come, <?php echo $_SESSION['nome'] . ' ' . $_SESSION['cognome'] ?></a>
         <a href="carrello.php">CARRELLO (<?php echo $count ?>)</a><?php
         }
         ?> 
