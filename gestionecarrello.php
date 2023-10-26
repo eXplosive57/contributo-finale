@@ -22,7 +22,13 @@ if(isset($_SESSION['id']) && isset($_POST['aggiungi']))
             $miei_elementi = array_column($_SESSION['carrello'],'Nome');
             if(in_array($_POST['nome'], $miei_elementi))
             {
-                $_SESSION['esiste'] = "Prodotto giá nel carrello!";
+                
+                foreach ($_SESSION['carrello'] as &$item) {
+                    if ($item['Nome'] == $_POST['nome']) {
+                        $item['Quantita']++;
+                        break;
+                    }
+                }
                 header("location: carrello.php");
                 
                 
@@ -31,7 +37,7 @@ if(isset($_SESSION['id']) && isset($_POST['aggiungi']))
 
             //se non esiste aggiungo l'elemento
             $count=count($_SESSION['carrello']);
-            $_SESSION['carrello'][$count] = array('Nome' =>$_POST['nome'], 'Prezzo' =>$_POST['prezzo'],'Foto' =>$_POST['foto'], 'Quantita'=>$_POST['qty']);
+            $_SESSION['carrello'][$count] = array('Nome' =>$_POST['nome'], 'Prezzo' =>$_POST['prezzo'],'Foto' =>$_POST['foto'], 'Quantita'=>'1');
             header("location: carrello.php");
             
             }
@@ -39,7 +45,7 @@ if(isset($_SESSION['id']) && isset($_POST['aggiungi']))
         else
         {
             //se il carrello non é stato ancora creato allora lo creo
-            $_SESSION['carrello'][0]= array('Nome' =>$_POST['nome'], 'Prezzo' =>$_POST['prezzo'],'Foto' =>$_POST['foto'], 'Quantita'=>$_POST['qty']);
+            $_SESSION['carrello'][0]= array('Nome' =>$_POST['nome'], 'Prezzo' =>$_POST['prezzo'],'Foto' =>$_POST['foto'], 'Quantita'=>'1');
             header("location: carrello.php");
         }
     
@@ -64,6 +70,31 @@ if(isset($_POST['rimuovi']))
     header("location: carrello.php");
 
 }
+if(isset($_POST['diminuisci']))
+{
+    
+    foreach ($_SESSION['carrello'] as &$item) {
+        if ($item['Nome'] == $_POST['nome']) {
+            $item['Quantita']--;
+            break;
+        }
+    }
+    header("location: carrello.php");
+    }
+
+    if(isset($_POST['aumenta']))
+{
+    
+    foreach ($_SESSION['carrello'] as &$item) {
+        if ($item['Nome'] == $_POST['nome']) {
+            $item['Quantita']++;
+            break;
+        }
+    }
+    header("location: carrello.php");
+    }
+    
+
 
 
 

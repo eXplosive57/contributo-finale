@@ -44,8 +44,17 @@ if(isset($_SESSION['carrello']))
   <a href="index.php">
     <img src="foto/leaf.png" alt="Logo" class="logo" >
   </a>
-    <b class='green'>GREEN HOUSE</b>
-  
+    <b style=margin-right:100px; class='green'>GREEN HOUSE</b>
+    <?php
+    if($_SESSION['tipo'] == 1){
+      $nome_= $_SESSION['nome'];
+      $sql5 = "SELECT crediti FROM utenti WHERE nome = '$nome_'";
+      $result5 = $con->query($sql5);
+      $row5 = mysqli_fetch_array($result5);
+      $_SESSION['crediti'] = $row5['crediti'];
+      ?>
+    <b style='margin-left:250px;'>CREDITI <?php echo $_SESSION['crediti']?></b>
+    <?php }?>
       <nav class='navbar'>
   
     <?php
@@ -53,9 +62,11 @@ if(isset($_SESSION['carrello']))
             if ($_SESSION['tipo'] == 0) {
         
         ?>
-        <a href="inserimento.php">INSERISCI PIANTA</a>
+        <a href="form_inserimento_pianta.php">INSERISCI PIANTA</a>
         <?php } ?>
         <a href="index.php">CATEGORIE</a>
+        <a href="richiesta_cre.php">RICHIEDI CREDITI</a>
+        <a href="faq.php">FAQ</a>
         <a href="logout.php">LOGOUT</a>
         <a>Sei loggato come, <?php echo $_SESSION['nome'] . ' ' . $_SESSION['cognome'] ?></a>
         <?php if($_SESSION['tipo'] == 1) {
@@ -111,10 +122,12 @@ if(!isset($_SESSION['loggato']) || $_SESSION['loggato'] !== true){
                       <table>
                           <thead>
                               <tr>
-                                  <th> NOME PIANTA <span class="icon-arrow">&UpArrow;</span></th>
-                                  <th> FOTO <span class="icon-arrow">&UpArrow;</span></th>
-                                  <th> QUANTITA <span class="icon-arrow">&UpArrow;</span></th>
-                                  <th> PREZZO <span class="icon-arrow">&UpArrow;</span></th>
+                                  <th> NOME PIANTA </th>
+                                  <th> FOTO </th>
+                                  <th> QUANTITA </th>
+                                  <th> PREZZO </th>
+                                  <th></th>
+                                  <th></th>
                                   <th></th>
                               </tr>
                           </thead>
@@ -138,9 +151,31 @@ if(!isset($_SESSION['loggato']) || $_SESSION['loggato'] !== true){
       <td>
         <form action ='gestionecarrello.php' method='POST'>
           <button class='rosso' name='rimuovi' type="submit">RIMUOVI</button>
-      </td>
           <input type='hidden' name='nome' value='<?php echo $value['Nome']?>'>
         </form>
+      </td>
+      <td>
+        <?php
+          if($value["Quantita"] > 0){
+            ?>
+          
+        <form action ='gestionecarrello.php' method='POST'>
+          <button class='blu' name='diminuisci' type="submit"> - </button>
+          <input type='hidden' name='nome' value='<?php echo $value['Nome']?>'>
+        </form>
+        <?php }
+          ?>
+      </td>
+
+      <td>
+        <?php if($_SESSION['crediti'] > $totale){?>
+        <form action ='gestionecarrello.php' method='POST'>
+          <button class='blu' name='aumenta' type="submit"> + </button>
+          <input type='hidden' name='nome' value='<?php echo $value['Nome']?>'>
+        </form>
+        <?php }?>
+      </td>
+      
     </tr>
 
     <?php
@@ -153,6 +188,11 @@ if(!isset($_SESSION['loggato']) || $_SESSION['loggato'] !== true){
         <td class="centrato-totale">
           <?php echo $totale ?>$<form action ='svuota.php' method='POST'>
             <?php
+            if($totale>$_SESSION['crediti']){
+              ?>
+              <button class='blu' name='svuota' type="submit" disabled >Crediti Insufficienti</button></td>
+              <?php
+            }else{
               if(!empty($_SESSION['carrello'])){ ?>
                 <button class='blu' name='svuota' type="submit">EFFETTUA ORDINE</button></td>
             </form> 
@@ -160,6 +200,7 @@ if(!isset($_SESSION['loggato']) || $_SESSION['loggato'] !== true){
     
   <?php
 }
+            }
 }
 }
 ?>

@@ -52,9 +52,10 @@ if (isset($_SESSION['pass'])) {
     <input type="password" name="password" id="username" required>
     </div>
     <button type="submit" value="invia">Invia</button>
-    <p class='text'>Se sei un utente clicca? <a href="accesso.php">qui</p>
+    <a style='margin-left:180px;' href="accesso.php"><button type="button" class='nero' >UTENTE</button>
 
 </form>
+
     
 </div>
 </body>

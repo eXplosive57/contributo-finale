@@ -80,7 +80,7 @@
     <input type="hidden" id="tipo" name="tipo" value="1">
 
     <button type="submit" value="invia">Invia</button>
-    <p class="text">Sei gia registrato? <a href="accesso.php">Accedi</a></p>
+    <a style='margin-left:250px;'href="accesso.php"><button type="button" class='nero' >ACCEDI</button>
 
 </form>
 </div>

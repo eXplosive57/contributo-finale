@@ -25,6 +25,16 @@ if(!isset($_SESSION['loggato']) || $_SESSION['loggato'] !== true){
     background-size:cover;
     
   }
+
+  input[type="file"]::file-selector-button {
+  border: 2px solid black;
+  padding: 0.2em 0.4em;
+  border-radius: 10px;
+  background-color: white;
+  transition: 1s;
+  margin-top:10px;
+  margin-bottom:10px;
+}
     </style>
 </head>
 
@@ -33,14 +43,15 @@ if(!isset($_SESSION['loggato']) || $_SESSION['loggato'] !== true){
   <a href="index.php">
     <img src="foto/leaf.png" alt="Logo" class="logo" >
   </a>
-    <b style='margin-left:-600px' class='green'>GREEN HOUSE</b>
+    <b style='margin-left:-500px' class='green'>GREEN HOUSE</b>
   
       <nav class='navbar'>
-        <a href="inserimento.php">INSERISCI PIANTA</a>
+        <a href="form_inserimento_pianta.php">INSERISCI PIANTA</a>
         <a href="loadrichieste.php">VISUALIZZA RICHIESTE</a>
         
         <a href="utenti.php">LISTA UTENTI</a>
         <a href="index.php">CATEGORIE</a>
+        <a href="faq.php">FAQ</a>
         <a href="logout.php">LOGOUT</a>
       </nav>
     </div>
@@ -70,7 +81,8 @@ if(!isset($_SESSION['loggato']) || $_SESSION['loggato'] !== true){
     </div>
     <div class="input-box">
     <label for="foto_pianta">Immagine Pianta</label>
-    <input type="text" name="foto_pia" id="foto_pia" required>
+    <input type="file" name="foto_pia" id="foto_pia" required>
+    
     </div>
     <button type="submit" value="invia">Invia</button>
             <form style='text-align:center;' action="index.php">

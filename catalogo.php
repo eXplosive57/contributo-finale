@@ -63,19 +63,40 @@ if(isset($_SESSION['carrello']))
     <a href="index.php">
     <img src="foto/leaf.png" alt="Logo" class="logo" >
   </a>
-    <b class='green'>GREEN HOUSE</b>
+    <?php 
+    if($_SESSION['tipo'] == 0){
+      ?><b style='margin-left:-500px' class='green'>GREEN HOUSE</b>
+      <?php
+    }else{
+      if($_SESSION['tipo'] == 1){
+      ?><b style='margin-left:-120px;' class='green'>GREEN HOUSE</b><?php
+    }}
+    ?>
+    
   
-      <nav class='navbar'>
+      <nav class='navbar'><?php
+      if($_SESSION['tipo'] == 1){
+      $nome_= $_SESSION['nome'];
+      $sql5 = "SELECT crediti FROM utenti WHERE nome = '$nome_'";
+      $result5 = $con->query($sql5);
+      $row5 = mysqli_fetch_array($result5);
+      $_SESSION['crediti'] = $row5['crediti'];
+      ?>
+    <b style='margin-left:250px;'>CREDITI <?php echo $_SESSION['crediti']?></b>
+    <?php }?>
     <a href="#catalogo">CATALOGO</a>
+    <a href="richiesta_cre.php">RICHIEDI CREDITI</a>
   
     <?php
             
             if ($_SESSION['tipo'] == 0) {
         
         ?>
-        <a href="inserimento.php">INSERISCI PIANTA</a>
+        <a href="form_inserimento_pianta.php">INSERISCI PIANTA</a>
+        <a href="loadrichieste.php">VISUALIZZA RICHIESTE</a>
+        <a href="utenti.php">LISTA UTENTI</a>
         <?php } ?>
-        
+        <a href="faq.php">FAQ</a>
         <a href="logout.php">LOGOUT</a>
         <?php if($_SESSION['tipo'] == 1) {
           ?>
@@ -116,40 +137,51 @@ $categorie = $xmlDoc->getElementsByTagName("categoria");
           $descrizione = $pianta->getElementsByTagName('descrizione')->item(0)->nodeValue;
           $foto = $pianta->getElementsByTagName('img')->item(0)->nodeValue;
           $prezzo = $pianta->getElementsByTagName('prezzo')->item(0)->nodeValue;
+          $qnt = $pianta->getElementsByTagName('quantita')->item(0)->nodeValue;
       
     ?>
 
 
-    <div class="card">
+    <div class="card" style="position: relative;">
         <img src="<?php echo $foto ?>" alt="">
         
         
             <h1><?php echo $nomePianta?></h1>
             <p class="descrizione-testo"><?php echo $descrizione?></p>
-            
+            <h3>Disponibiltá: <?php echo $qnt?></h3>
             <h2><?php echo $prezzo?> Cr</h2>
-            <form style=text-align:center; action="gestionecarrello.php" method="POST">
+            
+            <form style='position: absolute; bottom: 10px;' action="gestionecarrello.php" method="POST">
               <input name="nome" hidden value = "<?php echo $nomePianta; ?>">
               <input name="foto" hidden value = "<?php echo $foto; ?>">
               <input name="prezzo" hidden value = "<?php echo $prezzo; ?>">
-              <label for="qty">Quantita</label>
-              <input type="number" name="qty" id="qty" required pattern="[0-99]+" title="Inserisci un quantita numerica">
+              
+            <?php
+              if($_SESSION['tipo'] == 1) {
+                if($qnt>0){
+                  ?>
+              
             <br>
-            <?php 
+            <?php
+            if($_SESSION['tipo'] == 1){
               if($prezzo > ($_SESSION['crediti']))
               {?>
                 <button class='nascosto'style=margin-top:10px; type="submit" name="aggiungi" title="" disabled >Crediti Insufficienti</button>
                 <?php
               }
               else{?>
-                <button style=margin-top:10px; type="submit" name="aggiungi" title="">AGGIUNGI</button>
+                <button style='margin-top:10px;justify-content:center; ' type="submit" name="aggiungi" title="">AGGIUNGI</button>
                 <?php
+              }}
               }
+            }
+              
               ?>
               
-         
-          
+              
+            
             </form>
+            
         </div>
   <?php
     }

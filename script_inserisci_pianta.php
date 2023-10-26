@@ -15,6 +15,9 @@ $descrizione = $con->real_escape_string($_POST['desc']);
 $prezzo = $con->real_escape_string($_POST['prz']);
 $img_pianta = $con->real_escape_string($_POST['foto_pia']);
 
+$path = "foto_piante/";
+
+$img_pianta_path = $path . $img_pianta;
 
 $xmlDoc = new DOMDocument();
 $xmlDoc->load("catalogo.xml");
@@ -52,7 +55,7 @@ foreach ($categorie as $categoria) {
                         $nome_pianta_da_inserire = $xmlDoc->createElement("nome_pianta", $nome);
                         $descrizione_da_inserire = $xmlDoc->createElement("descrizione", $descrizione);
                         $prezzo_da_inserire = $xmlDoc->createElement("prezzo", $prezzo);
-                        $img = $xmlDoc->createElement("img", $img_pianta);
+                        $img = $xmlDoc->createElement("img", $img_pianta_path);
 
                         $pianta->appendChild($nome_pianta_da_inserire);
                         $pianta->appendChild($descrizione_da_inserire);
@@ -68,4 +71,4 @@ foreach ($categorie as $categoria) {
 
 
 
-header("location: inserimento.php");
+header("location: form_inserimento_pianta.php");

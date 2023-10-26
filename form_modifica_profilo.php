@@ -101,7 +101,7 @@ $_SESSION['ind'] = $row3['indirizzo'];
     <b style='margin-left:-640px' class='green'>GREEN HOUSE</b>
   
       <nav class='navbar'>
-        <a href="inserimento.php">INSERISCI PIANTA</a>
+        <a href="form_inserimento_pianta.php">INSERISCI PIANTA</a>
         <a href="loadrichieste.php">VISUALIZZA RICHIESTE</a>
         
         <a href="utenti.php">LISTA UTENTI</a>

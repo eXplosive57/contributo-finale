@@ -93,8 +93,9 @@ if (isset($_SESSION['reg'])) {
     <input type="password" name="password" id="username" required>
     </div>
     <button type="submit" value="invia">Invia</button>
-    <p class='text'>Ancora non sei registrato? <a href="reg.php">Registrati</p>
-    <p class='text'><a href="formloginadmin.php">admin</p>
+    <a style='margin-left:130px;'href="reg.php"><button type="button" class='nero' >REGISTRATI</button>
+    <br>
+    <a href="formloginadmin.php"><button type="button" class='nero' >ADMIN</button>
 
 </form>
     

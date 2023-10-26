@@ -47,14 +47,14 @@ if(isset($_SESSION['carrello']))
 <a href="index.php">
 <img src="foto/leaf.png" alt="Logo" class="logo" >
 </a>
-<b class='green'>GREEN HOUSE</b>
+<b style='margin-left:-50px;' class='green'>GREEN HOUSE</b>
 <?php
 }else if($_SESSION['tipo'] == 0){
   ?><div class='header'>
 <a href="index.php">
 <img src="foto/leaf.png" alt="Logo" class="logo" >
 </a>
-<b style='margin-left:-600px' class='green'>GREEN HOUSE</b>
+<b style='margin-left:-650px' class='green'>GREEN HOUSE</b>
 <?php }
     
      if($_SESSION['tipo'] == 1){
@@ -64,14 +64,15 @@ if(isset($_SESSION['carrello']))
       $row5 = mysqli_fetch_array($result5);
       $_SESSION['crediti'] = $row5['crediti'];
       ?>
-    <a>CREDITI <?php echo $_SESSION['crediti']?></a>
+    <b style='margin-left:250px;'>CREDITI <?php echo $_SESSION['crediti']?></b>
     <?php }?>
   
       <nav class='navbar'>
         <?php
           if ($_SESSION['tipo'] == 1) {
           ?>
-        <a href="#catalogo">CATALOGO</a>
+                <a href="#catalogo">CATALOGO</a>
+
         <a href="richiesta_cre.php">RICHIEDI CREDITI</a>
 
             <?php } ?>
@@ -82,11 +83,12 @@ if(isset($_SESSION['carrello']))
             if ($_SESSION['tipo'] == 0) {
     
     ?>
-       <a href="inserimento.php">INSERISCI PIANTA</a>
+       <a href="form_inserimento_pianta.php">INSERISCI PIANTA</a>
        <a href="loadrichieste.php">VISUALIZZA RICHIESTE</a>
        <a href="utenti.php">LISTA UTENTI</a>
+       <a href="faq.php">FAQ</a>
 <?php } ?>
-        
+<a href="faq.php">FAQ</a>
         <a href="logout.php">LOGOUT</a>
         <?php
         if ($_SESSION['tipo'] == 1) {

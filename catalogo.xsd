@@ -15,6 +15,7 @@
               <xsd:element name="descrizione" type="xs:string"/>
               <xsd:element name="prezzo" type="xs:decimal"/>
               <xsd:element name="img" type="xs:string"/>
+              <xsd:element name="quantita" type="xs:int"/>
             </xsd:sequence>
           </xsd:complexType>
         </xsd:element>

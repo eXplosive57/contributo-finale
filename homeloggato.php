@@ -42,7 +42,7 @@ if(isset($_SESSION['carrello']))
           if ($_SESSION['tipo'] == 0) {
       
       ?>
-      <a href="inserimento.php">INSERISCI PIANTA</a>
+      <a href="form_inserimento_pianta.php">INSERISCI PIANTA</a>
       <?php } ?>
       
       <a href="logout.php">LOGOUT</a>
