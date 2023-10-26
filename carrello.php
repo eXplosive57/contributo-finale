@@ -195,6 +195,8 @@ if(!isset($_SESSION['loggato']) || $_SESSION['loggato'] !== true){
             }else{
               if(!empty($_SESSION['carrello'])){ ?>
                 <button class='blu' name='svuota' type="submit">EFFETTUA ORDINE</button></td>
+                <input type="hidden" id="qnt" name="qnt" value="<?php echo $totale ?>">
+                <input type='hidden' name='nome' value='<?php echo $_SESSION['nome']?>'>
             </form> 
         </td>
     

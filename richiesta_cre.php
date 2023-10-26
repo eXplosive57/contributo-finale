@@ -86,7 +86,7 @@ if(isset($_SESSION['carrello']))
       ?>
     <b style='margin-left:250px;'>CREDITI <?php echo $_SESSION['crediti']?></b>
     <?php }?>
-    <a href="#catalogo">CATALOGO</a>
+    <a href="index.php">CATEGORIE</a>
     <a href="richiesta_cre.php">RICHIEDI CREDITI</a>
   
     <?php

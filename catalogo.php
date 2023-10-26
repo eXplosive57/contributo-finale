@@ -170,7 +170,7 @@ $categorie = $xmlDoc->getElementsByTagName("categoria");
                 <?php
               }
               else{?>
-                <button style='margin-top:10px;justify-content:center; ' type="submit" name="aggiungi" title="">AGGIUNGI</button>
+                <button style='margin-top:10px; margin-left:130px;text-align:center;' type="submit" name="aggiungi" title="">AGGIUNGI</button>
                 <?php
               }}
               }
