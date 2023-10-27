@@ -15,7 +15,7 @@
         <xsd:element ref="id" />
         <xsd:element ref="id_utente"/>
         <xsd:element ref="nome"/>
-        <xsd:element ref="cognome/>
+        <xsd:element ref="cognome"/>
         <xsd:element ref="qnt"/>
       </xsd:sequence>
     </xsd:complexType>

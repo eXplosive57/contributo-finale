@@ -294,6 +294,7 @@ body {
     width: 70%;
     justify-content: center;
     align-items: center;
+    display: flex;
     margin-top: 20px;
     margin-left: 50px;
     border-radius: 20px;

@@ -10,8 +10,16 @@ session_start();
 
 $cre = $con->real_escape_string($_POST['cre']);
 
+$xmlFile = "storico_cre.xml";
+$xmlstring = "";
+
+foreach(file($xmlFile) as $nodo){   //Leggo il contenuto del file XML
+
+    $xmlstring.= trim($nodo); 
+}
+
 $xmlDoc = new DOMDocument();
-$xmlDoc->load("storico_cre.xml");
+$xmlDoc->loadXML($xmlstring);
 
 
 $storicoCre = $xmlDoc->getElementsByTagName("storico_cre")->item(0);
@@ -44,6 +52,7 @@ $richiesta->appendChild($qnt);
 
 $storicoCre->appendChild($richiesta);
 $xmlDoc->formatOutput = true;
-$xmlDoc->save("storico_cre.xml");
+$xml = $xmlDoc->saveXML();
+file_put_contents($xmlFile, $xml);  //sovrascrive il contenuto del vecchio file XML con quello nuovo
 
 header("location: richiesta_cre.php");

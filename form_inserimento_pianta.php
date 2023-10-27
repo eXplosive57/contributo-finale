@@ -80,6 +80,10 @@ if(!isset($_SESSION['loggato']) || $_SESSION['loggato'] !== true){
     <input type="number" name="prz" id="prz" required>
     </div>
     <div class="input-box">
+    <label for="prz">Quantita</label>
+    <input type="number" name="qnt" id="qnt" required>
+    </div>
+    <div class="input-box">
     <label for="foto_pianta">Immagine Pianta</label>
     <input type="file" name="foto_pia" id="foto_pia" required>
     

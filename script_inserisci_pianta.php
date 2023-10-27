@@ -14,13 +14,22 @@ $nome = $con->real_escape_string($_POST['nome']);
 $descrizione = $con->real_escape_string($_POST['desc']);
 $prezzo = $con->real_escape_string($_POST['prz']);
 $img_pianta = $con->real_escape_string($_POST['foto_pia']);
+$qnt = $con->real_escape_string($_POST['qnt']);
 
 $path = "foto_piante/";
 
 $img_pianta_path = $path . $img_pianta;
 
+$xmlFile = "catalogo.xml";
+$xmlstring = "";
+
+foreach(file($xmlFile) as $nodo){   //Leggo il contenuto del file XML
+
+    $xmlstring.= trim($nodo); 
+}
+
 $xmlDoc = new DOMDocument();
-$xmlDoc->load("catalogo.xml");
+$xmlDoc->loadXML($xmlstring);
 
 
 $categorie = $xmlDoc->getElementsByTagName('categoria');
@@ -56,14 +65,18 @@ foreach ($categorie as $categoria) {
                         $descrizione_da_inserire = $xmlDoc->createElement("descrizione", $descrizione);
                         $prezzo_da_inserire = $xmlDoc->createElement("prezzo", $prezzo);
                         $img = $xmlDoc->createElement("img", $img_pianta_path);
+                        $qnt_da_inserire = $xmlDoc->createElement("quantita", $qnt);
 
                         $pianta->appendChild($nome_pianta_da_inserire);
                         $pianta->appendChild($descrizione_da_inserire);
                         $pianta->appendChild($prezzo_da_inserire);
                         $pianta->appendChild($img);
+                        $pianta->appendChild($qnt_da_inserire);
                         $categoria->appendChild($pianta);
                         $xmlDoc->formatOutput = true;
-                        $xmlDoc->save("catalogo.xml");
+
+                        $xml = $xmlDoc->saveXML();
+                        file_put_contents($xmlFile, $xml);  //sovrascrive il contenuto del vecchio file XML con quello nuovo
                     }
                 }
             }

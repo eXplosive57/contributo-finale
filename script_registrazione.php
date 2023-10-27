@@ -30,9 +30,9 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     } else {
         //inserisco l'utente se non esiste
         $sql = "INSERT INTO utenti (nome, cognome, mail, cf, telefono, 
-        indirizzo, password, Tipo) 
+        indirizzo,crediti,  password, Tipo) 
                 VALUES ('$nome','$cognome', '$mail','$cf','$telefono',
-                '$residenza','$hash', '$tipo')";
+                '$residenza',0,'$hash', '$tipo')";
 
         if ($con->query($sql) === TRUE) {
 

@@ -1,188 +1,175 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <categorie xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="catalogo.xsd">
-    <categoria>
-        <foto>foto_categorie/grasse.jpg</foto>
-        <nome>Piante grasse</nome>
-        <pianta>
-            <nome_pianta>Sansevieria</nome_pianta>
-            <descrizione>La Sansevieria, appartenente alla famiglia delle Liliaceae, è una pianta ornamentale per interni molto diffusa. È conosciuta anche come lingua di suocera, per la punta acuminata delle foglie. Queste, infatti, hanno una bellissima forma allungata verticalmente di colore verde scuro con bordi tendenti al giallo.</descrizione>
-            <prezzo>32.99</prezzo>
-            <img>foto_piante/nagini.jpg</img>
-            <quantita>0</quantita>
-        </pianta>
-        <pianta>
-            <nome_pianta>Aloe Vera</nome_pianta>
-            <descrizione>L’Aloe vera ha origini africane e cresce spontaneamente in diverse parti del mondo.
-                Un must che tutti dovremmo avere in casa: oltre alla sua bellezza e all’autonomia tipica delle piante succulenti, il gel che si può estrarre dalle sue foglie ha innumerevoli benefici. Tra i più rinomati, l’azione cicatrizzante che permette di diminuire i tempi di ricostituzione dei tessuti. Proprio per queste sue proprietà terapeutiche, l’Aloe vera è chiamata anche “pianta dei miracoli” e per questo è simbolo di guarigione, salute e vita.</descrizione>
-            <prezzo>37.99</prezzo>
-            <img>foto_piante/aloe.jpg</img>
-            <quantita>6</quantita>
-        </pianta>
-        <pianta>
-            <nome_pianta>Sansevieria Velvet Rosa</nome_pianta>
-            <descrizione>La Sansevieria Velvet è una tipologia di Sanseviera che si distingue per le sue punte colorate e vellutate al tatto. Queste ultime non solo le conferiscono un’aria allegra ma anche elegante e originale.
-                        Ovviamente la particolarità dell’estremità delle sue foglie non è un dono di madre natura, ma di due aziende olandesi: la prima si occupa di coltivazione di sansevierie, la seconda è specializzata nell’apporto di valore aggiunto ai fiori tramite decorazioni. In realtà quest’idea ha anche una sua utilità, infatti evitano che la Sansevieria velvet con la sua forma allungata si rovini sulle punte.</descrizione>
-            <prezzo>44.99</prezzo>
-            <img>foto_piante/velvet.jpg</img>
-            <quantita>6</quantita>
-        </pianta>
-        <pianta>
-            <nome_pianta>Sansevieria Velvet Azzurra</nome_pianta>
-            <descrizione>La Sansevieria Velvet è una tipologia di Sanseviera che si distingue per le sue punte colorate e vellutate al tatto. Queste ultime non solo le conferiscono un’aria allegra ma anche elegante e originale.
-                        Ovviamente la particolarità dell’estremità delle sue foglie non è un dono di madre natura, ma di due aziende olandesi: la prima si occupa di coltivazione di sansevierie, la seconda è specializzata nell’apporto di valore aggiunto ai fiori tramite decorazioni. In realtà quest’idea ha anche una sua utilità, infatti evitano che la Sansevieria velvet con la sua forma allungata si rovini sulle punte.</descrizione>
-            <prezzo>44.99</prezzo>
-            <img>foto_piante/velvetblu.jpg</img>
-            <quantita>0</quantita>
-        </pianta>
-        <pianta>
-            <nome_pianta>Sansevieria Velvet Gialla</nome_pianta>
-            <descrizione>La Sansevieria Velvet è una tipologia di Sanseviera che si distingue per le sue punte colorate e vellutate al tatto. Queste ultime non solo le conferiscono un’aria allegra ma anche elegante e originale.
-                        Ovviamente la particolarità dell’estremità delle sue foglie non è un dono di madre natura, ma di due aziende olandesi: la prima si occupa di coltivazione di sansevierie, la seconda è specializzata nell’apporto di valore aggiunto ai fiori tramite decorazioni. In realtà quest’idea ha anche una sua utilità, infatti evitano che la Sansevieria velvet con la sua forma allungata si rovini sulle punte.</descrizione>
-            <prezzo>44.99</prezzo>
-            <img>foto_piante/velvetgiallo.jpg</img>
-            <quantita>6</quantita>
-        </pianta>
-        <pianta>
-            <nome_pianta>Sansevieria Velvet Arancione</nome_pianta>
-            <descrizione>La Sansevieria Velvet è una tipologia di Sanseviera che si distingue per le sue punte colorate e vellutate al tatto. Queste ultime non solo le conferiscono un’aria allegra ma anche elegante e originale.
-                        Ovviamente la particolarità dell’estremità delle sue foglie non è un dono di madre natura, ma di due aziende olandesi: la prima si occupa di coltivazione di sansevierie, la seconda è specializzata nell’apporto di valore aggiunto ai fiori tramite decorazioni. In realtà quest’idea ha anche una sua utilità, infatti evitano che la Sansevieria velvet con la sua forma allungata si rovini sulle punte.</descrizione>
-            <prezzo>44.99</prezzo>
-            <img>foto_piante/velvetaran.jpg</img>
-            <quantita>6</quantita>
-        </pianta>
-        <pianta>
-            <nome_pianta>Ficus Elastica Robusta</nome_pianta>
-            <descrizione>Il ficus elastica robusta è resistente, incredibilmente decorativo e in grado di depurare l’ambiente. Tutte le caratteristiche più ricercate racchiuse in una meravigliosa pianta con grandi foglie verdi e lucide, simbolo di prosperità e abbondanza.</descrizione>
-            <prezzo>39.99</prezzo>
-            <img>foto_piante/pluto.jpg</img>
-            <quantita>6</quantita>
-        </pianta>
-    </categoria>
-    <categoria>
-        <foto>foto_categorie/bonsai.jpg</foto>
-        <nome>Bonsai</nome>
-        <pianta>
-            <nome_pianta>Tiramisu</nome_pianta>
-            <descrizione>Appartenente alla famiglia delle Moraceae, è molto rinomato sia per il suo bel fogliame verde scuro e lucido che per la struttura del suo tronco che richiama la radice del Ginseng (per questo è anche conosciuto come Bonsai Ginseng).
-            Un must per i veri appassionati di quest’arte, questo bonsai ha anche un valore aggiunto: è simbolo di fortuna e longevità! .</descrizione>
-            <prezzo>39.99</prezzo>
-            <img>foto_piante/tiramisu.jpg</img>
-            <quantita>6</quantita>
-        </pianta>
-        <pianta>
-            <nome_pianta>Azalea</nome_pianta>
-            <descrizione>L’Azalea è una pianta della famiglia delle Ericaceae e la sua storia si intreccia ad una leggenda indiana e ad un principe nel Cashemire. Si tratta di una pianta simbolo di femminilità, temperanza e moderazione e questo simbolismo l’ha resa particolarmente adatta a celebrare le mamme per la Festa della Mamma..</descrizione>
-            <prezzo>65</prezzo>
-            <img>foto_piante/Azalea.jpg</img>
-            <quantita>6</quantita>
-        </pianta>
-        <pianta>
-            <nome_pianta>Retusa Tropicale</nome_pianta>
-            <descrizione>Un mini albero sempreverde, il bonsai da interno per antonomasia: si adatta a quasi tutte le condizioni ambientali grazie alle sue foglie in grado di sopportare l'aria secca presente nelle abitazioni. Le sue foglie vi aiuteranno a capire il suo stato, se di colore verde scuro simboleggieranno buona salute e quindi un’adeguata coltivazione.</descrizione>
-            <prezzo>135</prezzo>
-            <img>foto_piante/RetusaTropicale.jpg</img>
-            <quantita>6</quantita>
-        </pianta>
-        <pianta>
-            <nome_pianta>Pyracantha</nome_pianta>
-            <descrizione>La Pyracantha, originaria dell'Asia minore, del bacino del Mediterraneo, della Cina e dell'Himalaya, era anticamente consociuta in Grecia come“spina di fuoco”, in greco infatti “Pyra” significa fuoco e “akanta” spina. Si tratta di una pianta robusta e facile da curare come bonsai, quindi è particolarmente indicata per i principianti.</descrizione>
-            <prezzo>89.99</prezzo>
-            <img>foto_piante/Pyracantha.jpg</img>
-            <quantita>6</quantita>
-        </pianta>
-        <pianta>
-            <nome_pianta>Mirto</nome_pianta>
-            <descrizione>provienente dal sud-est della Cina, dal Giappone e dal Vietnam, cresce in boschi radi fino a 1000 m di altitudine. Con la tecnica del bonsai, è una pianta che regala tante soddisfazioni, sia in termini estetici che di semplicità di cura. Infatti, le sue piccolissime e graziose foglie gli conferiscono una grande armonia e lo rendono di grande valore decorativo.</descrizione>
-            <prezzo>54.99</prezzo>
-            <img>foto_piante/mirto.jpg</img>
-            <quantita>6</quantita>
-        </pianta>
-    </categoria>
-    <categoria>
-        <foto>foto_categorie/orchidea.jpg</foto>
-        <nome>Orchidee</nome>
-        <pianta>
-            <nome_pianta>Orchidea Rosa</nome_pianta>
-            <descrizione>Questa varietà di Orchidea Phalaenopsis non ha bisogno di presentazioni: splendidi fiori che sbocciano tutto l'anno, un raffinato colore rosa e una forte personalità.
-È una delle piante più diffuse, conosciute ed acquistate per decorare gli interni in modo sofisticato. Quest’orchidea tropicale si adatta facilmente a tutti gli ambienti domestici ma, seppur sia molto facile da curare, richiede alcune attenzioni per poter essere così decorativa e splendente.</descrizione>
-            <prezzo>47.99</prezzo>
-            <img>foto_categorie/orchidea.jpg</img>
-            <quantita>6</quantita>
-        </pianta>
-        <pianta>
-            <nome_pianta>Orchidea Bianca</nome_pianta>
-            <descrizione>Questa varietà di Orchidea Phalaenopsis non ha bisogno di presentazioni: splendidi fiori che sbocciano tutto l'anno, un meraviglioso bianco candido e una forte personalità. È una delle piante più diffuse, conosciute ed acquistate per decorare gli interni in modo sofisticato. Quest’orchidea tropicale si adatta facilmente a tutti gli ambienti domestici ma, seppur sia molto facile da curare, richiede alcune attenzioni per poter essere così decorativa e splendente.</descrizione>
-            <prezzo>54.99</prezzo>
-            <img>foto_piante/orchibianca.jpg</img>
-            <quantita>6</quantita>
-        </pianta>
-        <pianta>
-            <nome_pianta>Ariel</nome_pianta>
-            <descrizione>È una delle piante più diffuse, conosciute ed acquistate per decorare gli interni e si adatta facilmente a tutti gli ambienti domestici.
-            Un must per gli appassionati delle orchidee che vogliono sperimentare questa nuova tecnica e, allo stesso tempo, valorizzare l’appartamento. </descrizione>
-            <prezzo>49.99</prezzo>
-            <img>foto_piante/ariel.jpg</img>
-            <quantita>6</quantita>
-        </pianta>
-        <pianta>
-            <nome_pianta>Preziosa Orchidea</nome_pianta>
-            <descrizione>È una delle piante più diffuse, conosciute ed acquistate per decorare gli interni in modo sofisticato. Quest’orchidea tropicale si adatta facilmente a tutti gli ambienti domestici ma, seppur sia molto facile da curare, richiede alcune attenzioni per poter essere così decorativa e splendente. </descrizione>
-            <prezzo>119</prezzo>
-            <img>foto_piante/prez.jpg</img>
-            <quantita>6</quantita>
-        </pianta>
-        <pianta>
-            <nome_pianta>Odette</nome_pianta>
-            <descrizione>È una delle piante più diffuse, conosciute ed acquistate per decorare gli interni in modo sofisticato. Quest’orchidea tropicale si adatta facilmente a tutti gli ambienti domestici ma, seppur sia molto facile da curare, richiede alcune attenzioni per poter essere così decorativa e splendente. </descrizione>
-            <prezzo>39.99</prezzo>
-            <img>foto_piante/odette.jpg</img>
-            <quantita>6</quantita>
-        </pianta>
-    </categoria>
-    <categoria>
-        <foto>foto_categorie/esterno.jpg</foto>
-        <nome>Piante da Esterno</nome>
-        <pianta>
-            <nome_pianta>Calathea</nome_pianta>
-            <descrizione>La calathea e una pianta sempreverde di origine tropicale.
-            La particolarità di questa pianta sono le sue foglie, la parte superiore è caratterizzata dalle
-             varie sfumature dei verdi, gialli, bianco e argento; la parte inferiore nei toni del rosso.</descrizione>
-            <prezzo>20</prezzo>
-            <img>foto/Calathea.avif</img>
-            <quantita>6</quantita>
-        </pianta>
-        <pianta>
-            <nome_pianta>Calathea</nome_pianta>
-            <descrizione>La calathea e una pianta sempreverde di origine tropicale.
-            La particolarità di questa pianta sono le sue foglie, la parte superiore è caratterizzata dalle
-             varie sfumature dei verdi, gialli, bianco e argento; la parte inferiore nei toni del rosso.</descrizione>
-            <prezzo>20</prezzo>
-            <img>foto/Calathea.avif</img>
-            <quantita>6</quantita>
-        </pianta>
-    </categoria>
-     <categoria>
-        <foto>foto_categorie/fiori.jpg</foto>
-        <nome>Fiori</nome>
-        <pianta>
-            <nome_pianta>Calathea</nome_pianta>
-            <descrizione>La calathea e una pianta sempreverde di origine tropicale.
-            La particolarità di questa pianta sono le sue foglie, la parte superiore è caratterizzata dalle
-             varie sfumature dei verdi, gialli, bianco e argento; la parte inferiore nei toni del rosso.</descrizione>
-            <prezzo>20</prezzo>
-            <img>foto/Calathea.avif</img>
-            <quantita>6</quantita>
-        </pianta>
-        <pianta>
-            <nome_pianta>Calathea</nome_pianta>
-            <descrizione>La calathea e una pianta sempreverde di origine tropicale.
-            La particolarità di questa pianta sono le sue foglie, la parte superiore è caratterizzata dalle
-             varie sfumature dei verdi, gialli, bianco e argento; la parte inferiore nei toni del rosso.</descrizione>
-            <prezzo>20</prezzo>
-            <img>foto/Calathea.avif</img>
-            <quantita>6</quantita>
-        </pianta>
-    </categoria>
-    
-    
-  </categorie>
+  <categoria>
+    <foto>foto_categorie/grasse.jpg</foto>
+    <nome>Piante grasse</nome>
+    <descrizione>Le piante grasse, con le loro foglie succulente e colori accattivanti, portano un tocco di bellezza e semplicità all'arredamento di interni ed esterni. Queste piante resistenti e affascinanti sono la scelta perfetta per chi desidera un tocco di natura in ogni angolo della propria casa o giardino.</descrizione>
+    <pianta>
+      <nome_pianta>Sansevieria</nome_pianta>
+      <descrizione>La Sansevieria, appartenente alla famiglia delle Liliaceae, è una pianta ornamentale per interni molto diffusa. È conosciuta anche come lingua di suocera, per la punta acuminata delle foglie. Queste, infatti, hanno una bellissima forma allungata verticalmente di colore verde scuro con bordi tendenti al giallo.</descrizione>
+      <prezzo>32.99</prezzo>
+      <img>foto_piante/nagini.jpg</img>
+      <quantita>14</quantita>
+    </pianta>
+    <pianta>
+      <nome_pianta>Aloe Vera</nome_pianta>
+      <descrizione>L’Aloe vera ha origini africane e cresce spontaneamente in diverse parti del mondo.Un must che tutti dovremmo avere in casa: oltre alla sua bellezza e all’autonomia tipica delle piante succulenti, il gel che si può estrarre dalle sue foglie ha innumerevoli benefici. Tra i più rinomati, l’azione cicatrizzante che permette di diminuire i tempi di ricostituzione dei tessuti. Proprio per queste sue proprietà terapeutiche, l’Aloe vera è chiamata anche “pianta dei miracoli” e per questo è simbolo di guarigione, salute e vita.</descrizione>
+      <prezzo>37.99</prezzo>
+      <img>foto_piante/aloe.jpg</img>
+      <quantita>0</quantita>
+    </pianta>
+    <pianta>
+      <nome_pianta>Sansevieria Velvet Rosa</nome_pianta>
+      <descrizione>La Sansevieria Velvet è una tipologia di Sanseviera che si distingue per le sue punte colorate e vellutate al tatto. Queste ultime non solo le conferiscono un’aria allegra ma anche elegante e originale.Ovviamente la particolarità dell’estremità delle sue foglie non è un dono di madre natura, ma di due aziende olandesi: la prima si occupa di coltivazione di sansevierie, la seconda è specializzata nell’apporto di valore aggiunto ai fiori tramite decorazioni. In realtà quest’idea ha anche una sua utilità, infatti evitano che la Sansevieria velvet con la sua forma allungata si rovini sulle punte.</descrizione>
+      <prezzo>44.99</prezzo>
+      <img>foto_piante/velvet.jpg</img>
+      <quantita>0</quantita>
+    </pianta>
+    <pianta>
+      <nome_pianta>Sansevieria Velvet Azzurra</nome_pianta>
+      <descrizione>La Sansevieria Velvet è una tipologia di Sanseviera che si distingue per le sue punte colorate e vellutate al tatto. Queste ultime non solo le conferiscono un’aria allegra ma anche elegante e originale.Ovviamente la particolarità dell’estremità delle sue foglie non è un dono di madre natura, ma di due aziende olandesi: la prima si occupa di coltivazione di sansevierie, la seconda è specializzata nell’apporto di valore aggiunto ai fiori tramite decorazioni. In realtà quest’idea ha anche una sua utilità, infatti evitano che la Sansevieria velvet con la sua forma allungata si rovini sulle punte.</descrizione>
+      <prezzo>44.99</prezzo>
+      <img>foto_piante/velvetblu.jpg</img>
+      <quantita>16</quantita>
+    </pianta>
+    <pianta>
+      <nome_pianta>Sansevieria Velvet Gialla</nome_pianta>
+      <descrizione>La Sansevieria Velvet è una tipologia di Sanseviera che si distingue per le sue punte colorate e vellutate al tatto. Queste ultime non solo le conferiscono un’aria allegra ma anche elegante e originale.Ovviamente la particolarità dell’estremità delle sue foglie non è un dono di madre natura, ma di due aziende olandesi: la prima si occupa di coltivazione di sansevierie, la seconda è specializzata nell’apporto di valore aggiunto ai fiori tramite decorazioni. In realtà quest’idea ha anche una sua utilità, infatti evitano che la Sansevieria velvet con la sua forma allungata si rovini sulle punte.</descrizione>
+      <prezzo>44.99</prezzo>
+      <img>foto_piante/velvetgiallo.jpg</img>
+      <quantita>4</quantita>
+    </pianta>
+    <pianta>
+      <nome_pianta>Sansevieria Velvet Arancione</nome_pianta>
+      <descrizione>La Sansevieria Velvet è una tipologia di Sanseviera che si distingue per le sue punte colorate e vellutate al tatto. Queste ultime non solo le conferiscono un’aria allegra ma anche elegante e originale.Ovviamente la particolarità dell’estremità delle sue foglie non è un dono di madre natura, ma di due aziende olandesi: la prima si occupa di coltivazione di sansevierie, la seconda è specializzata nell’apporto di valore aggiunto ai fiori tramite decorazioni. In realtà quest’idea ha anche una sua utilità, infatti evitano che la Sansevieria velvet con la sua forma allungata si rovini sulle punte.</descrizione>
+      <prezzo>44.99</prezzo>
+      <img>foto_piante/velvetaran.jpg</img>
+      <quantita>6</quantita>
+    </pianta>
+    <pianta>
+      <nome_pianta>Ficus Elastica Robusta</nome_pianta>
+      <descrizione>Il ficus elastica robusta è resistente, incredibilmente decorativo e in grado di depurare l’ambiente. Tutte le caratteristiche più ricercate racchiuse in una meravigliosa pianta con grandi foglie verdi e lucide, simbolo di prosperità e abbondanza.</descrizione>
+      <prezzo>39.99</prezzo>
+      <img>foto_piante/pluto.jpg</img>
+      <quantita>0</quantita>
+    </pianta>
+  </categoria>
+  <categoria>
+    <foto>foto_categorie/bonsai.jpg</foto>
+    <nome>Bonsai</nome>
+    <descrizione>I bonsai, simbolo di grazia e pazienza, catturano l'arte dell'equilibrio naturale in spazi ridotti. Con la loro eleganza senza tempo, trasformano qualsiasi ambiente in un'opera d'arte vivente, riflettendo la bellezza della natura in miniatura. Entra nel mondo dei bonsai e abbraccia la serenità e l'armonia che portano.</descrizione>
+    <pianta>
+      <nome_pianta>Tiramisu</nome_pianta>
+      <descrizione>Appartenente alla famiglia delle Moraceae, è molto rinomato sia per il suo bel fogliame verde scuro e lucido che per la struttura del suo tronco che richiama la radice del Ginseng (per questo è anche conosciuto come Bonsai Ginseng).Un must per i veri appassionati di quest’arte, questo bonsai ha anche un valore aggiunto: è simbolo di fortuna e longevità! .</descrizione>
+      <prezzo>39.99</prezzo>
+      <img>foto_piante/tiramisu.jpg</img>
+      <quantita>6</quantita>
+    </pianta>
+    <pianta>
+      <nome_pianta>Azalea</nome_pianta>
+      <descrizione>L’Azalea è una pianta della famiglia delle Ericaceae e la sua storia si intreccia ad una leggenda indiana e ad un principe nel Cashemire. Si tratta di una pianta simbolo di femminilità, temperanza e moderazione e questo simbolismo l’ha resa particolarmente adatta a celebrare le mamme per la Festa della Mamma..</descrizione>
+      <prezzo>65</prezzo>
+      <img>foto_piante/Azalea.jpg</img>
+      <quantita>6</quantita>
+    </pianta>
+    <pianta>
+      <nome_pianta>Retusa Tropicale</nome_pianta>
+      <descrizione>Un mini albero sempreverde, il bonsai da interno per antonomasia: si adatta a quasi tutte le condizioni ambientali grazie alle sue foglie in grado di sopportare l'aria secca presente nelle abitazioni. Le sue foglie vi aiuteranno a capire il suo stato, se di colore verde scuro simboleggieranno buona salute e quindi un’adeguata coltivazione.</descrizione>
+      <prezzo>135</prezzo>
+      <img>foto_piante/RetusaTropicale.jpg</img>
+      <quantita>6</quantita>
+    </pianta>
+    <pianta>
+      <nome_pianta>Pyracantha</nome_pianta>
+      <descrizione>La Pyracantha, originaria dell'Asia minore, del bacino del Mediterraneo, della Cina e dell'Himalaya, era anticamente consociuta in Grecia come“spina di fuoco”, in greco infatti “Pyra” significa fuoco e “akanta” spina. Si tratta di una pianta robusta e facile da curare come bonsai, quindi è particolarmente indicata per i principianti.</descrizione>
+      <prezzo>89.99</prezzo>
+      <img>foto_piante/Pyracantha.jpg</img>
+      <quantita>6</quantita>
+    </pianta>
+    <pianta>
+      <nome_pianta>Mirto</nome_pianta>
+      <descrizione>provienente dal sud-est della Cina, dal Giappone e dal Vietnam, cresce in boschi radi fino a 1000 m di altitudine. Con la tecnica del bonsai, è una pianta che regala tante soddisfazioni, sia in termini estetici che di semplicità di cura. Infatti, le sue piccolissime e graziose foglie gli conferiscono una grande armonia e lo rendono di grande valore decorativo.</descrizione>
+      <prezzo>54.99</prezzo>
+      <img>foto_piante/mirto.jpg</img>
+      <quantita>6</quantita>
+    </pianta>
+  </categoria>
+  <categoria>
+    <foto>foto_categorie/orchidea.jpg</foto>
+    <nome>Orchidee</nome>
+    <descrizione>Le orchidee, gioielli della natura, sono il simbolo dell'eleganza e della bellezza esotica. Con le loro forme delicate e fiori straordinariamente affascinanti, queste piante catturano l'essenza della raffinatezza. Aggiungi una nota di lusso e mistero al tuo ambiente con le orchidee, un regalo che incanta gli occhi e nutre l'anima.</descrizione>
+    <pianta>
+      <nome_pianta>Orchidea Rosa</nome_pianta>
+      <descrizione>Questa varietà di Orchidea Phalaenopsis non ha bisogno di presentazioni: splendidi fiori che sbocciano tutto l'anno, un raffinato colore rosa e una forte personalità.È una delle piante più diffuse, conosciute ed acquistate per decorare gli interni in modo sofisticato. Quest’orchidea tropicale si adatta facilmente a tutti gli ambienti domestici ma, seppur sia molto facile da curare, richiede alcune attenzioni per poter essere così decorativa e splendente.</descrizione>
+      <prezzo>47.99</prezzo>
+      <img>foto_categorie/orchidea.jpg</img>
+      <quantita>6</quantita>
+    </pianta>
+    <pianta>
+      <nome_pianta>Orchidea Bianca</nome_pianta>
+      <descrizione>Questa varietà di Orchidea Phalaenopsis non ha bisogno di presentazioni: splendidi fiori che sbocciano tutto l'anno, un meraviglioso bianco candido e una forte personalità. È una delle piante più diffuse, conosciute ed acquistate per decorare gli interni in modo sofisticato. Quest’orchidea tropicale si adatta facilmente a tutti gli ambienti domestici ma, seppur sia molto facile da curare, richiede alcune attenzioni per poter essere così decorativa e splendente.</descrizione>
+      <prezzo>54.99</prezzo>
+      <img>foto_piante/orchibianca.jpg</img>
+      <quantita>6</quantita>
+    </pianta>
+    <pianta>
+      <nome_pianta>Ariel</nome_pianta>
+      <descrizione>È una delle piante più diffuse, conosciute ed acquistate per decorare gli interni e si adatta facilmente a tutti gli ambienti domestici.Un must per gli appassionati delle orchidee che vogliono sperimentare questa nuova tecnica e, allo stesso tempo, valorizzare l’appartamento. </descrizione>
+      <prezzo>49.99</prezzo>
+      <img>foto_piante/ariel.jpg</img>
+      <quantita>6</quantita>
+    </pianta>
+    <pianta>
+      <nome_pianta>Preziosa Orchidea</nome_pianta>
+      <descrizione>È una delle piante più diffuse, conosciute ed acquistate per decorare gli interni in modo sofisticato. Quest’orchidea tropicale si adatta facilmente a tutti gli ambienti domestici ma, seppur sia molto facile da curare, richiede alcune attenzioni per poter essere così decorativa e splendente. </descrizione>
+      <prezzo>119</prezzo>
+      <img>foto_piante/prez.jpg</img>
+      <quantita>6</quantita>
+    </pianta>
+    <pianta>
+      <nome_pianta>Odette</nome_pianta>
+      <descrizione>È una delle piante più diffuse, conosciute ed acquistate per decorare gli interni in modo sofisticato. Quest’orchidea tropicale si adatta facilmente a tutti gli ambienti domestici ma, seppur sia molto facile da curare, richiede alcune attenzioni per poter essere così decorativa e splendente. </descrizione>
+      <prezzo>39.99</prezzo>
+      <img>foto_piante/odette.jpg</img>
+      <quantita>6</quantita>
+    </pianta>
+  </categoria>
+  <categoria>
+    <foto>foto_categorie/esterno.jpg</foto>
+    <nome>Piante da Esterno</nome>
+    <descrizione>Le piante da esterno sono il segreto per trasformare il tuo giardino o balcone in un paradiso verde. Con una vasta gamma di specie, colori e texture, queste piante aggiungono vita, freschezza e bellezza al tuo spazio esterno. Scegli le piante da esterno per creare un ambiente accogliente e rigoglioso, dove potrai rilassarti e godere della natura nel comfort del tuo spazio all'aperto.</descrizione>
+    <pianta>
+      <nome_pianta>Calathea</nome_pianta>
+      <descrizione>La calathea e una pianta sempreverde di origine tropicale.La particolarità di questa pianta sono le sue foglie, la parte superiore è caratterizzata dallevarie sfumature dei verdi, gialli, bianco e argento; la parte inferiore nei toni del rosso.</descrizione>
+      <prezzo>20</prezzo>
+      <img>foto/Calathea.avif</img>
+      <quantita>6</quantita>
+    </pianta>
+    <pianta>
+      <nome_pianta>Calathea</nome_pianta>
+      <descrizione>La calathea e una pianta sempreverde di origine tropicale.La particolarità di questa pianta sono le sue foglie, la parte superiore è caratterizzata dallevarie sfumature dei verdi, gialli, bianco e argento; la parte inferiore nei toni del rosso.</descrizione>
+      <prezzo>20</prezzo>
+      <img>foto/Calathea.avif</img>
+      <quantita>6</quantita>
+    </pianta>
+  </categoria>
+  <categoria>
+    <foto>foto_categorie/fiori.jpg</foto>
+    <nome>Fiori</nome>
+    <descrizione>I fiori sono l'essenza stessa della bellezza e dell'eleganza. Con i loro colori vivaci e fragranze avvolgenti, trasformano ogni momento in un'esperienza straordinaria. Scegli i fiori per esprimere amore, gioia e gratitudine, regalando un tocco di natura e magia a ogni occasione.</descrizione>
+    <pianta>
+      <nome_pianta>Calathea</nome_pianta>
+      <descrizione>La calathea e una pianta sempreverde di origine tropicale.La particolarità di questa pianta sono le sue foglie, la parte superiore è caratterizzata dallevarie sfumature dei verdi, gialli, bianco e argento; la parte inferiore nei toni del rosso.</descrizione>
+      <prezzo>20</prezzo>
+      <img>foto/Calathea.avif</img>
+      <quantita>6</quantita>
+    </pianta>
+    <pianta>
+      <nome_pianta>Calathea</nome_pianta>
+      <descrizione>La calathea e una pianta sempreverde di origine tropicale.La particolarità di questa pianta sono le sue foglie, la parte superiore è caratterizzata dallevarie sfumature dei verdi, gialli, bianco e argento; la parte inferiore nei toni del rosso.</descrizione>
+      <prezzo>20</prezzo>
+      <img>foto/Calathea.avif</img>
+      <quantita>6</quantita>
+    </pianta>
+  </categoria>
+</categorie>

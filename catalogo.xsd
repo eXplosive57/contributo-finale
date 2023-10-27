@@ -8,6 +8,7 @@
             <xsd:sequence>
         <xsd:element name="foto" type="xs:string"/>
         <xsd:element name="nome" type="xs:string"/>
+        <xsd:element name="descrizione" type="xs:string"/>
         <xsd:element name="pianta" maxOccurs="unbounded">
           <xsd:complexType>
             <xsd:sequence>

@@ -47,7 +47,7 @@ if(isset($_SESSION['carrello']))
 <a href="index.php">
 <img src="foto/leaf.png" alt="Logo" class="logo" >
 </a>
-<b style='margin-left:-50px;' class='green'>GREEN HOUSE</b>
+<b style='margin-left:0px;' class='green'>GREEN HOUSE</b>
 <?php
 }else if($_SESSION['tipo'] == 0){
   ?><div class='header'>
@@ -64,7 +64,7 @@ if(isset($_SESSION['carrello']))
       $row5 = mysqli_fetch_array($result5);
       $_SESSION['crediti'] = $row5['crediti'];
       ?>
-    <b style='margin-left:250px;'>CREDITI <?php echo $_SESSION['crediti']?></b>
+    <b style='margin-left:350px;'>CREDITI <?php echo $_SESSION['crediti']?></b>
     <?php }?>
   
       <nav class='navbar'>
@@ -88,7 +88,7 @@ if(isset($_SESSION['carrello']))
        <a href="utenti.php">LISTA UTENTI</a>
        <a href="faq.php">FAQ</a>
 <?php } ?>
-<a href="faq.php">FAQ</a>
+
         <a href="logout.php">LOGOUT</a>
         <?php
         if ($_SESSION['tipo'] == 1) {
@@ -121,14 +121,15 @@ $categorie = $xmlDoc->getElementsByTagName("categoria");
   foreach ($categorie as $categoria) {
     $nome = $categoria->getElementsByTagName("nome")->item(0)->nodeValue;
     $foto = $categoria->getElementsByTagName("foto")->item(0)->nodeValue;
+    $desc = $categoria->getElementsByTagName("descrizione")->item(0)->nodeValue;
     ?>
-    <div class="card">
+    <div class="card" >
         <img src="<?php echo $foto ?>" alt="">
         <div class="card-body">
             <h1><?php echo $nome ?></h1>
-            <p>descrizione!!!!</p>
-            <form style='text-align:center;' action="catalogo.php" method="post">
-              <button class="verde" name='valore' value='<?php echo$nome?>'>Esplora<span>&#10230;</span></button>
+            <p><?php echo $desc ?></p>
+            <form style='text-align:center;style="position: absolute; bottom: 70px;' action="catalogo.php" method="post">
+              <button ' class="verde" name='valore' value='<?php echo$nome?>'>Esplora<span>&#10230;</span></button>
             </form>
         </div>
     </div>

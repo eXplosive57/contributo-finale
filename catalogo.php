@@ -3,8 +3,10 @@
 
 include('config.php');
 $con = new mysqli($host,$userName,$password,$dbName);
-
-
+session_start();
+if(!isset($_SESSION['loggato']) || $_SESSION['loggato'] !== true){
+  header('location:accesso.php');
+}
 
 
 
@@ -24,14 +26,8 @@ $con = new mysqli($host,$userName,$password,$dbName);
 
 <body>
   <?php
-  session_start();
-if($_SESSION['tipo'] == 1){
-$nome_= $_SESSION['nome'];
-$sql5 = "SELECT crediti FROM utenti WHERE nome = '$nome_'";
-$result5 = $con->query($sql5);
-$row5 = mysqli_fetch_array($result5);
-$_SESSION['crediti'] = $row5['crediti'];
-}
+  
+
 
 //controllo sulla variabile 'loggato'
 if(!isset($_SESSION['loggato']) || $_SESSION['loggato'] !== true){
@@ -53,7 +49,13 @@ if(!isset($_SESSION['loggato']) || $_SESSION['loggato'] !== true){
       }
   else{
       
-
+    if($_SESSION['tipo'] == 1){
+      $nome_= $_SESSION['nome'];
+      $sql5 = "SELECT crediti FROM utenti WHERE nome = '$nome_'";
+      $result5 = $con->query($sql5);
+      $row5 = mysqli_fetch_array($result5);
+      $_SESSION['crediti'] = $row5['crediti'];
+      }
 $count = 0;
 if(isset($_SESSION['carrello']))
 {
@@ -65,7 +67,7 @@ if(isset($_SESSION['carrello']))
   </a>
     <?php 
     if($_SESSION['tipo'] == 0){
-      ?><b style='margin-left:-500px' class='green'>GREEN HOUSE</b>
+      ?><b style='margin-left:-420px' class='green'>GREEN HOUSE</b>
       <?php
     }else{
       if($_SESSION['tipo'] == 1){
@@ -84,7 +86,7 @@ if(isset($_SESSION['carrello']))
       ?>
     <b style='margin-left:250px;'>CREDITI <?php echo $_SESSION['crediti']?></b>
     <?php }?>
-    <a href="#catalogo">CATALOGO</a>
+    
     <a href="richiesta_cre.php">RICHIEDI CREDITI</a>
   
     <?php
@@ -114,8 +116,9 @@ $xmlDoc = new DOMDocument();
 $xmlDoc->load("catalogo.xml");
 
 $categorie = $xmlDoc->getElementsByTagName("categoria");
-?>
 
+
+?>
 
 
   <div id='catalogo' class='secondo'>
@@ -157,6 +160,7 @@ $categorie = $xmlDoc->getElementsByTagName("categoria");
               <input name="prezzo" hidden value = "<?php echo $prezzo; ?>">
               
             <?php
+            
               if($_SESSION['tipo'] == 1) {
                 if($qnt>0){
                   ?>
@@ -166,7 +170,7 @@ $categorie = $xmlDoc->getElementsByTagName("categoria");
             if($_SESSION['tipo'] == 1){
               if($prezzo > ($_SESSION['crediti']))
               {?>
-                <button class='nascosto'style=margin-top:10px; type="submit" name="aggiungi" title="" disabled >Crediti Insufficienti</button>
+                <button class='nascosto'style='margin-top:10px; margin-left:100px' type="submit" name="aggiungi" title="" disabled >Crediti Insufficienti</button>
                 <?php
               }
               else{?>
@@ -187,6 +191,7 @@ $categorie = $xmlDoc->getElementsByTagName("categoria");
     }
   }
 }
+
   
   ?>
     </div> 

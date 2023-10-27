@@ -105,8 +105,7 @@ if(isset($_SESSION['carrello']))
         unset($_SESSION['acq']);
       }
 
-
-
+      $_SESSION['piante_nel_carrello'] = array();
 //controllo sulla variabile 'loggato'
 if(!isset($_SESSION['loggato']) || $_SESSION['loggato'] !== true){
     header("location: accesso.php");
@@ -140,6 +139,14 @@ if(!isset($_SESSION['loggato']) || $_SESSION['loggato'] !== true){
       
   foreach($_SESSION['carrello'] as $key => $value)
   {
+    //mi salvo tutte le info delle piante del carrello
+    $pianta = array(
+      'nome' => $value["Nome"],
+      'quantita' => $value["Quantita"]
+    );
+
+    // Aggiungi questa pianta all'array delle piante nel carrello
+    $_SESSION['piante_nel_carrello'][] = $pianta;
     $totale = $totale + ($value["Prezzo"] * $value["Quantita"]);
     ?>
     <tr>
@@ -184,9 +191,14 @@ if(!isset($_SESSION['loggato']) || $_SESSION['loggato'] !== true){
         ?>
         
         <td colspan="4"></td>
-        
+        <td>
+          <label class='switch'>Spedizione con Corriere Express <bR><br>
+            <input type='checkbox'>
+            <span class='slider'></span>
+          </label>
+        </td>
         <td class="centrato-totale">
-          <?php echo $totale ?>$<form action ='svuota.php' method='POST'>
+          <?php echo $totale ?>$<br><br><form action ='svuota.php' method='POST'>
             <?php
             if($totale>$_SESSION['crediti']){
               ?>
@@ -197,8 +209,11 @@ if(!isset($_SESSION['loggato']) || $_SESSION['loggato'] !== true){
                 <button class='blu' name='svuota' type="submit">EFFETTUA ORDINE</button></td>
                 <input type="hidden" id="qnt" name="qnt" value="<?php echo $totale ?>">
                 <input type='hidden' name='nome' value='<?php echo $_SESSION['nome']?>'>
+                <input type='hidden' name='nome_pianta' value='<?php echo $value["Nome"]?>'>
+                <input type='hidden' name='numero_piante' value='<?php echo $value["Quantita"]?>'>
             </form> 
         </td>
+        
     
   <?php
 }
