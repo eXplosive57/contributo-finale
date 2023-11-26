@@ -78,10 +78,15 @@ $richieste = $xmlDoc->getElementsByTagName("richiesta");
             </section>
 <?php
 foreach ($richieste as $richiesta) {
+
+  $esito = $richiesta->getElementsByTagName("esito")->item(0)->textContent;
+    if($esito == 1) {
+
     $nome = $richiesta->getElementsByTagName("nome")->item(0)->textContent;
     $cognome = $richiesta->getElementsByTagName("cognome")->item(0)->textContent;
     $qnt = $richiesta->getElementsByTagName("qnt")->item(0)->textContent;
     $id = $richiesta->getElementsByTagName("id")->item(0)->textContent;
+    
 
 ?>
 
@@ -104,7 +109,7 @@ foreach ($richieste as $richiesta) {
             <button class="blu" type="submit">RIFIUTA</button></button></td>
           </form></td>
     </tr>
-<?php }?>
+<?php }}?>
 </div>
 </table>
 

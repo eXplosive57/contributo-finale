@@ -71,7 +71,7 @@ if(isset($_SESSION['carrello']))
       <?php
     }else{
       if($_SESSION['tipo'] == 1){
-      ?><b style='margin-left:-120px;' class='green'>GREEN HOUSE</b><?php
+      ?><b style='margin-left:-250px;' class='green'>GREEN HOUSE</b><?php
     }}
     ?>
     

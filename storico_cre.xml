@@ -1,24 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <storico_cre xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="storico_cre.xsd">
   <richiesta>
-    <id>1</id>
-    <id_utente>14</id_utente>
-    <nome>Mario</nome>
-    <cognome>Rossi</cognome>
-    <qnt>23</qnt>
-  </richiesta>
-  <richiesta>
-    <id>2</id>
-    <id_utente>15</id_utente>
-    <nome>Luca</nome>
-    <cognome>Verdi</cognome>
-    <qnt>44</qnt>
-  </richiesta>
-  <richiesta>
     <id>3</id>
     <id_utente>16</id_utente>
     <nome>Luigi</nome>
     <cognome>Lucio</cognome>
     <qnt>120</qnt>
+    <esito>0</esito>
+  </richiesta>
+  <richiesta>
+    <id>4</id>
+    <id_utente>15</id_utente>
+    <nome>Luca</nome>
+    <cognome>Verdi</cognome>
+    <qnt>2323</qnt>
+    <esito>2</esito>
+  </richiesta>
+  <richiesta>
+    <id>5</id>
+    <id_utente>15</id_utente>
+    <nome>Luca</nome>
+    <cognome>Verdi</cognome>
+    <qnt>12</qnt>
+    <esito>0</esito>
+  </richiesta>
+  <richiesta>
+    <id>6</id>
+    <id_utente>15</id_utente>
+    <nome>Luca</nome>
+    <cognome>Verdi</cognome>
+    <qnt>232342342423</qnt>
+    <esito>0</esito>
+  </richiesta>
+  <richiesta>
+    <id>7</id>
+    <id_utente>15</id_utente>
+    <nome>Luca</nome>
+    <cognome>Verdi</cognome>
+    <qnt>99</qnt>
+    <esito>2</esito>
   </richiesta>
 </storico_cre>

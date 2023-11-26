@@ -55,12 +55,12 @@
 
     <div class="input-box">
     <label for="mail">Indirizzo Mail</label>
-    <input type="text" name="mail" id="mail" required>
+    <input type="email" name="mail" id="mail" required>
     </div>
 
     <div class="input-box">
     <label for="telefono">Numero di Telefono</label>
-    <input type="text" name="telefono" id="telefono" required>
+    <input type="number" name="telefono" id="telefono" required>
     </div>
 
     <div class="input-box">
@@ -83,7 +83,12 @@
     <a style='margin-left:250px;'href="accesso.php"><button type="button" class='nero' >ACCEDI</button>
 
 </form>
+
+
 </div>
+
+
 </body>
 
 <html>
+

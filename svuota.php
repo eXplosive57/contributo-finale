@@ -20,9 +20,53 @@ if(isset($_SESSION['id']) && isset($_POST['svuota']))
         unset($_SESSION['carrello']);
 
         foreach ($_SESSION['piante_nel_carrello'] as $key => $value) {
+            
+
+            $nome_pianta = $value['nome'];
+            $numero_piante = $value['quantita']; 
+            $dataCorrente = date("Y-m-d H:i:s");
+
+            $xmlFile = "storico_acq.xml";
+            $xmlstring = "";
+            
+            foreach(file($xmlFile) as $nodo){   //Leggo il contenuto del file XML
+            
+                $xmlstring.= trim($nodo); 
+            }
+            
+            $xmlDoc = new DOMDocument();
+            $xmlDoc->loadXML($xmlstring);
+
+            $storicoAcq = $xmlDoc->getElementsByTagName("storico_acq")->item(0);
+
+                        $ultimarichiestaid = 0;
+                        $acqelem = $xmlDoc->getElementsByTagName("acq");
+                        //se c'é almeno una richiesta
+                        if ($acqelem->length > 0) {
+                            $ultimoacq = $acqelem->item($acqelem->length-1);
+                            $ultimoacqid = $ultimoacq->getElementsByTagName("id")->item(0)->textContent;
+                        }
+                        $idaggiornato = $ultimoacqid + 1;
+
+                        $acq = $xmlDoc->createElement("acq");
+                        
+                        $nome_pianta_ = $xmlDoc->createElement("nome_prodotto", $nome_pianta);
+                        $data = $xmlDoc->createElement("data_acquisto", $dataCorrente);
+                        $id = $xmlDoc->createElement("id", $idaggiornato);
+                        $id_ute = $xmlDoc->createElement("id_utente", $_SESSION['id']);
+                        
+                        $acq->appendChild($id);
+                        $acq->appendChild($id_ute);
+                        $acq->appendChild($nome_pianta_);
+                        $acq->appendChild($data);
+
+                        $storicoAcq->appendChild($acq);
+                        $xmlDoc->formatOutput = true;
+                        $xml = $xmlDoc->saveXML();
+                        file_put_contents($xmlFile, $xml);
+            
                 
-                $nome_pianta = $value['nome'];
-                $numero_piante = $value['quantita'];   
+  
                 $xmlDoc = new DOMDocument();
                 $xmlDoc->load("catalogo.xml");
         
@@ -59,7 +103,6 @@ if(isset($_SESSION['id']) && isset($_POST['svuota']))
                           }
                         
 
-    $_SESSION['acq'] = "ACQUISTO EFFETTUATO!";
     header("location: carrello.php");
     
                         }}

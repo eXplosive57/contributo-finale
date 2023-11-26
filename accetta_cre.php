@@ -6,7 +6,7 @@ session_start();
 
 $qnt = $con->real_escape_string($_POST['qnt']);
 $nome = $con->real_escape_string($_POST['nome']);
-$id = $con->real_escape_string($_POST['id']);
+$id_da_aggiornare = $con->real_escape_string($_POST['id']);
 
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
     if (isset($_POST['form_name']) && $_POST['form_name'] === 'form1') {
@@ -21,12 +21,16 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             $xmlDoc = new DOMDocument();
             $xmlDoc->load("storico_cre.xml");
 
-            $xpath = new DOMXPath($xmlDoc);
-            $nodesToRemove = $xpath->query("//richiesta[id = '$id']");
+            $richieste = $xmlDoc->getElementsByTagName("richiesta");
+            foreach ($richieste as $richiesta) {
+                $id = $richiesta->getElementsByTagName("id")->item(0)->textContent;
 
-            foreach ($nodesToRemove as $node) {
-                $node->parentNode->removeChild($node);
-            }
+                if($id == $id_da_aggiornare ){
+                    $campo_da_aggiornare = $richiesta->getElementsByTagName("esito")->item(0);
+                    $campo_da_aggiornare->nodeValue = "0";
+                }
+
+
             $xmlDoc->save("storico_cre.xml");
 
             
@@ -36,6 +40,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         }
     }
 }
+}
 
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
     if (isset($_POST['form_name']) && $_POST['form_name'] === 'form2') {
@@ -44,12 +49,15 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             $xmlDoc = new DOMDocument();
             $xmlDoc->load("storico_cre.xml");
 
-            $xpath = new DOMXPath($xmlDoc);
-            $nodesToRemove = $xpath->query("//richiesta[id = '$id']");
+            $richieste = $xmlDoc->getElementsByTagName("richiesta");
+            foreach ($richieste as $richiesta) {
+                $id = $richiesta->getElementsByTagName("id")->item(0)->textContent;
 
-            foreach ($nodesToRemove as $node) {
-                $node->parentNode->removeChild($node);
-            }
+                if($id == $id_da_aggiornare ){
+                    $campo_da_aggiornare = $richiesta->getElementsByTagName("esito")->item(0);
+                    //esito = 2 indica che la richiestra é stata rifiutata
+                    $campo_da_aggiornare->nodeValue = "2";
+                }
             $xmlDoc->save("storico_cre.xml");
 
             
@@ -58,32 +66,6 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             
         }
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+}
 
 ?>

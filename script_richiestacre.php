@@ -43,12 +43,14 @@ $idUtente = $xmlDoc->createElement("id_utente", $_SESSION['id']);
 $nome = $xmlDoc->createElement("nome", $_SESSION['nome']);
 $cognome = $xmlDoc->createElement("cognome", $_SESSION['cognome']);
 $qnt = $xmlDoc->createElement("qnt", $cre);
+$esito = $xmlDoc->createElement("esito", 1);
 
 $richiesta->appendChild($id);
 $richiesta->appendChild($idUtente);
 $richiesta->appendChild($nome);
 $richiesta->appendChild($cognome);
 $richiesta->appendChild($qnt);
+$richiesta->appendChild($esito);
 
 $storicoCre->appendChild($richiesta);
 $xmlDoc->formatOutput = true;

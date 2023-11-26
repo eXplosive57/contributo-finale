@@ -44,7 +44,8 @@ if ($con->query($utente) === FALSE) {
 
 
 $insert_utente = "INSERT INTO `Utenti` (`id`,`nome`, `cognome`,`mail`,`cf`,`telefono`,`indirizzo`, `crediti`,`password`, `Tipo`) VALUES
-('1','Admin', NULL, NULL,NULL,NULL,NULL,NULL,'" . password_hash('Admin', PASSWORD_DEFAULT) . "', 0)";
+('1','Admin', NULL, NULL,NULL,NULL,NULL,NULL,'" . password_hash('Admin', PASSWORD_DEFAULT) . "', 0),
+('2','Gestore', NULL, NULL,NULL,NULL,NULL,NULL,'" . password_hash('Admin', PASSWORD_DEFAULT) . "', 2)";
 
 if ($con->query($insert_utente) === FALSE) {
     echo "Errore nell'inserimento degli utenti " . $con->error;

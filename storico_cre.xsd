@@ -17,6 +17,7 @@
         <xsd:element ref="nome"/>
         <xsd:element ref="cognome"/>
         <xsd:element ref="qnt"/>
+        <xsd:element ref="esito"/>
       </xsd:sequence>
     </xsd:complexType>
   </xsd:element>
@@ -27,5 +28,6 @@
   <xsd:element name="nome" type="string"/>
   <xsd:element name="cognome" type="string"/>
   <xsd:element name="qnt" type="positiveInteger"/>
+  <xsd:element name="id_utente" type="integer"/>
 
 </xsd:schema>

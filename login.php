@@ -85,6 +85,11 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                 $row2 = mysqli_fetch_array($result2);
                 $_SESSION['tipo'] = $row2['Tipo'];
 
+                $sql3 = "SELECT id FROM utenti WHERE nome = '$nome' ";
+                $result3 = $con->query($sql3);
+                $row3 = mysqli_fetch_array($result3);
+                $_SESSION['id'] = $row3['id'];
+
                 header("location: index.php");
                 
                 

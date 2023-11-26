@@ -1,9 +1,12 @@
 <?php
+
 include('config.php');
 $con = new mysqli($host,$userName,$password,$dbName);
 session_start();
+if(!isset($_SESSION['loggato']) || $_SESSION['loggato'] !== true){
+  header('location:accesso.php');
+}
 ?>
-
 
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
@@ -12,8 +15,16 @@ session_start();
 
 <head>
 
-    <title>HOME</title>
+    <title>Richieste</title>
     <link rel="stylesheet" href="index.css" />
+    <style>
+      body {
+    font-family: Arial, sans-serif;
+    background-image: url('foto/wallpaper3.jpg') no-repeat;
+    background-size:cover;
+    
+  }
+    </style>
 </head>
 
 <body>
@@ -106,49 +117,57 @@ if(isset($_SESSION['carrello']))
       </nav>
     </div><?php
   }?>
-  <div class='centro'>
 
-  <div class="headline">
-    <h1>LA TUA OASI VERDE CON UN CLICK</h1>
-    <p style='color:green;'>RIGENERA LA TUA VITA CON LA BELLEZZA DELLE PIANTE</p>
-  </div>
-  <?php
+<?php 
+
+
+
+
+
+
 $xmlDoc = new DOMDocument();
-$xmlDoc->load("catalogo.xml");
+$xmlDoc->load("storico_cre.xml");
 
-$categorie = $xmlDoc->getElementsByTagName("categoria");
+$richieste = $xmlDoc->getElementsByTagName("richiesta");
 ?>
 
+<div class='centro_tab'>
+    <main class='table'>
+      <section class='table_header'>
+        <h1>Stato richieste</h1>
+      </section>
+          <section class="table__body">
+                      <table>
+                          <thead>
+                              <tr>
+                                  <th>QUANTITA</th>
+                                  <th>STATO</th>
+                                  <th></th>
+                              </tr>
+                          </thead>
+                          </tbody>
+                      
+            </section>
+<?php
+foreach ($richieste as $richiesta) {
+    $nome = $richiesta->getElementsByTagName("nome")->item(0)->textContent;
+    $esito = $richiesta->getElementsByTagName("esito")->item(0)->textContent;
+    $qnt = $richiesta->getElementsByTagName("qnt")->item(0)->textContent;
 
+    if ($nome == $_SESSION['nome']) {
+        echo '<tr>';
+        echo '<td>' . $qnt . ' Crediti</td>';
 
-<div id='catalogo'class='secondo'>
-    <div class="container">
-    <?php
-  foreach ($categorie as $categoria) {
-    $nome = $categoria->getElementsByTagName("nome")->item(0)->nodeValue;
-    $foto = $categoria->getElementsByTagName("foto")->item(0)->nodeValue;
-    $desc = $categoria->getElementsByTagName("descrizione")->item(0)->nodeValue;
-    ?>
-    <div class="card" >
-        <img src="<?php echo $foto ?>" alt="">
-        <div class="card-body">
-            <h1><?php echo $nome ?></h1>
-            <p><?php echo $desc ?></p>
-            <form style='text-align:center;style="position: absolute; bottom: 70px;' action="catalogo.php" method="post">
-              <button ' class="verde" name='valore' value='<?php echo$nome?>'>Esplora<span>&#10230;</span></button>
-            </form>
-        </div>
-    </div>
-    
-  <?php
-      }
+        if ($esito == 0) {
+            echo '<td><button class="verde">ACCETTATA</button></td>';
+        } elseif ($esito == 2) {
+            echo '<td><button class="rosso">RIFIUTATA</button></td>';
+        }
 
-  ?>
-    </div> 
-    
-  </div>
-  </div>
+        echo '</tr>';
+    }
+    }?>
+</div>
+</table>
 
 </body>
-
-</html>

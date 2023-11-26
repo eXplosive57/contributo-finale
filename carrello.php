@@ -40,42 +40,95 @@ if(isset($_SESSION['carrello']))
 </head>
 
 <body>
-<div class='header'>
+<?php
+//controllo sulla variabile 'loggato'
+if(!isset($_SESSION['loggato']) || $_SESSION['loggato'] !== true){
+  //se non sono loggato mpstro una navbar diversa
+  ?>
+  <div class='header'>
   <a href="index.php">
     <img src="foto/leaf.png" alt="Logo" class="logo" >
   </a>
-    <b style=margin-right:100px; class='green'>GREEN HOUSE</b>
+    <b style=margin-right:1310px; class='green'>GREEN HOUSE</b>
+  
+      <nav class='navbar'>
+    <a href="#catalogo">CATALOGO</a>
+    <a href="accesso.php">ACCEDI</a>
+      </nav>
+    </div>
     <?php
-    if($_SESSION['tipo'] == 1){
+  //caso in cui sono loggato
+      }
+  else{
+
+$count = 0;
+if(isset($_SESSION['carrello']))
+{
+  $count=count($_SESSION['carrello']);
+}?><?php if($_SESSION['tipo'] == 1){
+?><div class='header'>
+<a href="index.php">
+<img src="foto/leaf.png" alt="Logo" class="logo" >
+</a>
+<b style='margin-left:0px;' class='green'>GREEN HOUSE</b>
+<?php
+}else if($_SESSION['tipo'] == 0){
+  ?><div class='header'>
+<a href="index.php">
+<img src="foto/leaf.png" alt="Logo" class="logo" >
+</a>
+<b style='margin-left:-650px' class='green'>GREEN HOUSE</b>
+<?php }
+    
+     if($_SESSION['tipo'] == 1){
       $nome_= $_SESSION['nome'];
       $sql5 = "SELECT crediti FROM utenti WHERE nome = '$nome_'";
       $result5 = $con->query($sql5);
       $row5 = mysqli_fetch_array($result5);
       $_SESSION['crediti'] = $row5['crediti'];
       ?>
-    <b style='margin-left:250px;'>CREDITI <?php echo $_SESSION['crediti']?></b>
+    <b style='margin-left:350px;'>CREDITI <?php echo $_SESSION['crediti']?></b>
     <?php }?>
-      <nav class='navbar'>
   
+      <nav class='navbar'>
+        <?php
+          if ($_SESSION['tipo'] == 1) {
+          ?>
+                <div class="dropdown">
+      <button class="dropbtn">SERVIZI</button>
+      <div class="dropdown-content">
+        <a class="testo" href="richiesta_cre.php">RICHIEDI CREDITI</a>
+        <a class="testo" href="faq.php">FAQ</a>
+        <a class="testo" href="stato_richieste.php">Stato richieste</a>
+      </div>
+    </div>
+                <a href="#catalogo">CATALOGO</a>
+
+            <?php } ?>
+    
+
     <?php
             
             if ($_SESSION['tipo'] == 0) {
-        
-        ?>
-        <a href="form_inserimento_pianta.php">INSERISCI PIANTA</a>
-        <?php } ?>
-        <a href="index.php">CATEGORIE</a>
-        <a href="richiesta_cre.php">RICHIEDI CREDITI</a>
-        <a href="faq.php">FAQ</a>
+    
+    ?>
+       <a href="form_inserimento_pianta.php">INSERISCI PIANTA</a>
+       <a href="loadrichieste.php">VISUALIZZA RICHIESTE</a>
+       <a href="utenti.php">LISTA UTENTI</a>
+       <a href="faq.php">FAQ</a>
+<?php } ?>
+
         <a href="logout.php">LOGOUT</a>
-        <a>Sei loggato come, <?php echo $_SESSION['nome'] . ' ' . $_SESSION['cognome'] ?></a>
-        <?php if($_SESSION['tipo'] == 1) {
-          ?>
-        <a href="carrello.php">CARRELLO (<?php echo $count ?>)</a><?php
+        <?php
+        if ($_SESSION['tipo'] == 1) {
+        ?>
+            <a>Sei loggato come, <?php echo $_SESSION['nome'] . ' ' . $_SESSION['cognome'] ?></a>
+            <a href="carrello.php">CARRELLO (<?php echo $count ?>)</a><?php
         }
         ?> 
       </nav>
-    </div>
+    </div><?php
+  }?>
 
 <?php 
       if(isset($_SESSION['esiste'])) {

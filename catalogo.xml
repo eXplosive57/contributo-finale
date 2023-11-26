@@ -9,7 +9,7 @@
       <descrizione>La Sansevieria, appartenente alla famiglia delle Liliaceae, è una pianta ornamentale per interni molto diffusa. È conosciuta anche come lingua di suocera, per la punta acuminata delle foglie. Queste, infatti, hanno una bellissima forma allungata verticalmente di colore verde scuro con bordi tendenti al giallo.</descrizione>
       <prezzo>32.99</prezzo>
       <img>foto_piante/nagini.jpg</img>
-      <quantita>14</quantita>
+      <quantita>7</quantita>
     </pianta>
     <pianta>
       <nome_pianta>Aloe Vera</nome_pianta>
@@ -139,18 +139,31 @@
     <nome>Piante da Esterno</nome>
     <descrizione>Le piante da esterno sono il segreto per trasformare il tuo giardino o balcone in un paradiso verde. Con una vasta gamma di specie, colori e texture, queste piante aggiungono vita, freschezza e bellezza al tuo spazio esterno. Scegli le piante da esterno per creare un ambiente accogliente e rigoglioso, dove potrai rilassarti e godere della natura nel comfort del tuo spazio all'aperto.</descrizione>
     <pianta>
-      <nome_pianta>Calathea</nome_pianta>
-      <descrizione>La calathea e una pianta sempreverde di origine tropicale.La particolarità di questa pianta sono le sue foglie, la parte superiore è caratterizzata dallevarie sfumature dei verdi, gialli, bianco e argento; la parte inferiore nei toni del rosso.</descrizione>
-      <prezzo>20</prezzo>
-      <img>foto/Calathea.avif</img>
-      <quantita>6</quantita>
+      <nome_pianta>Limone a spalliera</nome_pianta>
+      <descrizione>Pianta originaria del Medio Oriente il cui nome deriva dal termine arabo "Limun", ossia Agrumi.
+
+E' una pianta che produce meravigliosi fiori bianchi molto profumati, maturi o acerbi secondo la stagione, tutto l'anno.</descrizione>
+      <prezzo>64.99</prezzo>
+      <img>foto_piante/limone.jpg</img>
+      <quantita>60</quantita>
     </pianta>
     <pianta>
-      <nome_pianta>Calathea</nome_pianta>
-      <descrizione>La calathea e una pianta sempreverde di origine tropicale.La particolarità di questa pianta sono le sue foglie, la parte superiore è caratterizzata dallevarie sfumature dei verdi, gialli, bianco e argento; la parte inferiore nei toni del rosso.</descrizione>
-      <prezzo>20</prezzo>
-      <img>foto/Calathea.avif</img>
-      <quantita>6</quantita>
+      <nome_pianta>Camelia</nome_pianta>
+      <descrizione>Una pianta dalle origini tropicali, la Camelia prende il suo nome dal missionario e botanico Georg Joseph Kamel che importà la suddetta pianta.
+
+Oltre ad avere un aspetto molto elegante, nel linguaggio dei fiori assume il significato di "perfetta bellezza" per cui è simbolo di stima, devozione e apprezzamento.</descrizione>
+      <prezzo>65</prezzo>
+      <img>foto_piante/camelia.jpg</img>
+      <quantita>30</quantita>
+    </pianta>
+    <pianta>
+      <nome_pianta>Kumquat</nome_pianta>
+      <descrizione>Il Kumquat, conosciuto anche come mandarino cinese o fortunella, è una pianta di agrumi originaria della Cina, giunta in Europa nell'800.
+E' caratterizzato da fiori, visibili tra luglio e settembre, che possono essere singoli o riuniti in piccole infiorescenze.
+I suoi frutti si caratterizzano per la forma ovale, a differenza del mandarino che tutti noi conosciamo, e la polpa ha un sapore acidulo.</descrizione>
+      <prezzo>49.99</prezzo>
+      <img>foto_piante/limone.jpg</img>
+      <quantita>23</quantita>
     </pianta>
   </categoria>
   <categoria>
