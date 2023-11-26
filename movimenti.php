@@ -1,5 +1,4 @@
 <?php
-
 include('config.php');
 $con = new mysqli($host,$userName,$password,$dbName);
 session_start();
@@ -48,17 +47,18 @@ if(!isset($_SESSION['loggato']) || $_SESSION['loggato'] !== true){
 
 <?php 
 
+$nome = $con->real_escape_string($_POST['nome']);
+$cognome = $con->real_escape_string($_POST['cognome']);
 
-$sql = "SELECT nome, cognome 
+$sql = "SELECT id
         FROM utenti 
-        WHERE nome <> 'Admin' AND nome <> 'Gestore'";
+        WHERE $nome = nome AND $cognome = cognome";
 $result = $con->query($sql);
-if ($result->num_rows > 0) {
   ?>
   <div class='centro_tab'>
     <main class='table'>
       <section class='table_header'>
-        <h1>GESTIONE UTENTI</h1>
+        <h1>STORICO ACQUISTI</h1>
       </section>
           <section class="table__body">
                       <table>
@@ -66,46 +66,40 @@ if ($result->num_rows > 0) {
                               <tr>
                                   <th>NOME</th>
                                   <th>COGNOME</th>
-                                  <th></th>
-                                  <th></th>
-                                  <th></th>
+                                  <th>PRODOTTO</th>
+                                  <th>DATA</th>
                               </tr>
                           </thead>
                           </tbody>
                       
             </section>
 <?php
-  // Itera attraverso i risultati della query e stampa le righe
-  while ($row = mysqli_fetch_array($result)) {
-    ?>
-      
+  $xmlDoc = new DOMDocument();
+  $xmlDoc->load("storico_acq.xml");
+  
+  $acquisti = $xmlDoc->getElementsByTagName("acq");
 
+  foreach ($acquisti as $acq) {
+    
+    $prodotto = $acq->getElementsByTagName("nome_prodotto")->item(0)->textContent;
+    $data = $acq->getElementsByTagName("data_acquisto")->item(0)->textContent;
+    $id = $acq->getElementsByTagName("id_utente")->item(0)->textContent;
 
     
-    <tr>
-      <td><?php echo $row["nome"] ?></td>
-      <td><?php echo $row["cognome"] ?></td>
-      <td>
-        <form action='form_modifica_profilo.php' method='post'>
-        <input type="hidden" id="nome" name="nome" value="<?php echo $row['nome']; ?>">
-        <input type="hidden" id="cognome" name="cognome" value="<?php echo $row['cognome']; ?>">
-          <button class="blu" type="submit">MODIFICA</button>
-        </form>
-      </td>
-      <td>
-        <form action='movimenti.php' method='post'>
-        <input type="hidden" id="nome" name="nome" value="<?php echo $row['nome']; ?>">
-        <input type="hidden" id="cognome" name="cognome" value="<?php echo $row['cognome']; ?>">
-          <a href='movimenti.php'><button class="blu" type="submit">MOVIMENTI</button></a>
-          </form>
-      </td>
+    
+    //if($id == $result){
         
-      <td><button class="rosso" type="submit">BAN</button></td>
-    </tr>
-<?php }}?>
+   ?>
+      <tr>
+      <td><?php echo $nome ?></td>
+      <td><?php echo $cognome ?></td>
+      <td><?php echo $prodotto ?></td>
+      <td><?php echo $data ?></td>
+      
+      
+    </tr>   
 </div>
+    
+  <?php } ?>
 </table>
-
-
-
 </body>

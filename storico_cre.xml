@@ -40,4 +40,12 @@
     <qnt>99</qnt>
     <esito>2</esito>
   </richiesta>
+  <richiesta>
+    <id>8</id>
+    <id_utente>3</id_utente>
+    <nome>Mario</nome>
+    <cognome>Rossi</cognome>
+    <qnt>976</qnt>
+    <esito>0</esito>
+  </richiesta>
 </storico_cre>

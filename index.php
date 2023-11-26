@@ -49,7 +49,7 @@ if(isset($_SESSION['carrello']))
 </a>
 <b style='margin-left:0px;' class='green'>GREEN HOUSE</b>
 <?php
-}else if($_SESSION['tipo'] == 0){
+}else if($_SESSION['tipo'] == 0 OR $_SESSION['tipo'] == 2){
   ?><div class='header'>
 <a href="index.php">
 <img src="foto/leaf.png" alt="Logo" class="logo" >
@@ -86,11 +86,11 @@ if(isset($_SESSION['carrello']))
 
     <?php
             
-            if ($_SESSION['tipo'] == 0) {
+            if ($_SESSION['tipo'] == 0 OR $_SESSION['tipo'] == 2 ) {
     
     ?>
        <a href="form_inserimento_pianta.php">INSERISCI PIANTA</a>
-       <a href="loadrichieste.php">VISUALIZZA RICHIESTE</a>
+       <a href="loadrichieste.php">RICHIESTE</a>
        <a href="utenti.php">LISTA UTENTI</a>
        <a href="faq.php">FAQ</a>
 <?php } ?>

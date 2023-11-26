@@ -2,14 +2,14 @@
 <storico_acq xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="storico_acq.xsd">
   <acq>
     <id>1</id>
-    <id_utente>15</id_utente>
-    <nome_prodotto>Sansevieria</nome_prodotto>
-    <data_acquisto>2023-11-26 19:48:01</data_acquisto>
+    <id_utente>3</id_utente>
+    <nome_prodotto>Sansevieria Velvet Azzurra</nome_prodotto>
+    <data_acquisto>2023-11-26 20:02:37</data_acquisto>
   </acq>
   <acq>
     <id>2</id>
-    <id_utente>15</id_utente>
-    <nome_prodotto>Sansevieria</nome_prodotto>
-    <data_acquisto>2023-11-26 19:50:57</data_acquisto>
+    <id_utente>3</id_utente>
+    <nome_prodotto>Sansevieria Velvet Azzurra</nome_prodotto>
+    <data_acquisto>2023-11-26 20:28:24</data_acquisto>
   </acq>
 </storico_acq>
