@@ -56,4 +56,12 @@
     <qnt>566</qnt>
     <esito>0</esito>
   </richiesta>
+  <richiesta>
+    <id>10</id>
+    <id_utente>5</id_utente>
+    <nome>emanuele</nome>
+    <cognome>par</cognome>
+    <qnt>500</qnt>
+    <esito>0</esito>
+  </richiesta>
 </storico_cre>

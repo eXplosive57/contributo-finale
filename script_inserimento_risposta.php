@@ -85,7 +85,9 @@ foreach ($domande as $domanda) {
 }
 
 // Salva le modifiche nel file
-$xmlDoc->save($xmlFile);
+$xmlDoc->formatOutput = true;
+$xml = $xmlDoc->saveXML();
+file_put_contents($xmlFile, $xml);
 
 
 

@@ -55,8 +55,10 @@ $domanda->appendChild($nome_da_inserire);
 $domanda->appendChild($data_da_inserire);
 
 $Domande->appendChild($domanda);
+
+
+// Salva le modifiche nel file
 $xmlDoc->formatOutput = true;
-$xml = $xmlDoc->saveXML();
-file_put_contents($xmlFile, $xml);  //sovrascrive il contenuto del vecchio file XML con quello nuovo
+$xmlDoc->save($xmlFile);
 
 header("location: faq.php");
