@@ -1,10 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<faqs xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="catalogo.xsd">
+<faqs xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="faqs.xsd">
   <faq>
     <id>1</id>
     <domanda>Quanta acqua serve per le piante da fiore?</domanda>
     <risposta>devono essere bagnate ogni giorno perché, a differenza delle piante in giardino, non possono sviluppare radici profonde</risposta>
     <creata_da>Mario Rossi</creata_da>
     <data>21-04-2023</data>
+  </faq>
+  <faq>
+    <id>2</id>
+    <domanda>Quanta acqua serve per le piante da fiore?</domanda>
+    <risposta>devono essere bagnate ogni giorno perché, a differenza delle piante in giardino, non possono sviluppare radici profonde</risposta>
+    <creata_da>GSFGSD BB</creata_da>
+    <data>21-04-2023</data>
+  </faq>
+  <faq>
+    <id>3</id>
+    <domanda>Quanta h2o serve per i fiori?</domanda>
+    <risposta>Circa 200 ml ogni 4 giorni.</risposta>
+    <creata_da>Mario Rossi</creata_da>
+    <data>2023-11-29 20:13:17</data>
+  </faq>
+  <faq>
+    <id>4</id>
+    <domanda>Quanat h2o serve per i fiori?</domanda>
+    <risposta>Circa 200 ml ogni 4 giorni.</risposta>
+    <creata_da>Mario Rossi</creata_da>
+    <data>2023-11-29 19:19:57</data>
   </faq>
 </faqs>

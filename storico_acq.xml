@@ -12,4 +12,16 @@
     <nome_prodotto>Sansevieria Velvet Azzurra</nome_prodotto>
     <data_acquisto>2023-11-26 20:28:24</data_acquisto>
   </acq>
+  <acq>
+    <id>3</id>
+    <id_utente>4</id_utente>
+    <nome_prodotto>Sansevieria</nome_prodotto>
+    <data_acquisto>2023-11-28 12:41:22</data_acquisto>
+  </acq>
+  <acq>
+    <id>4</id>
+    <id_utente>4</id_utente>
+    <nome_prodotto>Odette</nome_prodotto>
+    <data_acquisto>2023-11-28 12:41:22</data_acquisto>
+  </acq>
 </storico_acq>

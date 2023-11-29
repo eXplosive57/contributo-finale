@@ -65,6 +65,16 @@ button[type="submit"] {
   cursor: pointer;
   margin-bottom: 20px;
 }
+.giallo {
+  background-color:rgb(215, 168, 12);
+  color: #fff;
+  padding: 5px;
+  border: none;
+  border-radius: 5px;
+  font-size: 15px;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
 .verde span{
   margin-left: 10px;
   width: 0px;
@@ -476,9 +486,13 @@ table, th, td{
   text-align: center;
 }
 
+
+
+
+
 main.table{
-  width: 82vw;
-  height: 90vh;
+  width: auto;
+  height: auto;
   background-color: #fff5;
   border-radius: .9rem;
   box-shadow: 0 .4rem .8rem #0005;
@@ -493,7 +507,7 @@ main.table{
 }
 
 .table__body{
-  width:45%;
+  width:90%;
   max-height: 89%;
   background-color: #fffb;
   margin: 8rem auto;

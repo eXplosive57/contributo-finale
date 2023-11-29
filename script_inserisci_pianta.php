@@ -53,9 +53,6 @@ foreach ($categorie as $categoria) {
                             break;
                     }}
                         if ($piantaEsistente) {
-                        // La pianta esiste già, puoi gestire l'errore o fare altro
-                        // Ad esempio, puoi mostrare un messaggio di errore o reindirizzare
-                        // l'utente a una pagina diversa.
                         header("location: inserimento.php");
                     } else {
                         //altrimenti lo aggiungo

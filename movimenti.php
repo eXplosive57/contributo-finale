@@ -50,22 +50,21 @@ if(!isset($_SESSION['loggato']) || $_SESSION['loggato'] !== true){
 $nome = $con->real_escape_string($_POST['nome']);
 $cognome = $con->real_escape_string($_POST['cognome']);
 
-$sql = "SELECT id
-        FROM utenti 
-        WHERE $nome = nome AND $cognome = cognome";
-$result = $con->query($sql);
+
+
+
+
+  
   ?>
   <div class='centro_tab'>
     <main class='table'>
       <section class='table_header'>
-        <h1>STORICO ACQUISTI</h1>
+        <h1>STORICO ACQUISTI di <?php echo $nome . ' ' . $cognome?></h1>
       </section>
           <section class="table__body">
                       <table>
                           <thead>
                               <tr>
-                                  <th>NOME</th>
-                                  <th>COGNOME</th>
                                   <th>PRODOTTO</th>
                                   <th>DATA</th>
                               </tr>
@@ -80,26 +79,57 @@ $result = $con->query($sql);
   $acquisti = $xmlDoc->getElementsByTagName("acq");
 
   foreach ($acquisti as $acq) {
+
+
     
     $prodotto = $acq->getElementsByTagName("nome_prodotto")->item(0)->textContent;
     $data = $acq->getElementsByTagName("data_acquisto")->item(0)->textContent;
     $id = $acq->getElementsByTagName("id_utente")->item(0)->textContent;
 
+    $sql = "SELECT id FROM utenti WHERE nome = ? AND cognome = ?";
+    $stmt = $con->prepare($sql);
     
-    
-    //if($id == $result){
+    if ($stmt) {
         
+        $stmt->bind_param("ss", $nome, $cognome);
+    
+        
+        $stmt->execute();
+    
+     
+        $result = $stmt->get_result();
+    
+        if ($result) {
+           
+            if ($result->num_rows > 0) {
+                
+                $row = $result->fetch_array(MYSQLI_ASSOC);
+    
+                
+                $_SESSION['id_utente'] = $row['id'];
+            }
+        } else {
+            
+            echo "Errore nella query: " . $stmt->error;
+        }
+    
+        
+        $stmt->close();
+    } else {
+        
+        echo "Errore nella preparazione della query: " . $con->error;
+    }
+
+    if($_SESSION['id_utente'] == $id){
    ?>
       <tr>
-      <td><?php echo $nome ?></td>
-      <td><?php echo $cognome ?></td>
       <td><?php echo $prodotto ?></td>
       <td><?php echo $data ?></td>
       
       
     </tr>   
 </div>
-    
-  <?php } ?>
+  
+  <?php }} ?>
 </table>
 </body>

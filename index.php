@@ -93,6 +93,7 @@ if(isset($_SESSION['carrello']))
        <a href="loadrichieste.php">RICHIESTE</a>
        <a href="utenti.php">LISTA UTENTI</a>
        <a href="faq.php">FAQ</a>
+       <a href="load_domande.php">Domande</a>
 <?php } ?>
 
         <a href="logout.php">LOGOUT</a>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<domande xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="catalogo.xsd">
+  <domanda>
+    <id>1</id>
+    <nome>Quanat h2o serve per i fiori?</nome>
+    <creata_da>Mario Rossi</creata_da>
+    <data>2023-11-29 19:19:57</data>
+  </domanda>
+  <domanda>
+    <id>2</id>
+    <nome>asadasasdasda</nome>
+    <creata_da>Mario Rossi</creata_da>
+    <data>2023-11-29 20:24:39</data>
+  </domanda>
+  <domanda>
+    <id>3</id>
+    <nome>wewew</nome>
+    <creata_da>Mario Rossi</creata_da>
+    <data>2023-11-29 20:25:49</data>
+  </domanda>
+</domande>

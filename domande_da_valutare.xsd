@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+  <xsd:element name="domande">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element ref="domanda" maxOccurs="unbounded"/>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+
+  <xsd:element name="domanda">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element ref="id" />
+        <xsd:element ref="nome"/>
+        <xsd:element ref="creata_da"/>
+        <xsd:element ref="data" />
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+
+
+  <xsd:element name="id" type="integer" />
+  <xsd:element name="nome" type="string"/>
+  <xsd:element name="creata_da" type="string"/>
+  <xsd:element name="data" type="xs:date"/>
+
+</xsd:schema>
