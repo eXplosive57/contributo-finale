@@ -16,23 +16,9 @@
   </faq>
   <faq>
     <id>3</id>
-    <domanda>ciao</domanda>
+    <domanda>aaa</domanda>
     <risposta>Circa 200 ml ogni 4 giorni.</risposta>
     <creata_da>Mario Rossi</creata_da>
-    <data>2023-11-29 21:02:51</data>
-  </faq>
-  <faq>
-    <id>4</id>
-    <domanda>ciao</domanda>
-    <risposta>Circa 200 ml ogni 4 giorni.</risposta>
-    <creata_da>Mario Rossi</creata_da>
-    <data>2023-11-29 21:02:51</data>
-  </faq>
-  <faq>
-    <id>5</id>
-    <domanda>Ma i bonsai si possono mangiare?</domanda>
-    <risposta>Guardi se te la magni poi mori !</risposta>
-    <creata_da>emanuele par</creata_da>
-    <data>2023-11-29 22:05:17</data>
+    <data>2023-11-30 00:20:04</data>
   </faq>
 </faqs>

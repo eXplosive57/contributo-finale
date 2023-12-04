@@ -44,34 +44,35 @@ $domanda = $xmlDoc->createElement("faq");
 
 $id = $xmlDoc->createElement("id", $idaggiornato);
 $domanda_da_inserire = $xmlDoc->createElement("domanda", $nome_domanda_da_inserire);
-$nome_da_inserire = $xmlDoc->createElement("creata_da", $nome_da_inserire);
-$data_da_inserire = $xmlDoc->createElement("data", $data_da_inserire);
+$nom_da_inserire = $xmlDoc->createElement("creata_da", $nome_da_inserire);
+$dat_da_inserire = $xmlDoc->createElement("data", $data_da_inserire);
 $rispo_da_inserire = $xmlDoc->createElement("risposta", $risposta_da_inserire);
 
 $domanda->appendChild($id);
 $domanda->appendChild($domanda_da_inserire);
 $domanda->appendChild($rispo_da_inserire);
-$domanda->appendChild($nome_da_inserire);
-$domanda->appendChild($data_da_inserire);
+$domanda->appendChild($nom_da_inserire);
+$domanda->appendChild($dat_da_inserire);
 
 $question->appendChild($domanda);
 $xmlDoc->formatOutput = true;
 $xml = $xmlDoc->saveXML();
 file_put_contents($xmlFile, $xml);  //sovrascrive il contenuto del vecchio file XML con quello nuovo
 
-$xmlFile = "domande_da_valutare.xml";
+$xmlFile2 = "domande_da_valutare.xml";
 $xmlstring = "";
 
-foreach(file($xmlFile) as $nodo){   //Leggo il contenuto del file XML
+foreach(file($xmlFile2) as $nodo){   //Leggo il contenuto del file XML
 
     $xmlstring.= trim($nodo); 
 }
 
-$xmlDoc = new DOMDocument();
-$xmlDoc->loadXML($xmlstring);
+$xmlDoc2 = new DOMDocument();
+$xmlDoc2->loadXML($xmlstring);
 
 // Trova tutti gli elementi "domanda"
-$domande = $xmlDoc->getElementsByTagName('domanda');
+$domande = $xmlDoc2->getElementsByTagName('domanda');
+
 
 // Cerca la domanda da eliminare basandoti sul nome
 foreach ($domande as $domanda) {
@@ -79,16 +80,16 @@ foreach ($domande as $domanda) {
 
     if ($nomeElemento === $nome_domanda_da_inserire) {
         // Rimuovi l'elemento
+        
         $domanda->parentNode->removeChild($domanda);
-        break;
     }
 }
 
 // Salva le modifiche nel file
-$xmlDoc->formatOutput = true;
-$xml = $xmlDoc->saveXML();
-file_put_contents($xmlFile, $xml);
-
+$xmlDoc2->formatOutput = true;
+$xml2 = $xmlDoc2->saveXML();
+file_put_contents($xmlFile2, $xml2);
+ 
 
 
 header("location: faq.php");

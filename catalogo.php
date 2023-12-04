@@ -151,13 +151,18 @@ $categorie = $xmlDoc->getElementsByTagName("categoria");
         
             <h1><?php echo $nomePianta?></h1>
             <p class="descrizione-testo"><?php echo $descrizione?></p>
-            <h3>Disponibiltá: <?php echo $qnt?></h3>
+            <h3 style='position: absolute; bottom:90px;margin-left:100px'>Disponibiltá: <?php echo $qnt?></h3>
             <h2><?php echo $prezzo?> Cr</h2>
+            <form action='recensisci.php' method="POST">
+              <a><button style='bottom:90px; margin-left:130px;text-align:center;' type="submit" name="recensione" title="">Recensisci</button></a>
+              <input name="nome" hidden value = "<?php echo $nomePianta; ?>">
+            </form>
             
             <form style='position: absolute; bottom: 10px;' action="gestionecarrello.php" method="POST">
               <input name="nome" hidden value = "<?php echo $nomePianta; ?>">
               <input name="foto" hidden value = "<?php echo $foto; ?>">
               <input name="prezzo" hidden value = "<?php echo $prezzo; ?>">
+              
               
             <?php
             

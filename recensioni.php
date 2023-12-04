@@ -8,7 +8,6 @@ if(!isset($_SESSION['loggato']) || $_SESSION['loggato'] !== true){
 }
 ?>
 
-
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 
@@ -29,7 +28,7 @@ if(!isset($_SESSION['loggato']) || $_SESSION['loggato'] !== true){
 </head>
 
 <body>
-    <div class='header'>
+<div class='header'>
   <a href="index.php">
     <img src="foto/leaf.png" alt="Logo" class="logo" >
   </a>
@@ -37,7 +36,7 @@ if(!isset($_SESSION['loggato']) || $_SESSION['loggato'] !== true){
   
       <nav class='navbar'>
         <a href="form_inserimento_pianta.php">INSERISCI PIANTA</a>
-        <a href="loadrichieste.php">RICHIESTE</a>
+        <a href="loadrichieste.php">VISUALIZZA RICHIESTE</a>
         
         <a href="utenti.php">LISTA UTENTI</a>
         <a href="index.php">CATEGORIE</a>
@@ -49,63 +48,58 @@ if(!isset($_SESSION['loggato']) || $_SESSION['loggato'] !== true){
 <?php 
 
 
-$sql = "SELECT nome, cognome 
-        FROM utenti 
-        WHERE nome <> 'Admin' AND nome <> 'Gestore'";
-$result = $con->query($sql);
-if ($result->num_rows > 0) {
-  ?>
-  <div class='centro_tab'>
+
+
+
+
+$xmlDoc = new DOMDocument();
+$xmlDoc->load("recensioni_piante.xml");
+
+$piante = $xmlDoc->getElementsByTagName("pianta");
+?>
+
+<div class='centro_tab'>
     <main class='table'>
       <section class='table_header'>
-        <h1>GESTIONE UTENTI</h1>
+        <h1>RECENSIONI</h1>
       </section>
           <section class="table__body">
                       <table>
                           <thead>
                               <tr>
-                                  <th>NOME</th>
-                                  <th>COGNOME</th>
-                                  <th></th>
-                                  <th></th>
-                                  <th></th>
+                                  <th>UTENTE</th>
+                                  <th>PIANTA</th>
+                                  <th>COMMENTO</th>
+                                  <th>UTILITA</th>
+                                  <th>SUPPORTO</th>
                               </tr>
                           </thead>
                           </tbody>
                       
             </section>
 <?php
-  // Itera attraverso i risultati della query e stampa le righe
-  while ($row = mysqli_fetch_array($result)) {
-    ?>
-      
+foreach ($piante as $pianta) {
+    $nomePianta = $pianta->getElementsByTagName("nome")->item(0)->textContent;
+    $recensioni = $pianta->getElementsByTagName("recensione");
+    
+    foreach ($recensioni as $recensione) {
+        $autore = $recensione->getElementsByTagName("autore")->item(0)->textContent;
+        $commento = $recensione->getElementsByTagName("commento")->item(0)->textContent;
+        $utilita = $recensione->getElementsByTagName("utilita")->item(0)->textContent;
+        $supporto = $recensione->getElementsByTagName("supporto")->item(0)->textContent;
 
+?>
 
     
     <tr>
-      <td style='width:200px;'><?php echo $row["nome"] ?></td>
-      <td style='width:200px;'><?php echo $row["cognome"] ?></td>
-      <td>
-        <form action='form_modifica_profilo.php' method='post'>
-        <input type="hidden" id="nome" name="nome" value="<?php echo $row['nome']; ?>">
-        <input type="hidden" id="cognome" name="cognome" value="<?php echo $row['cognome']; ?>">
-          <button class="blu" type="submit">MODIFICA</button>
-        </form>
-      </td>
-      <td>
-        <form action='movimenti.php' method='post'>
-        <input type="hidden" id="nome" name="nome" value="<?php echo $row['nome']; ?>">
-        <input type="hidden" id="cognome" name="cognome" value="<?php echo $row['cognome']; ?>">
-          <a href='movimenti.php'><button class="blu" type="submit">MOVIMENTI</button></a>
-          </form>
-      </td>
-        
-      <td><button class="rosso" type="submit">BAN</button></td>
+      <td><?php echo $autore ?></td>
+      <td><?php echo $nomePianta ?></td>
+      <td><?php echo $commento ?></td>
+      <td><?php echo $utilita ?></td>
+      <td><?php echo $supporto ?></td>
     </tr>
 <?php }}?>
 </div>
 </table>
-
-
 
 </body>

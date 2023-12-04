@@ -89,11 +89,15 @@ if(isset($_SESSION['carrello']))
             if ($_SESSION['tipo'] == 0 OR $_SESSION['tipo'] == 2 ) {
     
     ?>
+<div class="dropdown">
+      <button class="dropbtn">SERVIZI</button>
+      <div class="dropdown-content">
        <a href="form_inserimento_pianta.php">INSERISCI PIANTA</a>
-       <a href="loadrichieste.php">RICHIESTE</a>
+       <a href="loadrichieste.php">RICHIESTE CREDITI</a>
        <a href="utenti.php">LISTA UTENTI</a>
        <a href="faq.php">FAQ</a>
-       <a href="load_domande.php">Domande</a>
+       <a href="domande_da_valutare.php">DOMANDE IN PENDING</a>
+            </div>
 <?php } ?>
 
         <a href="logout.php">LOGOUT</a>

@@ -92,7 +92,7 @@ foreach ($richieste as $richiesta) {
 
     
     <tr>
-      <td><?php echo $nome . " " .  $cognome ?></td>
+      <td style='width:200px;'><?php echo $nome . " " .  $cognome ?></td>
       <td><?php echo $qnt ?> Crediti</td>
       <td><form action="accetta_cre.php" method="POST"name="form1   ">
             <input type="hidden" name="form_name" value="form1">
