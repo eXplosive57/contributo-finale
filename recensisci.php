@@ -23,6 +23,14 @@ if(!isset($_SESSION['loggato']) || $_SESSION['loggato'] !== true){
 
     <title>HOME</title>
     <link rel="stylesheet" href="index.css" />
+    <style>
+      body {
+    font-family: Arial, sans-serif;
+    background-image: url('foto/wallpaper3.jpg') no-repeat;
+    background-size:cover;
+    
+  }
+    </style>
     
 </head>
 
@@ -112,21 +120,18 @@ if(isset($_SESSION['carrello']))
     </div>
     <!-- nome della categoria ottenuta dal bottone premuto in basa alla categoria scelta -->
 <div class="wrapper">
-<form action="script_registrazione.php" method="post">
+<form action="script_add_recensione.php" method="post">
     <h1 class='titolo2'><?php echo $nome_pianta ?></h1>
     <div class="input-box">
     <label for="nome">Scrivi la tua recensione</label>
-    <input type="text" name="nome" id="nome" required>
+    <input type="text" name="rec" id="rec" required>
     </div>
 
-    <div class="input-box">
-    <label for="cognome">Voto</label>
-    <input type="number" name="cognome" id="cognome" required>
-    </div>
-    <input type="hidden" id="tipo" name="tipo" value="1">
+    <input type="hidden" id="nome" name="nome" value="<?php echo $_SESSION['nome']?>">
+    <input type="hidden" id="cognome" name="cognome" value="<?php echo $_SESSION['cognome']?>">
+    <input type="hidden" id="pianta" name="pianta" value="<?php echo $nome_pianta ?>">
 
     <button type="submit" value="invia">Invia</button>
-    <a style='margin-left:250px;'href="accesso.php"><button type="button" class='nero' >ACCEDI</button>
 
 </form>
 

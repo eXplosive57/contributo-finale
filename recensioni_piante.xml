@@ -1,37 +1,48 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <recensioni_piante>
-    <pianta>
-        <nome>Sansevieria Velvet Azzurra</nome>
-        <recensioni>
-            <recensione>
-                <autore>Mario Rossi</autore>
-                <utilita> </utilita>
-                <supporto> </supporto>
-                <commento>Questa pianta è stupenda! Cresce molto bene in giardino.</commento>
-            </recensione>
-            <recensione>
-                <autore>Lucio Verdi</autore>
-                <utilita> </utilita>
-                <supporto> </supporto>
-                <commento>Una pianta robusta ma richiede molta acqua.</commento>
-            </recensione>
-        </recensioni>
-    </pianta>
-    <pianta>
-        <nome>Odette</nome>
-        <recensioni>
-            <recensione>
-                <autore>Luca Bianchi</autore>
-                <utilita> </utilita>
-                <supporto> </supporto>
-                <commento>Non sono rimasto molto soddisfatto di questa pianta, ha avuto problemi di parassiti.</commento>
-            </recensione>
-            <recensione>
-                <autore>Franco Russo</autore>
-                <utilita> </utilita>
-                <supporto> </supporto>
-                <commento>Una delle migliori piante che ho mai coltivato. Bellissimi fiori!</commento>
-            </recensione>
-        </recensioni>
-    </pianta>
+  <pianta>
+    <nome>Sansevieria Velvet Azzurra</nome>
+    <recensioni>
+      <recensione>
+        <autore>Mario Rossi</autore>
+        <utilita> </utilita>
+        <supporto> </supporto>
+        <commento>Questa pianta è stupenda! Cresce molto bene in giardino.</commento>
+      </recensione>
+      <recensione>
+        <autore>Lucio Verdi</autore>
+        <utilita> </utilita>
+        <supporto> </supporto>
+        <commento>Una pianta robusta ma richiede molta acqua.</commento>
+      </recensione>
+    </recensioni>
+  </pianta>
+  <pianta>
+    <nome>Odette</nome>
+    <recensioni>
+      <recensione>
+        <autore>Luca Bianchi</autore>
+        <utilita> </utilita>
+        <supporto> </supporto>
+        <commento>Non sono rimasto molto soddisfatto di questa pianta, ha avuto problemi di parassiti.</commento>
+      </recensione>
+      <recensione>
+        <autore>Franco Russo</autore>
+        <utilita> </utilita>
+        <supporto> </supporto>
+        <commento>Una delle migliori piante che ho mai coltivato. Bellissimi fiori!</commento>
+      </recensione>
+    </recensioni>
+  </pianta>
+  <pianta>
+    <nome>Aloe Vera</nome>
+    <recensioni>
+      <recensione>
+        <autore>Mario Rossi</autore>
+        <commento>molto bella!</commento>
+        <utilita/>
+        <supporto/>
+      </recensione>
+    </recensioni>
+  </pianta>
 </recensioni_piante>
