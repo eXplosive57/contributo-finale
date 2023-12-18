@@ -27,6 +27,7 @@ $utente = "CREATE TABLE IF NOT EXISTS `Utenti` (
     `nome` varchar(30) NOT NULL,
     `cognome` varchar(30) ,
     `mail` varchar(30) ,
+    `reputazione` int(255) NULL,
     `cf` varchar(30) ,
     `telefono` varchar(30) ,
     `indirizzo` varchar(30) ,

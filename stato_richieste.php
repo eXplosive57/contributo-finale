@@ -86,6 +86,7 @@ if(isset($_SESSION['carrello']))
       <button class="dropbtn">SERVIZI</button>
       <div class="dropdown-content">
         <a class="testo" href="richiesta_cre.php">RICHIEDI CREDITI</a>
+        <a class="testo" href="recensioni.php">RECENSIONI</a>
         <a class="testo" href="faq.php">FAQ</a>
         <a class="testo" href="stato_richieste.php">Stato richieste</a>
       </div>
@@ -133,45 +134,44 @@ $richieste = $xmlDoc->getElementsByTagName("richiesta");
 
 <div class='centro_tab'>
     <main class='table'>
-      <section class='table_header'>
-        <h1>Stato richieste</h1>
-      </section>
-          <section class="table__body">
-                      <table>
-                          <thead>
-                              <tr>
-                                  <th>QUANTITA</th>
-                                  <th>STATO</th>
-                                  <th></th>
-                              </tr>
-                          </thead>
-                          </tbody>
-                      
-            </section>
-<?php
-foreach ($richieste as $richiesta) {
-    $nome = $richiesta->getElementsByTagName("nome")->item(0)->textContent;
-    $esito = $richiesta->getElementsByTagName("esito")->item(0)->textContent;
-    $qnt = $richiesta->getElementsByTagName("qnt")->item(0)->textContent;
+        <section class='table_header'>
+            <h1>Stato richieste</h1>
+        </section>
+        <section class="table__body">
+            <table>
+                <thead>
+                    <tr>
+                        <th>QUANTITA</th>
+                        <th>STATO</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <?php
+                    foreach ($richieste as $richiesta) {
+                        $nome = $richiesta->getElementsByTagName("nome")->item(0)->textContent;
+                        $esito = $richiesta->getElementsByTagName("esito")->item(0)->textContent;
+                        $qnt = $richiesta->getElementsByTagName("qnt")->item(0)->textContent;
 
-    if ($nome == $_SESSION['nome']) {
-        echo '<tr>';
-        echo '<td>' . $qnt . ' Crediti</td>';
-        //esito = 0 richiesta accettata
-        //esito = 1 richiesta in attesa
-        //esito = 2 richiesta rifiutata
-        if ($esito == 0) {
-            echo '<td><button class="verde">ACCETTATA</button></td>';
-        } elseif ($esito == 2) {
-            echo '<td><button class="rosso">RIFIUTATA</button></td>';
-        }elseif ($esito == 1) {
-          echo '<td><button class="giallo">IN ATTESA</button></td>';
-      }
-
-        echo '</tr>';
-    }
-    }?>
+                        if ($nome == $_SESSION['nome']) {
+                          echo '<tr>';
+                          echo '<td style="width:200px">' . $qnt . ' Crediti</td>'; // Modifica la larghezza desiderata
+                          if ($esito == 0) {
+                              echo '<td style="width:200px"><button class="verde">ACCETTATA</button></td>';
+                          } elseif ($esito == 2) {
+                              echo '<td style="width:200px"><button class="rosso">RIFIUTATA</button></td>';
+                          } elseif ($esito == 1) {
+                              echo '<td style="width:200px"><button class="giallo">IN ATTESA</button></td>';
+                          }
+                          echo '</tr>';
+                          
+                        }
+                    }
+                    ?>
+                </tbody>
+            </table>
+        </section>
+    </main>
 </div>
-</table>
+
 
 </body>

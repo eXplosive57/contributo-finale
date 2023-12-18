@@ -131,7 +131,7 @@ if(isset($_SESSION['carrello']))
     <input type="hidden" id="cognome" name="cognome" value="<?php echo $_SESSION['cognome']?>">
     <input type="hidden" id="pianta" name="pianta" value="<?php echo $nome_pianta ?>">
 
-    <button type="submit" value="invia">Invia</button>
+    <button style='margin-left:170px;'type="submit" value="invia">Invia</button>
 
 </form>
 

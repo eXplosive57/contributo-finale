@@ -85,6 +85,7 @@ if(isset($_SESSION['carrello']))
       <button class="dropbtn">SERVIZI</button>
       <div class="dropdown-content">
         <a class="testo" href="richiesta_cre.php">RICHIEDI CREDITI</a>
+        <a class="testo" href="recensioni.php">RECENSIONI</a>
         <a class="testo" href="faq.php">FAQ</a>
         <a class="testo" href="stato_richieste.php">Stato richieste</a>
       </div>
@@ -103,6 +104,7 @@ if(isset($_SESSION['carrello']))
       <button class="dropbtn">SERVIZI</button>
       <div class="dropdown-content">
        <a href="form_inserimento_pianta.php">INSERISCI PIANTA</a>
+
        <a href="loadrichieste.php">RICHIESTE CREDITI</a>
        <a href="utenti.php">LISTA UTENTI</a>
        <a href="faq.php">FAQ</a>
@@ -147,8 +149,7 @@ $piante = $xmlDoc->getElementsByTagName("pianta");
                                   <th>UTENTE</th>
                                   <th>PIANTA</th>
                                   <th>COMMENTO</th>
-                                  <th>UTILITA</th>
-                                  <th>SUPPORTO</th>
+                                  <th>VOTO</th>
                               </tr>
                           </thead>
                           </tbody>
@@ -172,8 +173,19 @@ foreach ($piante as $pianta) {
       <td><?php echo $autore ?></td>
       <td><?php echo $nomePianta ?></td>
       <td><?php echo $commento ?></td>
-      <td><?php echo $utilita ?></td>
-      <td><?php echo $supporto ?></td>
+      <td>
+        <form action="script_gestione_voti.php" name='voto' method="post">
+              <input type="number" name="utilita" id="utilita" min="1" max="5">
+              <br><br>
+              <input type="number" name="supporto" id="supporto" min="1" max="3">
+              <input type="hidden" id="pianta" name="pianta" value="<?php echo $nomePianta ?>">
+              <input type="hidden" id="rec" name="rec" value="<?php echo $commento ?>">
+              <input type="hidden" id="nome" name="nome" value="<?php echo $_SESSION['nome'] ?>">
+              <input type="hidden" id="cognome" name="cognome" value="<?php echo $_SESSION['cognome'] ?>">
+              <br><br>
+              <input type="submit" value="Vota">
+        </form>
+      </td>
     </tr>
 <?php }}?>
 </div>

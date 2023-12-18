@@ -85,6 +85,7 @@ if(isset($_SESSION['carrello']))
       <button class="dropbtn">SERVIZI</button>
       <div class="dropdown-content">
         <a class="testo" href="richiesta_cre.php">RICHIEDI CREDITI</a>
+        <a class="testo" href="recensioni.php">RECENSIONI</a>
         <a class="testo" href="faq.php">FAQ</a>
         <a class="testo" href="stato_richieste.php">Stato richieste</a>
       </div>
@@ -184,16 +185,16 @@ if($_SESSION['tipo'] == 1) {
 ?>
 <div class="wrapper">
 <form action="script_faq.php" method="post">
-    <h1 class='titolo2'>POSTA UNA DOMANDA</h1>
+    <h1 class='titolo2'>Domanda alla Community!</h1>
     <div class="input-box">
-    <label for="nome">Domanda</label>
+    <label for="nome"></label>
     <input type="text" name="domanda" id="domanda" required>
     <input type="hidden" id="nome" name="nome" value="<?php echo $_SESSION['nome'] ?>">
     <input type="hidden" id="cognome" name="cognome" value="<?php echo $_SESSION['cognome'] ?>">
     <input type="hidden" id="data" name="data" value="<?php echo $dataCorrente ?>">
     </div>
 
-    <button type="submit" value="invia">Invia</button>
+    <button style='margin-left:170px;' type="submit" value="invia">Invia</button>
 
 </form>
 <?php } ?>

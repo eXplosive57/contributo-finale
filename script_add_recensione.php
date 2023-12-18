@@ -80,8 +80,10 @@ if (!$pianta_esistente) {
     $xmlDoc->getElementsByTagName("recensioni_piante")->item(0)->appendChild($nuova_pianta);
 
     $xmlDoc->formatOutput = true;
-    $xmlDoc->save($xmlFile);  // sovrascrive il contenuto del vecchio file XML con quello nuovo
+    $xmlDoc->save($xmlFile);  
 }
+
+
 
 header("location: recensioni.php");
 ?>
