@@ -1,26 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xsd:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
-  <xsd:element name="categorie">
-    <xsd:complexType>
-      <xsd:sequence>
-      <xsd:element name="categoria" maxOccurs="unbounded">
-          <xsd:complexType>
-            <xsd:sequence>
-        <xsd:element name="foto" type="xs:string"/>
-        <xsd:element name="nome" type="xs:string"/>
-        <xsd:element name="descrizione" type="xs:string"/>
-        <xsd:element name="pianta" maxOccurs="unbounded">
-          <xsd:complexType>
-            <xsd:sequence>
-              <xsd:element name="nome_pianta" type="xs:string"/>
-              <xsd:element name="descrizione" type="xs:string"/>
-              <xsd:element name="prezzo" type="xs:decimal"/>
-              <xsd:element name="img" type="xs:string"/>
-              <xsd:element name="quantita" type="xs:int"/>
-            </xsd:sequence>
-          </xsd:complexType>
-        </xsd:element>
-      </xsd:sequence>
-    </xsd:complexType>
-  </xsd:element>
-</xsd:schema>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="categorie">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="categoria" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="foto" type="xs:string"/>
+              <xs:element name="nome" type="xs:string"/>
+              <xs:element name="descrizione" type="xs:string"/>
+              <xs:element name="pianta" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="nome_pianta" type="xs:string"/>
+                    <xs:element name="descrizione" type="xs:string"/>
+                    <xs:element name="prezzo" type="xs:decimal"/>
+                    <xs:element name="img" type="xs:string"/>
+                    <xs:element name="quantita" type="xs:int"/>
+                    <xs:element name="sconto" maxOccurs="unbounded">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="N" type="xs:int"/>
+                          <xs:element name="M" type="xs:int"/>
+                          <xs:element name="O" type="xs:decimal"/>
+                          <xs:element name="R" type="xs:decimal"/>
+                          <xs:element name="X" type="xs:int"/>
+                          <xs:element name="Y"  type="xs:int"/>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

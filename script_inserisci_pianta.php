@@ -71,7 +71,9 @@ foreach ($categorie as $categoria) {
                         $pianta->appendChild($qnt_da_inserire);
                         $categoria->appendChild($pianta);
                         $xmlDoc->formatOutput = true;
+                        
 
+                        $xmlDoc->formatOutput = true;
                         $xml = $xmlDoc->saveXML();
                         file_put_contents($xmlFile, $xml);  //sovrascrive il contenuto del vecchio file XML con quello nuovo
                     }
