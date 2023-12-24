@@ -12,6 +12,7 @@ $cf = $con->real_escape_string($_POST['cf']);
 $residenza = $con->real_escape_string($_POST['residenza']);
 $telefono = $con->real_escape_string($_POST['telefono']);
 $password = $con->real_escape_string($_POST['password']);
+$data = $con->real_escape_string($_POST['data']);
 $tipo = $con->real_escape_string($_POST['tipo']);
 //hash della password
 $hash = password_hash($password, PASSWORD_DEFAULT);
@@ -30,9 +31,9 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     } else {
         //inserisco l'utente se non esiste
         $sql = "INSERT INTO utenti (nome, cognome, mail, cf, telefono, 
-        indirizzo,crediti,  password, Tipo) 
+        indirizzo,crediti,  password, data_iscrizione, Tipo) 
                 VALUES ('$nome','$cognome', '$mail','$cf','$telefono',
-                '$residenza',0,'$hash', '$tipo')";
+                '$residenza',0,'$hash','$data', '$tipo')";
 
         if ($con->query($sql) === TRUE) {
 

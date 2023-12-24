@@ -70,7 +70,7 @@
     <nome>Mario</nome>
     <cognome>Rossi</cognome>
     <qnt>66</qnt>
-    <esito>1</esito>
+    <esito>0</esito>
   </richiesta>
   <richiesta>
     <id>12</id>
@@ -78,6 +78,14 @@
     <nome>Mario</nome>
     <cognome>Rossi</cognome>
     <qnt>32</qnt>
+    <esito>0</esito>
+  </richiesta>
+  <richiesta>
+    <id>13</id>
+    <id_utente>3</id_utente>
+    <nome>Mario</nome>
+    <cognome>Rossi</cognome>
+    <qnt>145</qnt>
     <esito>0</esito>
   </richiesta>
 </storico_cre>

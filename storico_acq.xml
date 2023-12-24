@@ -2,38 +2,42 @@
 <storico_acq xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="storico_acq.xsd">
   <acq>
     <id>1</id>
-    <id_utente>3</id_utente>
-    <nome_prodotto>Sansevieria Velvet Azzurra</nome_prodotto>
-    <data_acquisto>2023-11-26 20:02:37</data_acquisto>
+    <nome>Mario Rossi</nome>
+    <nome_prodotto>Sansevieria Velvet Arancione</nome_prodotto>
+    <data_acquisto>2022-09-23</data_acquisto>
+    <prezzo>49.99</prezzo>
+    <qnt>1</qnt>
   </acq>
   <acq>
     <id>2</id>
-    <id_utente>3</id_utente>
-    <nome_prodotto>Sansevieria Velvet Azzurra</nome_prodotto>
-    <data_acquisto>2023-11-26 20:28:24</data_acquisto>
+    <nome>Mario Rossi</nome>
+    <nome_prodotto>Ariel</nome_prodotto>
+    <data_acquisto>2020-05-13</data_acquisto>
+    <prezzo>49.99</prezzo>
+    <qnt>1</qnt>
   </acq>
   <acq>
     <id>3</id>
-    <id_utente>4</id_utente>
-    <nome_prodotto>Sansevieria</nome_prodotto>
-    <data_acquisto>2023-11-28 12:41:22</data_acquisto>
+    <nome>Mario Rossi</nome>
+    <nome_prodotto>Azalea</nome_prodotto>
+    <data_acquisto>2021-12-24</data_acquisto>
+    <prezzo>65</prezzo>
+    <qnt>1</qnt>
   </acq>
   <acq>
     <id>4</id>
-    <id_utente>4</id_utente>
-    <nome_prodotto>Odette</nome_prodotto>
-    <data_acquisto>2023-11-28 12:41:22</data_acquisto>
+    <nome>Mario Rossi</nome>
+    <nome_prodotto>Orchidea Rosa</nome_prodotto>
+    <data_acquisto>2022-12-24</data_acquisto>
+    <prezzo>47.99</prezzo>
+    <qnt>2</qnt>
   </acq>
   <acq>
     <id>5</id>
-    <id_utente>5</id_utente>
-    <nome_prodotto>Sansevieria Velvet Azzurra</nome_prodotto>
-    <data_acquisto>2023-11-29 22:05:10</data_acquisto>
-  </acq>
-  <acq>
-    <id>6</id>
-    <id_utente>3</id_utente>
-    <nome_prodotto>Sansevieria Velvet Azzurra</nome_prodotto>
-    <data_acquisto>2023-12-04 17:29:32</data_acquisto>
+    <nome>Mario Rossi</nome>
+    <nome_prodotto>Camelia</nome_prodotto>
+    <data_acquisto>2023-12-24</data_acquisto>
+    <prezzo>65</prezzo>
+    <qnt>1</qnt>
   </acq>
 </storico_acq>

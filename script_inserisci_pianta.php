@@ -5,7 +5,9 @@ $con = new mysqli($host,$userName,$password,$dbName);
 
 
 session_start();
-
+if($_SESSION['tipo'] == 1){
+    header('location:accesso.php');
+  }
 
 
 $cat = $con->real_escape_string($_POST['cat']);
@@ -63,6 +65,13 @@ foreach ($categorie as $categoria) {
                         $prezzo_da_inserire = $xmlDoc->createElement("prezzo", $prezzo);
                         $img = $xmlDoc->createElement("img", $img_pianta_path);
                         $qnt_da_inserire = $xmlDoc->createElement("quantita", $qnt);
+                        $sconto = $xmlDoc->createElement("sconto");
+                        $N = $xmlDoc->createElement("N", 0);
+                        $M = $xmlDoc->createElement("N", 0);
+                        $O = $xmlDoc->createElement("N", );
+                        $R = $xmlDoc->createElement("N", 0);
+                        $X = $xmlDoc->createElement("N", 0);
+                        $Y = $xmlDoc->createElement("N", 0);
 
                         $pianta->appendChild($nome_pianta_da_inserire);
                         $pianta->appendChild($descrizione_da_inserire);

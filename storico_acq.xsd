@@ -13,17 +13,21 @@
     <xsd:complexType>
       <xsd:sequence>
         <xsd:element ref="id" />
-        <xsd:element ref="id_utente"/>
+        <xsd:element ref="nome"/>
         <xsd:element ref="nome_prodotto"/>
         <xsd:element ref="data_acquisto"/>
+        <xsd:element ref="prezzo"/>
+        <xsd:element ref="qnt"/>
       </xsd:sequence>
     </xsd:complexType>
   </xsd:element>
 
 
   <xsd:element name="id" type="integer" />
-  <xsd:element name="id_utente" type="integer"/>
+  <xsd:element name="nome" type="string"/>
   <xsd:element name="nome_prodotto" type="string"/>
   <xsd:element name="data_acquisto" type="xs:date"/>
+  <xsd:element name="prezzo" type="float"/>
+  <xsd:element name="qnt" type="int"/>
 
 </xsd:schema>

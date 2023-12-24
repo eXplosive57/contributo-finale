@@ -21,6 +21,8 @@
     <?php
 
     session_start();
+    $dataCorrente = date("Y-m-d");
+
     if (isset($_SESSION['errore'])) {
 
         ?>
@@ -78,6 +80,7 @@
     <input type="password" name="password" id="username" required>
     </div>
     <input type="hidden" id="tipo" name="tipo" value="1">
+    <input type="hidden" id="data" name="data" value="<?php echo $dataCorrente ?>">
 
     <button type="submit" value="invia">Invia</button>
     <a style='margin-left:250px;'href="accesso.php"><button type="button" class='nero' >ACCEDI</button>

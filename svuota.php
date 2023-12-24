@@ -5,26 +5,58 @@ $con = new mysqli($host,$userName,$password,$dbName);
 session_start();
 $qnt = floatval($_POST['qnt']);
 $nome = $con->real_escape_string($_POST['nome']);
+$numero_pianta = $con->real_escape_string($_POST['numero_piante']);
+$prezzo_pianta = $con->real_escape_string($_POST['prezzo_pianta']);
 
-
+$nome_completo = $_SESSION['nome'] . ' ' . $_SESSION['cognome'];
 
 
 if(isset($_SESSION['id']) && isset($_POST['svuota']))
-
 {
-   
+
+
+
+            $xmlFile = "catalogo.xml";
+            $xmlstring = "";
+            
+            foreach(file($xmlFile) as $nodo){   //Leggo il contenuto del file XML
+            
+                $xmlstring.= trim($nodo); 
+            }
+            
+            $xmlDoc = new DOMDocument();
+            $xmlDoc->loadXML($xmlstring);
+
+    
+
             $sql = "UPDATE utenti
                     SET crediti = crediti - '$qnt'
                     WHERE nome = '$nome'";
             $con->query($sql);
         unset($_SESSION['carrello']);
 
+        
+
+
+
         foreach ($_SESSION['piante_nel_carrello'] as $key => $value) {
             
+            $xmlFile = "catalogo.xml";
+            $xmlstring = "";
+            
+            foreach(file($xmlFile) as $nodo){
+            
+                $xmlstring.= trim($nodo); 
+            }
+            
+            $xmlDoc = new DOMDocument();
+            $xmlDoc->loadXML($xmlstring);
+
+
 
             $nome_pianta = $value['nome'];
             $numero_piante = $value['quantita']; 
-            $dataCorrente = date("Y-m-d H:i:s");
+            $dataCorrente = date("Y-m-d");
 
             $xmlFile = "storico_acq.xml";
             $xmlstring = "";
@@ -53,12 +85,16 @@ if(isset($_SESSION['id']) && isset($_POST['svuota']))
                         $nome_pianta_ = $xmlDoc->createElement("nome_prodotto", $nome_pianta);
                         $data = $xmlDoc->createElement("data_acquisto", $dataCorrente);
                         $id = $xmlDoc->createElement("id", $idaggiornato);
-                        $id_ute = $xmlDoc->createElement("id_utente", $_SESSION['id']);
+                        $nome_da_inserire = $xmlDoc->createElement("nome", $nome_completo);
+                        $prezzo_da_inserire = $xmlDoc->createElement("prezzo", $prezzo_pianta);
+                        $qnt_da_inserire = $xmlDoc->createElement("qnt", $numero_piante);
                         
                         $acq->appendChild($id);
-                        $acq->appendChild($id_ute);
+                        $acq->appendChild($nome_da_inserire);
                         $acq->appendChild($nome_pianta_);
                         $acq->appendChild($data);
+                        $acq->appendChild($prezzo_da_inserire);
+                        $acq->appendChild($qnt_da_inserire);
 
                         $storicoAcq->appendChild($acq);
                         $xmlDoc->formatOutput = true;

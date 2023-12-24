@@ -1,4 +1,3 @@
-
 <?php
 
 
@@ -15,6 +14,82 @@ $count = 0;
 if(isset($_SESSION['carrello']))
 {
   $count=count($_SESSION['carrello']);
+}
+
+//ottengo i crediti spessi fino ad una certa data
+$xmlFile = "storico_acq.xml";
+$dataConfronto = "2023-12-24";
+$dateToCompareObject = new DateTime($dataConfronto);
+
+$xmlstring = "";
+foreach (file($xmlFile) as $nodo) {
+    $xmlstring .= trim($nodo);
+}
+
+$xmlDoc = new DOMDocument();
+$xmlDoc->loadXML($xmlstring);
+
+$xpath = new DOMXPath($xmlDoc);
+
+// seleziono solamente le date che mi interessano
+$query = "//acq[translate(data_acquisto, '-', '') <= '{$dateToCompareObject->format('Ymd')}' ]";
+
+$acqNodes = $xpath->query($query);
+
+$crediti_spesi = 0;
+$_SESSION['crediti_spesi'] = $crediti_spesi;
+
+foreach ($acqNodes as $acqNode) {
+    // sommo il valore di prezzo per ogni elemento acq mathcato
+    $prezzo = $acqNode->getElementsByTagName("prezzo")->item(0)->nodeValue;
+    $qnt = $acqNode->getElementsByTagName("qnt")->item(0)->nodeValue;
+    $crediti_spesi += $prezzo * $qnt;
+    $_SESSION['crediti_spesi'] = $crediti_spesi;
+    
+  
+}
+
+
+
+    //OTTENGO LA REPUTAZIONE
+    $sql = "SELECT reputazione
+    FROM utenti
+    WHERE id = '{$_SESSION['id']}' ";
+    if ($result = $con->query($sql)) {
+        if ($result->num_rows == 1) {
+        $row = $result->fetch_array(MYSQLI_ASSOC);
+        $_SESSION['rep'] = $row['reputazione'];
+    }}
+
+    //OTTENGO I MESI DI IRSCIZIONE TOTALI
+$sql2 = "SELECT DATEDIFF(CURDATE(), data_iscrizione) / 30 AS mesi_iscrizione
+    FROM utenti
+    WHERE id = '{$_SESSION['id']}' ";
+    if ($result2 = $con->query($sql2)) {
+        if ($result2->num_rows == 1) {
+        $row2 = $result2->fetch_array(MYSQLI_ASSOC);
+        $_SESSION['mesi'] = round($row2['mesi_iscrizione'], 0);
+    }}
+
+//OTTENGO I CREDITI TOTALI
+$sql3 = "SELECT crediti
+    FROM utenti
+    WHERE id = '{$_SESSION['id']}' ";
+    if ($result3 = $con->query($sql3)) {
+        if ($result3->num_rows == 1) {
+        $row3 = $result3->fetch_array(MYSQLI_ASSOC);
+        $_SESSION['crediti_tot'] = $row3['crediti'];
+    }}
+
+//OTTENGO GLI ANNI DI IRSCIZIONE TOTALI
+$sql4 = "SELECT DATEDIFF(CURDATE(), data_iscrizione) / 365 AS anni_iscrizione
+        FROM utenti
+        WHERE id = '{$_SESSION['id']}' ";
+if ($result4 = $con->query($sql4)) {
+    if ($result4->num_rows == 1) {
+        $row4 = $result4->fetch_array(MYSQLI_ASSOC);
+        $_SESSION['anni'] = round($row4['anni_iscrizione'], 0);
+    }
 }
 
 
@@ -157,6 +232,8 @@ if(isset($_SESSION['carrello']))
         
         unset($_SESSION['acq']);
       }
+      
+      
 
       $_SESSION['piante_nel_carrello'] = array();
 //controllo sulla variabile 'loggato'
@@ -200,13 +277,75 @@ if(!isset($_SESSION['loggato']) || $_SESSION['loggato'] !== true){
 
     // Aggiungi questa pianta all'array delle piante nel carrello
     $_SESSION['piante_nel_carrello'][] = $pianta;
-    $totale = $totale + ($value["Prezzo"] * $value["Quantita"]);
+
     ?>
     <tr>
       <td><?php echo $value["Nome"] ?></td>
       <td><img src='<?php echo $value["Foto"] ?>'></td>
       <td>x<?php echo $value["Quantita"] ?></td>
-      <td><?php echo $value["Prezzo"] ?>$</td>
+      <td>
+
+          <?php 
+
+                  //il seguente codice gestisce l'eventuale sconto
+
+                    $nome_pianta = $value['Nome'];
+                    $numero_piante = $value['Quantita']; 
+                    $dataCorrente = date("Y-m-d");
+
+                    $xmlFile = "catalogo.xml";
+                    $xmlstring = "";
+                    
+                    foreach(file($xmlFile) as $nodo){
+                    
+                        $xmlstring.= trim($nodo); 
+                    }
+                    
+                    $xmlDoc = new DOMDocument();
+                    $xmlDoc->loadXML($xmlstring);
+                      
+                    $categorie = $xmlDoc->getElementsByTagName("categoria");
+
+                        foreach ($categorie as $categoria) {
+                            $piante = $categoria->getElementsByTagName("pianta");
+                            foreach ($piante as $pianta) {
+                                $nome_pianta_check = $pianta->getElementsByTagName("nome_pianta")->item(0)->nodeValue;
+                                if($nome_pianta_check == $nome_pianta){
+            
+                                $sconto = $pianta->getElementsByTagName('sconto')->item(0);
+            
+                                $crediti = $sconto->getElementsByTagName('N')->item(0)->nodeValue;
+                                $crediti_Data = $sconto->getElementsByTagName('M')->item(0)->nodeValue;
+                                $offerta = $sconto->getElementsByTagName('O')->item(0)->nodeValue;
+                                $reputazione = $sconto->getElementsByTagName('R')->item(0)->nodeValue;
+                                $mesi = $sconto->getElementsByTagName('X')->item(0)->nodeValue;
+                                $anni = $sconto->getElementsByTagName('Y')->item(0)->nodeValue;
+                                
+
+                                //controllo sui parametri degli sconti
+                                if($_SESSION['crediti_tot'] >= $crediti && $_SESSION['rep'] >= $reputazione
+                                  && $_SESSION['mesi'] >= $mesi && $_SESSION['anni'] >= $anni && $_SESSION['crediti_spesi'] >= $crediti_Data){
+
+
+                                  echo round($value["Prezzo"]-($value["Prezzo"]*0.10), 2);
+                                  $prezzo_scontato = $value["Prezzo"]-($value["Prezzo"]*0.10);
+                                  $totale = $totale + ($prezzo_scontato * $value["Quantita"]);
+                                }else{
+                                  echo $value["Prezzo"];
+                                  $totale = $totale + ($value["Prezzo"] * $value["Quantita"]);
+                                }
+            
+                        }}}
+          ?>
+
+         
+
+
+
+
+
+
+      </td>
       
       <td>
         <form action ='gestionecarrello.php' method='POST'>
@@ -251,7 +390,7 @@ if(!isset($_SESSION['loggato']) || $_SESSION['loggato'] !== true){
           </label>
         </td>
         <td class="centrato-totale">
-          <?php echo $totale ?>$<br><br><form action ='svuota.php' method='POST'>
+          <?php echo round($totale, 2) ?>$<br><br><form action ='svuota.php' method='POST'>
             <?php
             if($totale>$_SESSION['crediti']){
               ?>
@@ -263,6 +402,7 @@ if(!isset($_SESSION['loggato']) || $_SESSION['loggato'] !== true){
                 <input type="hidden" id="qnt" name="qnt" value="<?php echo $totale ?>">
                 <input type='hidden' name='nome' value='<?php echo $_SESSION['nome']?>'>
                 <input type='hidden' name='nome_pianta' value='<?php echo $value["Nome"]?>'>
+                <input type='hidden' name='prezzo_pianta' value='<?php echo $value["Prezzo"]?>'>
                 <input type='hidden' name='numero_piante' value='<?php echo $value["Quantita"]?>'>
             </form> 
         </td>
@@ -273,6 +413,7 @@ if(!isset($_SESSION['loggato']) || $_SESSION['loggato'] !== true){
             }
 }
 }
+
 ?>
 </div>
 </table>

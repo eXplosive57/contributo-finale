@@ -6,6 +6,9 @@ $con = new mysqli($host,$userName,$password,$dbName);
 
 session_start();
 
+
+
+
 $cat = $con->real_escape_string($_POST['cat']);
 $nome = $con->real_escape_string($_POST['nome']);
 
@@ -68,4 +71,4 @@ foreach ($categorie as $categoria) {
 
 
 
-header("location: form_inserimento_sconto.php");
+header("location: form_sconti.php");

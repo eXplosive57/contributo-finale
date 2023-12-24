@@ -9,14 +9,14 @@
       <descrizione>La Sansevieria, appartenente alla famiglia delle Liliaceae, è una pianta ornamentale per interni molto diffusa. È conosciuta anche come lingua di suocera, per la punta acuminata delle foglie. Queste, infatti, hanno una bellissima forma allungata verticalmente di colore verde scuro con bordi tendenti al giallo.</descrizione>
       <prezzo>32.99</prezzo>
       <img>foto_piante/nagini.jpg</img>
-      <quantita>6</quantita>
+      <quantita>5</quantita>
       <sconto>
         <N>2</N>
-        <M>2</M>
+        <M>320</M>
         <O>ok</O>
-        <R>2</R>
+        <R>1</R>
         <X>2</X>
-        <Y>2</Y>
+        <Y>1</Y>
       </sconto>
     </pianta>
     <pianta>
@@ -25,6 +25,14 @@
       <prezzo>37.99</prezzo>
       <img>foto_piante/aloe.jpg</img>
       <quantita>0</quantita>
+      <sconto>
+        <N>50</N>
+        <M>250</M>
+        <O>Piantax</O>
+        <R>2</R>
+        <X>3</X>
+        <Y>1</Y>
+      </sconto>
     </pianta>
     <pianta>
       <nome_pianta>Sansevieria Velvet Rosa</nome_pianta>
@@ -32,6 +40,14 @@
       <prezzo>44.99</prezzo>
       <img>foto_piante/velvet.jpg</img>
       <quantita>0</quantita>
+      <sconto>
+        <N>0</N>
+        <M>120</M>
+        <O/>
+        <R>0</R>
+        <X>0</X>
+        <Y>0</Y>
+      </sconto>
     </pianta>
     <pianta>
       <nome_pianta>Sansevieria Velvet Azzurra</nome_pianta>
@@ -39,6 +55,14 @@
       <prezzo>44.99</prezzo>
       <img>foto_piante/velvetblu.jpg</img>
       <quantita>5</quantita>
+      <sconto>
+        <N>0</N>
+        <M>210</M>
+        <O/>
+        <R>0</R>
+        <X>0</X>
+        <Y>0</Y>
+      </sconto>      
     </pianta>
     <pianta>
       <nome_pianta>Sansevieria Velvet Gialla</nome_pianta>
@@ -46,13 +70,29 @@
       <prezzo>44.99</prezzo>
       <img>foto_piante/velvetgiallo.jpg</img>
       <quantita>4</quantita>
+      <sconto>
+        <N>0</N>
+        <M>180</M>
+        <O/>
+        <R>0</R>
+        <X>0</X>
+        <Y>0</Y>
+      </sconto>      
     </pianta>
     <pianta>
       <nome_pianta>Sansevieria Velvet Arancione</nome_pianta>
       <descrizione>La Sansevieria Velvet è una tipologia di Sanseviera che si distingue per le sue punte colorate e vellutate al tatto. Queste ultime non solo le conferiscono un’aria allegra ma anche elegante e originale.Ovviamente la particolarità dell’estremità delle sue foglie non è un dono di madre natura, ma di due aziende olandesi: la prima si occupa di coltivazione di sansevierie, la seconda è specializzata nell’apporto di valore aggiunto ai fiori tramite decorazioni. In realtà quest’idea ha anche una sua utilità, infatti evitano che la Sansevieria velvet con la sua forma allungata si rovini sulle punte.</descrizione>
       <prezzo>44.99</prezzo>
       <img>foto_piante/velvetaran.jpg</img>
-      <quantita>6</quantita>
+      <quantita>5</quantita>
+      <sconto>
+        <N>0</N>
+        <M>79</M>
+        <O/>
+        <R>0</R>
+        <X>0</X>
+        <Y>0</Y>
+      </sconto>      
     </pianta>
     <pianta>
       <nome_pianta>Ficus Elastica Robusta</nome_pianta>
@@ -60,6 +100,14 @@
       <prezzo>39.99</prezzo>
       <img>foto_piante/pluto.jpg</img>
       <quantita>0</quantita>
+      <sconto>
+        <N>0</N>
+        <M>84</M>
+        <O/>
+        <R>0</R>
+        <X>0</X>
+        <Y>0</Y>
+      </sconto>      
     </pianta>
   </categoria>
   <categoria>
@@ -72,13 +120,29 @@
       <prezzo>39.99</prezzo>
       <img>foto_piante/tiramisu.jpg</img>
       <quantita>6</quantita>
+      <sconto>
+        <N>0</N>
+        <M>99</M>
+        <O/>
+        <R>0</R>
+        <X>0</X>
+        <Y>0</Y>
+      </sconto>      
     </pianta>
     <pianta>
       <nome_pianta>Azalea</nome_pianta>
       <descrizione>L’Azalea è una pianta della famiglia delle Ericaceae e la sua storia si intreccia ad una leggenda indiana e ad un principe nel Cashemire. Si tratta di una pianta simbolo di femminilità, temperanza e moderazione e questo simbolismo l’ha resa particolarmente adatta a celebrare le mamme per la Festa della Mamma..</descrizione>
       <prezzo>65</prezzo>
       <img>foto_piante/Azalea.jpg</img>
-      <quantita>6</quantita>
+      <quantita>2</quantita>
+      <sconto>
+        <N>0</N>
+        <M>149</M>
+        <O/>
+        <R>0</R>
+        <X>0</X>
+        <Y>0</Y>
+      </sconto>      
     </pianta>
     <pianta>
       <nome_pianta>Retusa Tropicale</nome_pianta>
@@ -86,6 +150,14 @@
       <prezzo>135</prezzo>
       <img>foto_piante/RetusaTropicale.jpg</img>
       <quantita>6</quantita>
+      <sconto>
+        <N>0</N>
+        <M>320</M>
+        <O/>
+        <R>0</R>
+        <X>0</X>
+        <Y>0</Y>
+      </sconto>      
     </pianta>
     <pianta>
       <nome_pianta>Pyracantha</nome_pianta>
@@ -93,6 +165,14 @@
       <prezzo>89.99</prezzo>
       <img>foto_piante/Pyracantha.jpg</img>
       <quantita>6</quantita>
+      <sconto>
+        <N>0</N>
+        <M>290</M>
+        <O/>
+        <R>0</R>
+        <X>0</X>
+        <Y>0</Y>
+      </sconto>      
     </pianta>
     <pianta>
       <nome_pianta>Mirto</nome_pianta>
@@ -100,6 +180,14 @@
       <prezzo>54.99</prezzo>
       <img>foto_piante/mirto.jpg</img>
       <quantita>6</quantita>
+      <sconto>
+        <N>0</N>
+        <M>110</M>
+        <O/>
+        <R>0</R>
+        <X>0</X>
+        <Y>0</Y>
+      </sconto>      
     </pianta>
   </categoria>
   <categoria>
@@ -111,21 +199,45 @@
       <descrizione>Questa varietà di Orchidea Phalaenopsis non ha bisogno di presentazioni: splendidi fiori che sbocciano tutto l'anno, un raffinato colore rosa e una forte personalità.È una delle piante più diffuse, conosciute ed acquistate per decorare gli interni in modo sofisticato. Quest’orchidea tropicale si adatta facilmente a tutti gli ambienti domestici ma, seppur sia molto facile da curare, richiede alcune attenzioni per poter essere così decorativa e splendente.</descrizione>
       <prezzo>47.99</prezzo>
       <img>foto_categorie/orchidea.jpg</img>
-      <quantita>6</quantita>
+      <quantita>4</quantita>
+      <sconto>
+        <N>0</N>
+        <M>340</M>
+        <O/>
+        <R>0</R>
+        <X>0</X>
+        <Y>0</Y>
+      </sconto>      
     </pianta>
     <pianta>
       <nome_pianta>Orchidea Bianca</nome_pianta>
       <descrizione>Questa varietà di Orchidea Phalaenopsis non ha bisogno di presentazioni: splendidi fiori che sbocciano tutto l'anno, un meraviglioso bianco candido e una forte personalità. È una delle piante più diffuse, conosciute ed acquistate per decorare gli interni in modo sofisticato. Quest’orchidea tropicale si adatta facilmente a tutti gli ambienti domestici ma, seppur sia molto facile da curare, richiede alcune attenzioni per poter essere così decorativa e splendente.</descrizione>
       <prezzo>54.99</prezzo>
       <img>foto_piante/orchibianca.jpg</img>
-      <quantita>6</quantita>
+      <quantita>5</quantita>
+      <sconto>
+        <N>0</N>
+        <M>290</M>
+        <O/>
+        <R>0</R>
+        <X>0</X>
+        <Y>0</Y>
+      </sconto>      
     </pianta>
     <pianta>
       <nome_pianta>Ariel</nome_pianta>
       <descrizione>È una delle piante più diffuse, conosciute ed acquistate per decorare gli interni e si adatta facilmente a tutti gli ambienti domestici.Un must per gli appassionati delle orchidee che vogliono sperimentare questa nuova tecnica e, allo stesso tempo, valorizzare l’appartamento. </descrizione>
       <prezzo>49.99</prezzo>
       <img>foto_piante/ariel.jpg</img>
-      <quantita>6</quantita>
+      <quantita>5</quantita>
+      <sconto>
+        <N>0</N>
+        <M>133</M>
+        <O/>
+        <R>0</R>
+        <X>0</X>
+        <Y>0</Y>
+      </sconto>      
     </pianta>
     <pianta>
       <nome_pianta>Preziosa Orchidea</nome_pianta>
@@ -133,6 +245,14 @@
       <prezzo>119</prezzo>
       <img>foto_piante/prez.jpg</img>
       <quantita>6</quantita>
+      <sconto>
+        <N>0</N>
+        <M>214</M>
+        <O/>
+        <R>0</R>
+        <X>0</X>
+        <Y>0</Y>
+      </sconto>      
     </pianta>
     <pianta>
       <nome_pianta>Odette</nome_pianta>
@@ -140,6 +260,14 @@
       <prezzo>39.99</prezzo>
       <img>foto_piante/odette.jpg</img>
       <quantita>4</quantita>
+      <sconto>
+        <N>0</N>
+        <M>65</M>
+        <O/>
+        <R>0</R>
+        <X>0</X>
+        <Y>0</Y>
+      </sconto>      
     </pianta>
   </categoria>
   <categoria>
@@ -152,20 +280,44 @@
       <prezzo>64.99</prezzo>
       <img>foto_piante/limone.jpg</img>
       <quantita>60</quantita>
+      <sconto>
+        <N>0</N>
+        <M>87</M>
+        <O/>
+        <R>0</R>
+        <X>0</X>
+        <Y>0</Y>
+      </sconto>      
     </pianta>
     <pianta>
       <nome_pianta>Camelia</nome_pianta>
       <descrizione>Una pianta dalle origini tropicali, la Camelia prende il suo nome dal missionario e botanico Georg Joseph Kamel che importà la suddetta pianta.Oltre ad avere un aspetto molto elegante, nel linguaggio dei fiori assume il significato di "perfetta bellezza" per cui è simbolo di stima, devozione e apprezzamento.</descrizione>
       <prezzo>65</prezzo>
       <img>foto_piante/camelia.jpg</img>
-      <quantita>30</quantita>
+      <quantita>26</quantita>
+      <sconto>
+        <N>0</N>
+        <M>94</M>
+        <O/>
+        <R>0</R>
+        <X>0</X>
+        <Y>0</Y>
+      </sconto>      
     </pianta>
     <pianta>
       <nome_pianta>Kumquat</nome_pianta>
       <descrizione>Il Kumquat, conosciuto anche come mandarino cinese o fortunella, è una pianta di agrumi originaria della Cina, giunta in Europa nell'800.E' caratterizzato da fiori, visibili tra luglio e settembre, che possono essere singoli o riuniti in piccole infiorescenze.I suoi frutti si caratterizzano per la forma ovale, a differenza del mandarino che tutti noi conosciamo, e la polpa ha un sapore acidulo.</descrizione>
       <prezzo>49.99</prezzo>
       <img>foto_piante/limone.jpg</img>
-      <quantita>23</quantita>
+      <quantita>22</quantita>
+      <sconto>
+        <N>0</N>
+        <M>155</M>
+        <O/>
+        <R>0</R>
+        <X>0</X>
+        <Y>0</Y>
+      </sconto>      
     </pianta>
   </categoria>
   <categoria>
@@ -178,6 +330,14 @@
       <prezzo>20</prezzo>
       <img>foto/Calathea.avif</img>
       <quantita>6</quantita>
+      <sconto>
+        <N>0</N>
+        <M>50</M>
+        <O/>
+        <R>0</R>
+        <X>0</X>
+        <Y>0</Y>
+      </sconto>      
     </pianta>
     <pianta>
       <nome_pianta>Calathea</nome_pianta>
@@ -185,6 +345,14 @@
       <prezzo>20</prezzo>
       <img>foto/Calathea.avif</img>
       <quantita>6</quantita>
+      <sconto>
+        <N>0</N>
+        <M>50</M>
+        <O/>
+        <R>0</R>
+        <X>0</X>
+        <Y>0</Y>
+      </sconto>      
     </pianta>
   </categoria>
 </categorie>

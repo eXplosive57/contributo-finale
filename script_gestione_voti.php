@@ -1,11 +1,9 @@
 <?php
-// Verifica che il metodo di richiesta sia POST
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     
-    // Verifica se i parametri richiesti sono presenti nel POST
-    //if (isset($_POST['voto'])) {
-        
-        // carica il file XML
+//tale file serve per inserire il voto e la utilita della recensione
+
         $xmlFile = "recensioni_piante.xml";
         $xmlstring = "";
 
@@ -57,12 +55,6 @@ $xmlDoc->loadXML($xmlstring);
                 }
             }
         }
-
-
-
-
-
-
 
 
         // salva le modifiche nel file XML
