@@ -17,7 +17,7 @@ if(isset($_SESSION['carrello']))
 }
 
 //ottengo i crediti spessi fino ad una certa data
-$xmlFile = "storico_acq.xml";
+$xmlFile = "XML/storico_acq.xml";
 $dataConfronto = "2023-12-24";
 $dateToCompareObject = new DateTime($dataConfronto);
 
@@ -145,7 +145,7 @@ if(isset($_SESSION['carrello']))
 <a href="index.php">
 <img src="foto/leaf.png" alt="Logo" class="logo" >
 </a>
-<b style='margin-left:0px;' class='green'>GREEN HOUSE</b>
+<b style='margin-left:-10px;' class='green'>GREEN HOUSE</b>
 <?php
 }else if($_SESSION['tipo'] == 0){
   ?><div class='header'>
@@ -162,7 +162,7 @@ if(isset($_SESSION['carrello']))
       $row5 = mysqli_fetch_array($result5);
       $_SESSION['crediti'] = $row5['crediti'];
       ?>
-    <b style='margin-left:350px;'>CREDITI <?php echo $_SESSION['crediti']?></b>
+    <b style='margin-left:550px;'>CREDITI <?php echo $_SESSION['crediti']?></b>
     <?php }?>
   
       <nav class='navbar'>

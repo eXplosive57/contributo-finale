@@ -48,7 +48,7 @@ if(isset($_SESSION['carrello']))
 <a href="index.php">
 <img src="foto/leaf.png" alt="Logo" class="logo" >
 </a>
-<b style='margin-left:-100px;' class='green'>GREEN HOUSE</b>
+<b style='margin-left:0px;' class='green'>GREEN HOUSE</b>
 <?php
 }else if($_SESSION['tipo'] == 0 OR $_SESSION['tipo'] == 2){
   ?><div class='header'>
@@ -65,20 +65,20 @@ if(isset($_SESSION['carrello']))
       $row5 = mysqli_fetch_array($result5);
       $_SESSION['crediti'] = $row5['crediti'];
       ?>
-    <b style='margin-left:350px;'>CREDITI <?php echo $_SESSION['crediti']?></b>
+    <b style='margin-left:580px;'>CREDITI <?php echo $_SESSION['crediti']?></b>
     <?php }?>
   
       <nav class='navbar'>
         <?php
           if ($_SESSION['tipo'] == 1) {
           ?>
-                <div class="dropdown">
+        <div class="dropdown">
       <button class="dropbtn">SERVIZI</button>
       <div class="dropdown-content">
-        <p style='text-align:center;' href="richiesta_cre.php">RICHIEDI CREDITI</p>
-        <p style='text-align:center;' href="recensioni.php">RECENSIONI</p>
-        <p style='text-align:center;' href="faq.php">FAQ</p>
-        <p style='text-align:center;' href="stato_richieste.php">Stato richieste</p>
+        <a class="testo" href="richiesta_cre.php">RICHIEDI CREDITI</a>
+        <a class="testo" href="recensioni.php">RECENSIONI</a>
+        <a class="testo" href="faq.php">FAQ</a>
+        <a class="testo" href="stato_richieste.php">Stato richieste</a>
       </div>
     </div>
                 <a href="#catalogo">CATALOGO</a>
@@ -93,7 +93,7 @@ if(isset($_SESSION['carrello']))
     ?>
 <div class="dropdown">
       <button class="dropbtn">SERVIZI</button>
-      <div class="dropdown-content">
+      <div class="dropdown-content" style='min-height: 200px;'>
        <a href="form_inserimento_pianta.php">INSERISCI PIANTA</a>
        <a href="loadrichieste.php">RICHIESTE CREDITI</a>
        <a href="utenti.php">LISTA UTENTI</a>

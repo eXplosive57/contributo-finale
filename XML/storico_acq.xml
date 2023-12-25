@@ -40,4 +40,12 @@
     <prezzo>65</prezzo>
     <qnt>1</qnt>
   </acq>
+  <acq>
+    <id>6</id>
+    <nome>Lucio Verdi</nome>
+    <nome_prodotto>Aloe Vera</nome_prodotto>
+    <data_acquisto>2023-12-25</data_acquisto>
+    <prezzo>37.99</prezzo>
+    <qnt>1</qnt>
+  </acq>
 </storico_acq>

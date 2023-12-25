@@ -57,7 +57,7 @@ if(!isset($_SESSION['loggato']) || $_SESSION['loggato'] !== true || $_SESSION['t
     </div>
 
     <div class="wrapper">
-<form action="script_inserisci_pianta.php" method="post">
+<form action="Script/script_inserisci_pianta.php" method="post">
     <h1 class="titolo2">AGGIUNGI PIANTA</h1>
     <div class="input-box">
     <label for="nome_cat">Nome Categoria</label>

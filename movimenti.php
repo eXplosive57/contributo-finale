@@ -15,7 +15,7 @@ if(!isset($_SESSION['loggato']) || $_SESSION['loggato'] !== true || $_SESSION['t
 
 <head>
 
-    <title>Richieste</title>
+    <title>Movimenti</title>
     <link rel="stylesheet" href="index.css" />
     <style>
       body {
@@ -51,7 +51,7 @@ $nome = $con->real_escape_string($_POST['nome']);
 $cognome = $con->real_escape_string($_POST['cognome']);
 
 
-
+$nome_completo = $nome . ' ' . $cognome;
 
 
   
@@ -66,6 +66,7 @@ $cognome = $con->real_escape_string($_POST['cognome']);
                           <thead>
                               <tr>
                                   <th>PRODOTTO</th>
+                                  <th>QUANTITA</th>
                                   <th>DATA</th>
                               </tr>
                           </thead>
@@ -74,7 +75,7 @@ $cognome = $con->real_escape_string($_POST['cognome']);
             </section>
 <?php
   $xmlDoc = new DOMDocument();
-  $xmlDoc->load("storico_acq.xml");
+  $xmlDoc->load("XML/storico_acq.xml");
   
   $acquisti = $xmlDoc->getElementsByTagName("acq");
 
@@ -84,47 +85,17 @@ $cognome = $con->real_escape_string($_POST['cognome']);
     
     $prodotto = $acq->getElementsByTagName("nome_prodotto")->item(0)->textContent;
     $data = $acq->getElementsByTagName("data_acquisto")->item(0)->textContent;
-    $id = $acq->getElementsByTagName("id_utente")->item(0)->textContent;
+    $nome_da_verificare = $acq->getElementsByTagName("nome")->item(0)->textContent;
+    $qnt = $acq->getElementsByTagName("qnt")->item(0)->textContent;
 
-    $sql = "SELECT id FROM utenti WHERE nome = ? AND cognome = ?";
-    $stmt = $con->prepare($sql);
-    
-    if ($stmt) {
-        
-        $stmt->bind_param("ss", $nome, $cognome);
-    
-        
-        $stmt->execute();
-    
-     
-        $result = $stmt->get_result();
-    
-        if ($result) {
-           
-            if ($result->num_rows > 0) {
-                
-                $row = $result->fetch_array(MYSQLI_ASSOC);
-    
-                
-                $_SESSION['id_utente'] = $row['id'];
-            }
-        } else {
-            
-            echo "Errore nella query: " . $stmt->error;
-        }
-    
-        
-        $stmt->close();
-    } else {
-        
-        echo "Errore nella preparazione della query: " . $con->error;
-    }
 
-    if($_SESSION['id_utente'] == $id){
+
+    if($nome_completo == $nome_da_verificare){
    ?>
       <tr>
       <td><?php echo $prodotto ?></td>
-      <td><?php echo $data ?></td>
+      <td><?php echo $qnt ?></td>
+      <td style='width:40%'><?php echo $data ?></td>
       
       
     </tr>   

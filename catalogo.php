@@ -67,7 +67,7 @@ if(isset($_SESSION['carrello']))
   </a>
     <?php 
     if($_SESSION['tipo'] == 0){
-      ?><b style='margin-left:-720px' class='green'>GREEN HOUSE</b>
+      ?><b style='margin-left:-420px' class='green'>GREEN HOUSE</b>
       <?php
     }else{
       if($_SESSION['tipo'] == 1){
@@ -205,7 +205,7 @@ $fraseCasuale = $frasi[array_rand($frasi)];
       ?>
 
 
-        <form action="gestionecarrello.php" method="POST">
+        <form action="Script/gestionecarrello.php" method="POST">
             <input name="nome" hidden value="<?php echo $nomePianta; ?>">
             <input name="foto" hidden value="<?php echo $foto; ?>">
             <input name="prezzo" hidden value="<?php echo $prezzo; ?>">

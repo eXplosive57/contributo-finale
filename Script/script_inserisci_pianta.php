@@ -67,11 +67,11 @@ foreach ($categorie as $categoria) {
                         $qnt_da_inserire = $xmlDoc->createElement("quantita", $qnt);
                         $sconto = $xmlDoc->createElement("sconto");
                         $N = $xmlDoc->createElement("N", 0);
-                        $M = $xmlDoc->createElement("N", 0);
-                        $O = $xmlDoc->createElement("N", );
-                        $R = $xmlDoc->createElement("N", 0);
-                        $X = $xmlDoc->createElement("N", 0);
-                        $Y = $xmlDoc->createElement("N", 0);
+                        $M = $xmlDoc->createElement("M", 0);
+                        $O = $xmlDoc->createElement("O", 0);
+                        $R = $xmlDoc->createElement("R", 0);
+                        $X = $xmlDoc->createElement("X", 0);
+                        $Y = $xmlDoc->createElement("Y", 0);
 
                         $pianta->appendChild($nome_pianta_da_inserire);
                         $pianta->appendChild($descrizione_da_inserire);

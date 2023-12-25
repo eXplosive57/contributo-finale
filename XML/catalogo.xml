@@ -9,7 +9,7 @@
       <descrizione>La Sansevieria, appartenente alla famiglia delle Liliaceae, è una pianta ornamentale per interni molto diffusa. È conosciuta anche come lingua di suocera, per la punta acuminata delle foglie. Queste, infatti, hanno una bellissima forma allungata verticalmente di colore verde scuro con bordi tendenti al giallo.</descrizione>
       <prezzo>32.99</prezzo>
       <img>foto_piante/nagini.jpg</img>
-      <quantita>5</quantita>
+      <quantita>10</quantita>
       <sconto>
         <N>2</N>
         <M>320</M>
@@ -24,13 +24,13 @@
       <descrizione>L’Aloe vera ha origini africane e cresce spontaneamente in diverse parti del mondo.Un must che tutti dovremmo avere in casa: oltre alla sua bellezza e all’autonomia tipica delle piante succulenti, il gel che si può estrarre dalle sue foglie ha innumerevoli benefici. Tra i più rinomati, l’azione cicatrizzante che permette di diminuire i tempi di ricostituzione dei tessuti. Proprio per queste sue proprietà terapeutiche, l’Aloe vera è chiamata anche “pianta dei miracoli” e per questo è simbolo di guarigione, salute e vita.</descrizione>
       <prezzo>37.99</prezzo>
       <img>foto_piante/aloe.jpg</img>
-      <quantita>8</quantita>
+      <quantita>7</quantita>
       <sconto>
         <N>50</N>
-        <M>250</M>
+        <M>0</M>
         <O>Piantax</O>
         <R>2</R>
-        <X>3</X>
+        <X>1</X>
         <Y>1</Y>
       </sconto>
     </pianta>
@@ -39,14 +39,14 @@
       <descrizione>La Sansevieria Velvet è una tipologia di Sanseviera che si distingue per le sue punte colorate e vellutate al tatto. Queste ultime non solo le conferiscono un’aria allegra ma anche elegante e originale.Ovviamente la particolarità dell’estremità delle sue foglie non è un dono di madre natura, ma di due aziende olandesi: la prima si occupa di coltivazione di sansevierie, la seconda è specializzata nell’apporto di valore aggiunto ai fiori tramite decorazioni. In realtà quest’idea ha anche una sua utilità, infatti evitano che la Sansevieria velvet con la sua forma allungata si rovini sulle punte.</descrizione>
       <prezzo>44.99</prezzo>
       <img>foto_piante/velvet.jpg</img>
-      <quantita>24</quantita>
+      <quantita>0</quantita>
       <sconto>
-        <N>0</N>
+        <N>45</N>
         <M>120</M>
         <O/>
-        <R>0</R>
-        <X>0</X>
-        <Y>0</Y>
+        <R>2</R>
+        <X>3</X>
+        <Y>1</Y>
       </sconto>
     </pianta>
     <pianta>
@@ -56,13 +56,13 @@
       <img>foto_piante/velvetblu.jpg</img>
       <quantita>5</quantita>
       <sconto>
-        <N>0</N>
+        <N>67</N>
         <M>210</M>
         <O/>
-        <R>0</R>
-        <X>0</X>
-        <Y>0</Y>
-      </sconto>      
+        <R>2</R>
+        <X>2</X>
+        <Y>1</Y>
+      </sconto>
     </pianta>
     <pianta>
       <nome_pianta>Sansevieria Velvet Gialla</nome_pianta>
@@ -71,28 +71,28 @@
       <img>foto_piante/velvetgiallo.jpg</img>
       <quantita>4</quantita>
       <sconto>
-        <N>0</N>
+        <N>67</N>
         <M>180</M>
         <O/>
-        <R>0</R>
-        <X>0</X>
+        <R>3</R>
+        <X>4</X>
         <Y>0</Y>
-      </sconto>      
+      </sconto>
     </pianta>
     <pianta>
       <nome_pianta>Sansevieria Velvet Arancione</nome_pianta>
       <descrizione>La Sansevieria Velvet è una tipologia di Sanseviera che si distingue per le sue punte colorate e vellutate al tatto. Queste ultime non solo le conferiscono un’aria allegra ma anche elegante e originale.Ovviamente la particolarità dell’estremità delle sue foglie non è un dono di madre natura, ma di due aziende olandesi: la prima si occupa di coltivazione di sansevierie, la seconda è specializzata nell’apporto di valore aggiunto ai fiori tramite decorazioni. In realtà quest’idea ha anche una sua utilità, infatti evitano che la Sansevieria velvet con la sua forma allungata si rovini sulle punte.</descrizione>
       <prezzo>44.99</prezzo>
       <img>foto_piante/velvetaran.jpg</img>
-      <quantita>5</quantita>
+      <quantita>15</quantita>
       <sconto>
-        <N>0</N>
+        <N>78</N>
         <M>79</M>
         <O/>
-        <R>0</R>
-        <X>0</X>
+        <R>2</R>
+        <X>4</X>
         <Y>0</Y>
-      </sconto>      
+      </sconto>
     </pianta>
     <pianta>
       <nome_pianta>Ficus Elastica Robusta</nome_pianta>
@@ -101,13 +101,13 @@
       <img>foto_piante/pluto.jpg</img>
       <quantita>0</quantita>
       <sconto>
-        <N>0</N>
+        <N>80</N>
         <M>84</M>
         <O/>
-        <R>0</R>
-        <X>0</X>
+        <R>2</R>
+        <X>3</X>
         <Y>0</Y>
-      </sconto>      
+      </sconto>
     </pianta>
   </categoria>
   <categoria>
@@ -119,15 +119,15 @@
       <descrizione>Appartenente alla famiglia delle Moraceae, è molto rinomato sia per il suo bel fogliame verde scuro e lucido che per la struttura del suo tronco che richiama la radice del Ginseng (per questo è anche conosciuto come Bonsai Ginseng).Un must per i veri appassionati di quest’arte, questo bonsai ha anche un valore aggiunto: è simbolo di fortuna e longevità! .</descrizione>
       <prezzo>39.99</prezzo>
       <img>foto_piante/tiramisu.jpg</img>
-      <quantita>6</quantita>
+      <quantita>0</quantita>
       <sconto>
-        <N>0</N>
+        <N>76</N>
         <M>99</M>
         <O/>
-        <R>0</R>
-        <X>0</X>
-        <Y>0</Y>
-      </sconto>      
+        <R>3</R>
+        <X>2</X>
+        <Y>1</Y>
+      </sconto>
     </pianta>
     <pianta>
       <nome_pianta>Azalea</nome_pianta>
@@ -136,13 +136,13 @@
       <img>foto_piante/Azalea.jpg</img>
       <quantita>2</quantita>
       <sconto>
-        <N>0</N>
+        <N>45</N>
         <M>149</M>
         <O/>
-        <R>0</R>
-        <X>0</X>
-        <Y>0</Y>
-      </sconto>      
+        <R>2</R>
+        <X>4</X>
+        <Y>1</Y>
+      </sconto>
     </pianta>
     <pianta>
       <nome_pianta>Retusa Tropicale</nome_pianta>
@@ -151,43 +151,43 @@
       <img>foto_piante/RetusaTropicale.jpg</img>
       <quantita>6</quantita>
       <sconto>
-        <N>0</N>
+        <N>120</N>
         <M>320</M>
         <O/>
-        <R>0</R>
-        <X>0</X>
+        <R>2</R>
+        <X>3</X>
         <Y>0</Y>
-      </sconto>      
+      </sconto>
     </pianta>
     <pianta>
       <nome_pianta>Pyracantha</nome_pianta>
       <descrizione>La Pyracantha, originaria dell'Asia minore, del bacino del Mediterraneo, della Cina e dell'Himalaya, era anticamente consociuta in Grecia come“spina di fuoco”, in greco infatti “Pyra” significa fuoco e “akanta” spina. Si tratta di una pianta robusta e facile da curare come bonsai, quindi è particolarmente indicata per i principianti.</descrizione>
       <prezzo>89.99</prezzo>
       <img>foto_piante/Pyracantha.jpg</img>
-      <quantita>6</quantita>
+      <quantita>15</quantita>
       <sconto>
-        <N>0</N>
+        <N>88</N>
         <M>290</M>
         <O/>
-        <R>0</R>
-        <X>0</X>
+        <R>3</R>
+        <X>2</X>
         <Y>0</Y>
-      </sconto>      
+      </sconto>
     </pianta>
     <pianta>
       <nome_pianta>Mirto</nome_pianta>
       <descrizione>provienente dal sud-est della Cina, dal Giappone e dal Vietnam, cresce in boschi radi fino a 1000 m di altitudine. Con la tecnica del bonsai, è una pianta che regala tante soddisfazioni, sia in termini estetici che di semplicità di cura. Infatti, le sue piccolissime e graziose foglie gli conferiscono una grande armonia e lo rendono di grande valore decorativo.</descrizione>
       <prezzo>54.99</prezzo>
       <img>foto_piante/mirto.jpg</img>
-      <quantita>6</quantita>
+      <quantita>0</quantita>
       <sconto>
-        <N>0</N>
+        <N>99</N>
         <M>110</M>
         <O/>
-        <R>0</R>
-        <X>0</X>
+        <R>2</R>
+        <X>7</X>
         <Y>0</Y>
-      </sconto>      
+      </sconto>
     </pianta>
   </categoria>
   <categoria>
@@ -201,13 +201,13 @@
       <img>foto_categorie/orchidea.jpg</img>
       <quantita>4</quantita>
       <sconto>
-        <N>0</N>
+        <N>80</N>
         <M>340</M>
         <O/>
-        <R>0</R>
-        <X>0</X>
+        <R>3</R>
+        <X>5</X>
         <Y>0</Y>
-      </sconto>      
+      </sconto>
     </pianta>
     <pianta>
       <nome_pianta>Orchidea Bianca</nome_pianta>
@@ -216,13 +216,13 @@
       <img>foto_piante/orchibianca.jpg</img>
       <quantita>5</quantita>
       <sconto>
-        <N>0</N>
+        <N>77</N>
         <M>290</M>
         <O/>
-        <R>0</R>
-        <X>0</X>
-        <Y>0</Y>
-      </sconto>      
+        <R>2</R>
+        <X>1</X>
+        <Y>1</Y>
+      </sconto>
     </pianta>
     <pianta>
       <nome_pianta>Ariel</nome_pianta>
@@ -231,28 +231,28 @@
       <img>foto_piante/ariel.jpg</img>
       <quantita>5</quantita>
       <sconto>
-        <N>0</N>
+        <N>88</N>
         <M>133</M>
         <O/>
-        <R>0</R>
-        <X>0</X>
-        <Y>0</Y>
-      </sconto>      
+        <R>2</R>
+        <X>2</X>
+        <Y>1</Y>
+      </sconto>
     </pianta>
     <pianta>
       <nome_pianta>Preziosa Orchidea</nome_pianta>
       <descrizione>È una delle piante più diffuse, conosciute ed acquistate per decorare gli interni in modo sofisticato. Quest’orchidea tropicale si adatta facilmente a tutti gli ambienti domestici ma, seppur sia molto facile da curare, richiede alcune attenzioni per poter essere così decorativa e splendente. </descrizione>
       <prezzo>119</prezzo>
       <img>foto_piante/prez.jpg</img>
-      <quantita>6</quantita>
+      <quantita>5</quantita>
       <sconto>
-        <N>0</N>
+        <N>99</N>
         <M>214</M>
         <O/>
-        <R>0</R>
-        <X>0</X>
-        <Y>0</Y>
-      </sconto>      
+        <R>2</R>
+        <X>2</X>
+        <Y>1</Y>
+      </sconto>
     </pianta>
     <pianta>
       <nome_pianta>Odette</nome_pianta>
@@ -261,13 +261,13 @@
       <img>foto_piante/odette.jpg</img>
       <quantita>4</quantita>
       <sconto>
-        <N>0</N>
+        <N>66</N>
         <M>65</M>
         <O/>
-        <R>0</R>
-        <X>0</X>
-        <Y>0</Y>
-      </sconto>      
+        <R>4</R>
+        <X>3</X>
+        <Y>1</Y>
+      </sconto>
     </pianta>
   </categoria>
   <categoria>
@@ -279,45 +279,45 @@
       <descrizione>Pianta originaria del Medio Oriente il cui nome deriva dal termine arabo "Limun", ossia Agrumi.E' una pianta che produce meravigliosi fiori bianchi molto profumati, maturi o acerbi secondo la stagione, tutto l'anno.</descrizione>
       <prezzo>64.99</prezzo>
       <img>foto_piante/limone.jpg</img>
-      <quantita>60</quantita>
+      <quantita>15</quantita>
       <sconto>
-        <N>0</N>
+        <N>90</N>
         <M>87</M>
         <O/>
-        <R>0</R>
-        <X>0</X>
-        <Y>0</Y>
-      </sconto>      
+        <R>2</R>
+        <X>2</X>
+        <Y>2</Y>
+      </sconto>
     </pianta>
     <pianta>
       <nome_pianta>Camelia</nome_pianta>
       <descrizione>Una pianta dalle origini tropicali, la Camelia prende il suo nome dal missionario e botanico Georg Joseph Kamel che importà la suddetta pianta.Oltre ad avere un aspetto molto elegante, nel linguaggio dei fiori assume il significato di "perfetta bellezza" per cui è simbolo di stima, devozione e apprezzamento.</descrizione>
       <prezzo>65</prezzo>
       <img>foto_piante/camelia.jpg</img>
-      <quantita>26</quantita>
+      <quantita>20</quantita>
       <sconto>
-        <N>0</N>
+        <N>56</N>
         <M>94</M>
         <O/>
-        <R>0</R>
+        <R>2</R>
         <X>0</X>
-        <Y>0</Y>
-      </sconto>      
+        <Y>1</Y>
+      </sconto>
     </pianta>
     <pianta>
       <nome_pianta>Kumquat</nome_pianta>
       <descrizione>Il Kumquat, conosciuto anche come mandarino cinese o fortunella, è una pianta di agrumi originaria della Cina, giunta in Europa nell'800.E' caratterizzato da fiori, visibili tra luglio e settembre, che possono essere singoli o riuniti in piccole infiorescenze.I suoi frutti si caratterizzano per la forma ovale, a differenza del mandarino che tutti noi conosciamo, e la polpa ha un sapore acidulo.</descrizione>
       <prezzo>49.99</prezzo>
       <img>foto_piante/limone.jpg</img>
-      <quantita>22</quantita>
+      <quantita>0</quantita>
       <sconto>
-        <N>0</N>
+        <N>99</N>
         <M>155</M>
         <O/>
-        <R>0</R>
-        <X>0</X>
-        <Y>0</Y>
-      </sconto>      
+        <R>2</R>
+        <X>4</X>
+        <Y>1</Y>
+      </sconto>
     </pianta>
   </categoria>
   <categoria>
@@ -325,34 +325,75 @@
     <nome>Fiori</nome>
     <descrizione>I fiori sono l'essenza stessa della bellezza e dell'eleganza. Con i loro colori vivaci e fragranze avvolgenti, trasformano ogni momento in un'esperienza straordinaria. Scegli i fiori per esprimere amore, gioia e gratitudine, regalando un tocco di natura e magia a ogni occasione.</descrizione>
     <pianta>
-      <nome_pianta>Calathea</nome_pianta>
-      <descrizione>La calathea e una pianta sempreverde di origine tropicale.La particolarità di questa pianta sono le sue foglie, la parte superiore è caratterizzata dallevarie sfumature dei verdi, gialli, bianco e argento; la parte inferiore nei toni del rosso.</descrizione>
-      <prezzo>20</prezzo>
-      <img>foto/Calathea.avif</img>
-      <quantita>6</quantita>
+      <nome_pianta>Rose</nome_pianta>
+      <descrizione>Libera il bouquet dall’involucro e accorcia gli steli di circa 3 cm con un taglio obliquo per permettere ai fiori di assorbire meglio l’acqua.Inserisci il mazzo in un vaso senza riempirlo fino all’orlo e ricordati di cambiare l’acqua ogni due giorni in modo da mantenerla pulita e fresca.</descrizione>
+      <prezzo>35</prezzo>
+      <img>foto_piante/rose.avif</img>
+      <quantita>15</quantita>
       <sconto>
-        <N>0</N>
-        <M>50</M>
+        <N>99</N>
+        <M>155</M>
         <O/>
-        <R>0</R>
-        <X>0</X>
-        <Y>0</Y>
-      </sconto>      
+        <R>2</R>
+        <X>4</X>
+        <Y>1</Y>
+      </sconto>
     </pianta>
     <pianta>
-      <nome_pianta>Calathea</nome_pianta>
-      <descrizione>La calathea e una pianta sempreverde di origine tropicale.La particolarità di questa pianta sono le sue foglie, la parte superiore è caratterizzata dallevarie sfumature dei verdi, gialli, bianco e argento; la parte inferiore nei toni del rosso.</descrizione>
-      <prezzo>20</prezzo>
-      <img>foto/Calathea.avif</img>
-      <quantita>6</quantita>
+      <nome_pianta>Atena</nome_pianta>
+      <descrizione>Margherite colorate e verde decorativo.
+Non fatevi ingannare dalla semplicità di questo bouquet di margherite! Dietro la sua semplicità, la margherita nasconde una pluralità di signifcati: innocenza, spontaneità, sincerità, amore puro e fortuna.
+Donare o donarsi questo bouquet senza tempo, simboleggia ancora la promessa di un amore leale, un gesto di un nobile animo per una candida creatura.</descrizione>
+      <prezzo>36.99</prezzo>
+      <img>foto_piante/atena.avif</img>
+      <quantita>15</quantita>
+    </pianta>
+    <pianta>
+      <nome_pianta>Come</nome_pianta>
+      <descrizione>Ogni bouquet Interflora è un dono unico realizzato con passione dai nostri fioristi. Per questo ti invitiamo a celebrare con noi lo spirito di condivisione in questa stagione di festa. Sorprendi i tuoi cari con questa magnifica creazione e regala un'emozione in grado di lasciare grandi e piccini senza parole! Il nostro bouquet concilia tradizione e modernità con la sua incantevole delicatezza ed eleganza. L'effetto sarà indimenticabile per chiunque lo riceva, portando con sé la magia in ogni casa.</descrizione>
+      <prezzo>35</prezzo>
+      <img>foto_piante/come.avif</img>
+      <quantita>15</quantita>
       <sconto>
-        <N>0</N>
-        <M>50</M>
+        <N>99</N>
+        <M>155</M>
         <O/>
-        <R>0</R>
-        <X>0</X>
-        <Y>0</Y>
-      </sconto>      
+        <R>2</R>
+        <X>4</X>
+        <Y>1</Y>
+      </sconto>
+    </pianta>
+    <pianta>
+      <nome_pianta>Era</nome_pianta>
+      <descrizione>Libera il bouquet dall’involucro e accorcia gli steli di circa 3 cm con un taglio obliquo per permettere ai fiori di assorbire meglio l’acqua.Inserisci il mazzo in un vaso senza riempirlo fino all’orlo e ricordati di cambiare l’acqua ogni due giorni in modo da mantenerla pulita e fresca.</descrizione>
+      <prezzo>44.99</prezzo>
+      <img>foto_piante/era.avif</img>
+      <quantita>15</quantita>
+      <sconto>
+        <N>99</N>
+        <M>155</M>
+        <O/>
+        <R>2</R>
+        <X>4</X>
+        <Y>1</Y>
+      </sconto>
+    </pianta>
+    <pianta>
+      <nome_pianta>Complicita</nome_pianta>
+      <descrizione>Bouquet di rose, gigli e verde decorativo.
+Questo bouquet presenta colori chiari con tonalità vicine al bianco per un'esperienza fresca, naturale e luminosa. Con questi fiori, si ottiene sempre il risultato giusto.
+Attenzione: I nostri fioristi lavorano con fiori freschi di stagione, talvolta gli omaggi floreali potrebbero arrivare a destinazione con fiori di colore o varietà diversa dalla foto a seconda della reperibilità.</descrizione>
+      <prezzo>47.99</prezzo>
+      <img>foto_piante/complicita.avif</img>
+      <quantita>15</quantita>
+      <sconto>
+        <N>99</N>
+        <M>155</M>
+        <O/>
+        <R>2</R>
+        <X>4</X>
+        <Y>1</Y>
+      </sconto>
     </pianta>
   </categoria>
 </categorie>

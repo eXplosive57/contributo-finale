@@ -110,6 +110,14 @@
     <nome>Mario</nome>
     <cognome>Rossi</cognome>
     <qnt>99</qnt>
-    <esito>1</esito>
+    <esito>2</esito>
+  </richiesta>
+  <richiesta>
+    <id>17</id>
+    <id_utente>4</id_utente>
+    <nome>Lucio</nome>
+    <cognome>Verdi</cognome>
+    <qnt>90</qnt>
+    <esito>0</esito>
   </richiesta>
 </storico_cre>
