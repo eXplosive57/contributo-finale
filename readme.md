@@ -6,6 +6,8 @@ Componenti gruppo:
 - Indirizzo Repository:
 - https://github.com/eXplosive57/Contributo-3-Kerrouche.XML-DOM
 
+  Per poter utilizzare questo sito, bisognerá installare il file ' install.php '.
+
 - > Nel database é presente un utente Admin e un utente Gestore. <br>
 Per accedere con l'utente admin usare: <br>
   > Username: Admin <br>
