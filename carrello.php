@@ -1,7 +1,7 @@
 <?php
 
 
-include('config.php');
+include('Script/config.php');
 $con = new mysqli($host,$userName,$password,$dbName);
 
 session_start();
@@ -293,7 +293,7 @@ if(!isset($_SESSION['loggato']) || $_SESSION['loggato'] !== true){
                     $numero_piante = $value['Quantita']; 
                     $dataCorrente = date("Y-m-d");
 
-                    $xmlFile = "catalogo.xml";
+                    $xmlFile = "XML/catalogo.xml";
                     $xmlstring = "";
                     
                     foreach(file($xmlFile) as $nodo){
@@ -348,7 +348,7 @@ if(!isset($_SESSION['loggato']) || $_SESSION['loggato'] !== true){
       </td>
       
       <td>
-        <form action ='gestionecarrello.php' method='POST'>
+        <form action ='Script/gestionecarrello.php' method='POST'>
           <button class='rosso' name='rimuovi' type="submit">RIMUOVI</button>
           <input type='hidden' name='nome' value='<?php echo $value['Nome']?>'>
         </form>
@@ -358,7 +358,7 @@ if(!isset($_SESSION['loggato']) || $_SESSION['loggato'] !== true){
           if($value["Quantita"] > 0){
             ?>
           
-        <form action ='gestionecarrello.php' method='POST'>
+        <form action ='Script/gestionecarrello.php' method='POST'>
           <button class='blu' name='diminuisci' type="submit"> - </button>
           <input type='hidden' name='nome' value='<?php echo $value['Nome']?>'>
         </form>
@@ -368,7 +368,7 @@ if(!isset($_SESSION['loggato']) || $_SESSION['loggato'] !== true){
 
       <td>
         <?php if($_SESSION['crediti'] > $totale){?>
-        <form action ='gestionecarrello.php' method='POST'>
+        <form action ='Script/gestionecarrello.php' method='POST'>
           <button class='blu' name='aumenta' type="submit"> + </button>
           <input type='hidden' name='nome' value='<?php echo $value['Nome']?>'>
         </form>
@@ -390,7 +390,7 @@ if(!isset($_SESSION['loggato']) || $_SESSION['loggato'] !== true){
           </label>
         </td>
         <td class="centrato-totale">
-          <?php echo round($totale, 2) ?>$<br><br><form action ='svuota.php' method='POST'>
+          <?php echo round($totale, 2) ?>$<br><br><form action ='Script/svuota.php' method='POST'>
             <?php
             if($totale>$_SESSION['crediti']){
               ?>

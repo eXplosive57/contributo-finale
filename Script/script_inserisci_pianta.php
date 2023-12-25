@@ -6,7 +6,7 @@ $con = new mysqli($host,$userName,$password,$dbName);
 
 session_start();
 if($_SESSION['tipo'] == 1){
-    header('location:accesso.php');
+    header('location: ../accesso.php');
   }
 
 
@@ -22,7 +22,7 @@ $path = "foto_piante/";
 
 $img_pianta_path = $path . $img_pianta;
 
-$xmlFile = "catalogo.xml";
+$xmlFile = "../XML/catalogo.xml";
 $xmlstring = "";
 
 foreach(file($xmlFile) as $nodo){   //Leggo il contenuto del file XML
@@ -55,7 +55,7 @@ foreach ($categorie as $categoria) {
                             break;
                     }}
                         if ($piantaEsistente) {
-                        header("location: inserimento.php");
+                        header("location: ../form_inserimento_pianta.php");
                     } else {
                         //altrimenti lo aggiungo
                         $pianta = $xmlDoc->createElement("pianta");
@@ -92,4 +92,4 @@ foreach ($categorie as $categoria) {
 
 
 
-header("location: form_inserimento_pianta.php");
+header("location: ../form_inserimento_pianta.php");

@@ -1,6 +1,6 @@
 <?php
 
-include('config.php');
+include('Script/config.php');
 $con = new mysqli($host,$userName,$password,$dbName);
 session_start();
 if(!isset($_SESSION['loggato']) || $_SESSION['loggato'] !== true || $_SESSION['tipo'] == 1){

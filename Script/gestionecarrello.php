@@ -30,7 +30,7 @@ if(isset($_SESSION['id']) && isset($_POST['aggiungi']))
                         break;
                     }
                 }
-                header("location: carrello.php");
+                header("location: ../carrello.php");
                 
                 
             }
@@ -39,7 +39,7 @@ if(isset($_SESSION['id']) && isset($_POST['aggiungi']))
             //se non esiste aggiungo l'elemento
             $count=count($_SESSION['carrello']);
             $_SESSION['carrello'][$count] = array('Nome' =>$_POST['nome'], 'Prezzo' =>$_POST['prezzo'],'Foto' =>$_POST['foto'], 'Quantita'=>'1');
-            header("location: carrello.php");
+            header("location: ../carrello.php");
             
             }
         }
@@ -47,7 +47,7 @@ if(isset($_SESSION['id']) && isset($_POST['aggiungi']))
         {
             //se il carrello non é stato ancora creato allora lo creo
             $_SESSION['carrello'][0]= array('Nome' =>$_POST['nome'], 'Prezzo' =>$_POST['prezzo'],'Foto' =>$_POST['foto'], 'Quantita'=>'1');
-            header("location: carrello.php");
+            header("location: ../carrello.php");
         }
     
     }
@@ -68,7 +68,7 @@ if(isset($_POST['rimuovi']))
         }
 
     }
-    header("location: carrello.php");
+    header("location: ../carrello.php");
 
 }
 if(isset($_POST['diminuisci']))
@@ -80,7 +80,7 @@ if(isset($_POST['diminuisci']))
             break;
         }
     }
-    header("location: carrello.php");
+    header("location: ../carrello.php");
     }
 
     if(isset($_POST['aumenta']))
@@ -92,7 +92,7 @@ if(isset($_POST['diminuisci']))
             break;
         }
     }
-    header("location: carrello.php");
+    header("location: ../carrello.php");
     }
     
 

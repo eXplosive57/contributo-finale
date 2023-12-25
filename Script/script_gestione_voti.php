@@ -4,7 +4,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     
 //tale file serve per inserire il voto e la utilita della recensione
 
-        $xmlFile = "recensioni_piante.xml";
+        $xmlFile = "../XML/recensioni_piante.xml";
         $xmlstring = "";
 
         foreach(file($xmlFile) as $nodo){   //leggo il contenuto del file XML
@@ -63,7 +63,7 @@ $xmlDoc->loadXML($xmlstring);
         file_put_contents($xmlFile, $xml);
 
        
-         header("Location: recensioni.php");
+         header("Location: ../recensioni.php");
     }
 
 ?>

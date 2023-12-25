@@ -1,7 +1,7 @@
 <?php
 
 
-include('config.php');
+include('Script/config.php');
 $con = new mysqli($host,$userName,$password,$dbName);
 session_start();
 if(!isset($_SESSION['loggato']) || $_SESSION['loggato'] !== true){
@@ -67,11 +67,11 @@ if(isset($_SESSION['carrello']))
   </a>
     <?php 
     if($_SESSION['tipo'] == 0){
-      ?><b style='margin-left:-420px' class='green'>GREEN HOUSE</b>
+      ?><b style='margin-left:-720px' class='green'>GREEN HOUSE</b>
       <?php
     }else{
       if($_SESSION['tipo'] == 1){
-      ?><b style='margin-left:-250px;' class='green'>GREEN HOUSE</b><?php
+      ?><b style='margin-left:-500px;' class='green'>GREEN HOUSE</b><?php
     }}
     ?>
     
@@ -86,8 +86,17 @@ if(isset($_SESSION['carrello']))
       ?>
     <b style='margin-left:250px;'>CREDITI <?php echo $_SESSION['crediti']?></b>
     <?php }?>
+
+    <?php 
+    if ($_SESSION['tipo'] == 0) { 
+    
+    ?>
     
     <a href="richiesta_cre.php">RICHIEDI CREDITI</a>
+
+    <?php 
+    }
+    ?>
   
     <?php
             
@@ -98,7 +107,15 @@ if(isset($_SESSION['carrello']))
         <a href="loadrichieste.php">VISUALIZZA RICHIESTE</a>
         <a href="utenti.php">LISTA UTENTI</a>
         <?php } ?>
-        <a href="faq.php">FAQ</a>
+        <div class="dropdown">
+      <button class="dropbtn">SERVIZI</button>
+      <div class="dropdown-content">
+        <a class="testo" href="richiesta_cre.php">RICHIEDI CREDITI</a>
+        <a class="testo" href="recensioni.php">RECENSIONI</a>
+        <a class="testo" href="faq.php">FAQ</a>
+        <a class="testo" href="stato_richieste.php">Stato richieste</a>
+      </div>
+    </div>
         <a href="logout.php">LOGOUT</a>
         <?php if($_SESSION['tipo'] == 1) {
           ?>
@@ -113,7 +130,7 @@ if(isset($_SESSION['carrello']))
 $nome= $_POST['valore'];
 ;
 $xmlDoc = new DOMDocument();
-$xmlDoc->load("catalogo.xml");
+$xmlDoc->load("XML/catalogo.xml");
 
 $categorie = $xmlDoc->getElementsByTagName("categoria");
 
@@ -175,10 +192,18 @@ $fraseCasuale = $frasi[array_rand($frasi)];
     <h2><?php echo $prezzo?> Cr</h2>
 
     <div class="card-buttons">
-        <form action='recensisci.php' method="POST">
-            <button type="submit" name="recensione" title="">Recensisci</button>
-            <input name="nome" hidden value="<?php echo $nomePianta; ?>">
-        </form>
+      <?php 
+
+        if ($_SESSION['tipo'] == 1) {
+      ?>        
+                <form action='recensisci.php' method="POST">
+                    <button type="submit" name="recensione" title="">Recensisci</button>
+                    <input name="nome" hidden value="<?php echo $nomePianta; ?>">
+                </form>
+      <?php
+              }
+      ?>
+
 
         <form action="gestionecarrello.php" method="POST">
             <input name="nome" hidden value="<?php echo $nomePianta; ?>">

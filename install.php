@@ -1,6 +1,6 @@
 <?php
 
-require_once('config.php');
+require_once('Script/config.php');
 
 // Crea la connessione col server
 $con = new mysqli($host, $userName, $password);

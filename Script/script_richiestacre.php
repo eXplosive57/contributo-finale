@@ -10,7 +10,7 @@ session_start();
 
 $cre = $con->real_escape_string($_POST['cre']);
 
-$xmlFile = "storico_cre.xml";
+$xmlFile = "../XML/storico_cre.xml";
 $xmlstring = "";
 
 foreach(file($xmlFile) as $nodo){   //Leggo il contenuto del file XML
@@ -57,4 +57,4 @@ $xmlDoc->formatOutput = true;
 $xml = $xmlDoc->saveXML();
 file_put_contents($xmlFile, $xml);  //sovrascrive il contenuto del vecchio file XML con quello nuovo
 
-header("location: richiesta_cre.php");
+header("location: ../richiesta_cre.php");

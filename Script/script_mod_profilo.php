@@ -26,7 +26,7 @@ $con = new mysqli($host,$userName,$password,$dbName);
 
 if ($con->query($sql) === TRUE) {
     $_SESSION['Aggiornato'] = 'Campi aggiornati!';
-    header('location:utenti.php');
+    header('location: ../utenti.php');
 } else {
     echo "Errore nell'aggiornamento del database: " . $con->error;
 }

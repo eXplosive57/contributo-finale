@@ -1,5 +1,5 @@
 <?php
-include('config.php');
+include('Script/config.php');
 $con = new mysqli($host,$userName,$password,$dbName);
 session_start();
 ?>
@@ -48,14 +48,14 @@ if(isset($_SESSION['carrello']))
 <a href="index.php">
 <img src="foto/leaf.png" alt="Logo" class="logo" >
 </a>
-<b style='margin-left:0px;' class='green'>GREEN HOUSE</b>
+<b style='margin-left:-100px;' class='green'>GREEN HOUSE</b>
 <?php
 }else if($_SESSION['tipo'] == 0 OR $_SESSION['tipo'] == 2){
   ?><div class='header'>
 <a href="index.php">
 <img src="foto/leaf.png" alt="Logo" class="logo" >
 </a>
-<b style='margin-left:-650px' class='green'>GREEN HOUSE</b>
+<b style='margin-left:-1340px' class='green'>GREEN HOUSE</b>
 <?php }
     
      if($_SESSION['tipo'] == 1){
@@ -136,7 +136,7 @@ if(isset($_SESSION['carrello']))
   </div>
   <?php
 $xmlDoc = new DOMDocument();
-$xmlDoc->load("catalogo.xml");
+$xmlDoc->load("XML/catalogo.xml");
 
 $categorie = $xmlDoc->getElementsByTagName("categoria");
 ?>

@@ -1,6 +1,6 @@
 <?php
 
-include('config.php');
+include('Script/config.php');
 $con = new mysqli($host,$userName,$password,$dbName);
 session_start();
 if(!isset($_SESSION['loggato']) || $_SESSION['loggato'] !== true || $_SESSION['tipo'] == 1){
@@ -33,7 +33,7 @@ if(!isset($_SESSION['loggato']) || $_SESSION['loggato'] !== true || $_SESSION['t
   <a href="index.php">
     <img src="foto/leaf.png" alt="Logo" class="logo" >
   </a>
-    <b style='margin-left:-480px' class='green'>GREEN HOUSE</b>
+    <b style='margin-left:-600px' class='green'>GREEN HOUSE</b>
   
       <nav class='navbar'>
         <a href="form_inserimento_pianta.php">INSERISCI PIANTA</a>
@@ -99,8 +99,6 @@ if ($result->num_rows > 0) {
           <a href='movimenti.php'><button class="blu" type="submit">MOVIMENTI</button></a>
           </form>
       </td>
-        
-      <td><button class="rosso" type="submit">BAN</button></td>
     </tr>
 <?php }}?>
 </div>

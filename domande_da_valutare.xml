@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<domande xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="domande_da_valutare.xsd">
-  <domanda>
-    <id>1</id>
-    <nome>Una pianta da esterno necessita di tante cure?</nome>
-    <creata_da>Mario Rossi</creata_da>
-    <data>2023-12-04 17:29:45</data>
-  </domanda>
-</domande>

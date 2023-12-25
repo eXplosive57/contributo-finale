@@ -16,7 +16,7 @@ if(isset($_SESSION['id']) && isset($_POST['svuota']))
 
 
 
-            $xmlFile = "catalogo.xml";
+            $xmlFile = "../XML/catalogo.xml";
             $xmlstring = "";
             
             foreach(file($xmlFile) as $nodo){   //Leggo il contenuto del file XML
@@ -41,7 +41,7 @@ if(isset($_SESSION['id']) && isset($_POST['svuota']))
 
         foreach ($_SESSION['piante_nel_carrello'] as $key => $value) {
             
-            $xmlFile = "catalogo.xml";
+            $xmlFile = "../XML/catalogo.xml";
             $xmlstring = "";
             
             foreach(file($xmlFile) as $nodo){
@@ -58,7 +58,7 @@ if(isset($_SESSION['id']) && isset($_POST['svuota']))
             $numero_piante = $value['quantita']; 
             $dataCorrente = date("Y-m-d");
 
-            $xmlFile = "storico_acq.xml";
+            $xmlFile = "../XML/storico_acq.xml";
             $xmlstring = "";
             
             foreach(file($xmlFile) as $nodo){   //Leggo il contenuto del file XML
@@ -104,7 +104,7 @@ if(isset($_SESSION['id']) && isset($_POST['svuota']))
                 
   
                 $xmlDoc = new DOMDocument();
-                $xmlDoc->load("catalogo.xml");
+                $xmlDoc->load("../XML/catalogo.xml");
         
                 $categorie = $xmlDoc->getElementsByTagName("categoria");
                 foreach ($categorie as $categoria) {
@@ -134,12 +134,12 @@ if(isset($_SESSION['id']) && isset($_POST['svuota']))
                                 // Aggiorna il valore dell'elemento quantità nel documento XML
                                 $quantita_element->nodeValue = $nuova_quantita;
                                 $xmlDoc->formatOutput = true;
-                                $xmlDoc->save("catalogo.xml");
+                                $xmlDoc->save("../XML/catalogo.xml");
                                     }
                           }
                         
 
-    header("location: carrello.php");
+    header("location: ../carrello.php");
     
                         }}
 }}

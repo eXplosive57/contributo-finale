@@ -1,6 +1,6 @@
 <?php
 
-include('config.php');
+include('Script/config.php');
 $con = new mysqli($host,$userName,$password,$dbName);
 session_start();
 if(!isset($_SESSION['loggato']) || $_SESSION['loggato'] !== true){
@@ -58,7 +58,7 @@ if(isset($_SESSION['carrello']))
 <a href="index.php">
 <img src="foto/leaf.png" alt="Logo" class="logo" >
 </a>
-<b style='margin-left:0px;' class='green'>GREEN HOUSE</b>
+<b style='margin-left:-100px;' class='green'>GREEN HOUSE</b>
 <?php
 }else if($_SESSION['tipo'] == 0){
   ?><div class='header'>
@@ -127,7 +127,7 @@ if(isset($_SESSION['carrello']))
 
 
 $xmlDoc = new DOMDocument();
-$xmlDoc->load("storico_cre.xml");
+$xmlDoc->load("XML/storico_cre.xml");
 
 $richieste = $xmlDoc->getElementsByTagName("richiesta");
 ?>
@@ -154,7 +154,7 @@ $richieste = $xmlDoc->getElementsByTagName("richiesta");
 
                         if ($nome == $_SESSION['nome']) {
                           echo '<tr>';
-                          echo '<td style="width:200px">' . $qnt . ' Crediti</td>'; // Modifica la larghezza desiderata
+                          echo '<td style="width:200px">' . $qnt . ' Crediti</td>';
                           if ($esito == 0) {
                               echo '<td style="width:200px"><button class="verde">ACCETTATA</button></td>';
                           } elseif ($esito == 2) {

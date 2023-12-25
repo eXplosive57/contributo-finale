@@ -14,7 +14,7 @@ $data_form = $con->real_escape_string($_POST['data']);
 
 $nome_completo = $nome_form . ' ' . $cognome_form;
  
-$xmlFile = "domande_da_valutare.xml";
+$xmlFile = "../XML/domande_da_valutare.xml";
 $xmlstring = "";
 
 foreach(file($xmlFile) as $nodo){   //Leggo il contenuto del file XML
@@ -61,4 +61,4 @@ $Domande->appendChild($domanda);
 $xmlDoc->formatOutput = true;
 $xmlDoc->save($xmlFile);
 
-header("location: faq.php");
+header("location: ../faq.php");

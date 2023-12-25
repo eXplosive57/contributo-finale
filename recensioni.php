@@ -1,6 +1,6 @@
 <?php
 
-include('config.php');
+include('Script/config.php');
 $con = new mysqli($host,$userName,$password,$dbName);
 session_start();
 if(!isset($_SESSION['loggato']) || $_SESSION['loggato'] !== true){
@@ -57,7 +57,7 @@ if(isset($_SESSION['carrello']))
 <a href="index.php">
 <img src="foto/leaf.png" alt="Logo" class="logo" >
 </a>
-<b style='margin-left:0px;' class='green'>GREEN HOUSE</b>
+<b style='margin-left:-100px;' class='green'>GREEN HOUSE</b>
 <?php
 }else if($_SESSION['tipo'] == 0 OR $_SESSION['tipo'] == 2){
   ?><div class='header'>
@@ -103,7 +103,7 @@ if(isset($_SESSION['carrello']))
 <div class="dropdown">
       <button class="dropbtn">SERVIZI</button>
       <div class="dropdown-content">
-       <a href="form_inserimento_pianta.php">INSERISCI PIANTA</a>
+       <a href="Script/form_inserimento_pianta.php">INSERISCI PIANTA</a>
 
        <a href="loadrichieste.php">RICHIESTE CREDITI</a>
        <a href="utenti.php">LISTA UTENTI</a>
@@ -127,12 +127,12 @@ if(isset($_SESSION['carrello']))
 <?php 
 
 
-
+$nome_completo = $_SESSION['nome'] . ' ' . $_SESSION['cognome'];
 
 
 
 $xmlDoc = new DOMDocument();
-$xmlDoc->load("recensioni_piante.xml");
+$xmlDoc->load("XML/recensioni_piante.xml");
 
 $piante = $xmlDoc->getElementsByTagName("pianta");
 ?>
@@ -174,7 +174,11 @@ foreach ($piante as $pianta) {
       <td><?php echo $nomePianta ?></td>
       <td><?php echo $commento ?></td>
       <td>
-        <form action="script_gestione_voti.php" name='voto' method="post">
+        <?php 
+            if($nome_completo <> $autore){
+              ?>
+              
+              <form action="Script/script_gestione_voti.php" name='voto' method="post">
               <input type="number" name="utilita" id="utilita" min="1" max="5">
               <br><br>
               <input type="number" name="supporto" id="supporto" min="1" max="3">
@@ -184,7 +188,13 @@ foreach ($piante as $pianta) {
               <input type="hidden" id="cognome" name="cognome" value="<?php echo $_SESSION['cognome'] ?>">
               <br><br>
               <input type="submit" value="Vota">
-        </form>
+        </form><?php
+            } 
+            
+            ?>
+            
+        
+        
       </td>
     </tr>
 <?php }}?>

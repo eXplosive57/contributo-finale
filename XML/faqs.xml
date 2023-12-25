@@ -21,4 +21,11 @@
     <creata_da>Mario Rossi</creata_da>
     <data>2023-11-30 00:20:04</data>
   </faq>
+  <faq>
+    <id>4</id>
+    <domanda>Una pianta da esterno necessita di tante cure?</domanda>
+    <risposta>Il minimo indispensabile!</risposta>
+    <creata_da>Mario Rossi</creata_da>
+    <data>2023-12-04 17:29:45</data>
+  </faq>
 </faqs>

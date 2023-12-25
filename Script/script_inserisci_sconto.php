@@ -22,7 +22,7 @@ $anni = $con->real_escape_string($_POST['anni']);
 
 
 
-$xmlFile = "catalogo.xml";
+$xmlFile = "../XML/catalogo.xml";
 $xmlstring = "";
 
 foreach(file($xmlFile) as $nodo){   //Leggo il contenuto del file XML
@@ -71,4 +71,4 @@ foreach ($categorie as $categoria) {
 
 
 
-header("location: form_sconti.php");
+header("location: ../form_sconti.php");

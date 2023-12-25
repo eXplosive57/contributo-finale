@@ -1,6 +1,6 @@
 <?php
 
-include('config.php');
+include('Script/config.php');
 $con = new mysqli($host,$userName,$password,$dbName);
 session_start();
 if(!isset($_SESSION['loggato']) || $_SESSION['loggato'] !== true || $_SESSION['tipo'] == 1){
@@ -52,7 +52,7 @@ if(!isset($_SESSION['loggato']) || $_SESSION['loggato'] !== true || $_SESSION['t
 
 
     $xmlDoc = new DOMDocument();
-    $xmlDoc->load("domande_da_valutare.xml");
+    $xmlDoc->load("XML/domande_da_valutare.xml");
 
     $question = $xmlDoc->getElementsByTagName("domanda");
 
@@ -92,7 +92,7 @@ foreach ($question as $domanda) {
       <td style='width:400px;'><?php echo $nome ?></td>
       <td style='width:400px;'><?php echo $data ?></td>
       <td>
-        <form action="script_inserimento_risposta.php" method="post">
+        <form action="Script/script_inserimento_risposta.php" method="post">
           <div class="input-box">
           <label for="nome"></label>
           <input style='width:300px;' type="text" name="risposta" id="risposta" required>

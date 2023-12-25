@@ -2,7 +2,7 @@
 
 
 
-include('config.php');
+include('Script/config.php');
 $con = new mysqli($host,$userName,$password,$dbName);
 
 $sql = "UPDATE utenti
@@ -16,9 +16,12 @@ echo "Errore nell'aggiornamento del database: " . $con->error;
 }
 
 
+$xmlDoc = new DOMDocument();
+$xmlDoc->load("catalogo.xml");
 
+$categorie = $xmlDoc->getElementsByTagName("categoria");
 
-
+foreach ($categorie as $categoria) {
 $piante = $xmlDoc->getElementsByTagName('pianta');
         $reputazione = 0;
         foreach ($piante as $pianta) {
@@ -40,6 +43,6 @@ $piante = $xmlDoc->getElementsByTagName('pianta');
                     }
                 }
             }
-
+        }
 
 ?>

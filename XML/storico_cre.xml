@@ -88,4 +88,28 @@
     <qnt>145</qnt>
     <esito>0</esito>
   </richiesta>
+  <richiesta>
+    <id>14</id>
+    <id_utente>3</id_utente>
+    <nome>Mario</nome>
+    <cognome>Rossi</cognome>
+    <qnt>120</qnt>
+    <esito>0</esito>
+  </richiesta>
+  <richiesta>
+    <id>15</id>
+    <id_utente>3</id_utente>
+    <nome>Mario</nome>
+    <cognome>Rossi</cognome>
+    <qnt>24</qnt>
+    <esito>1</esito>
+  </richiesta>
+  <richiesta>
+    <id>16</id>
+    <id_utente>3</id_utente>
+    <nome>Mario</nome>
+    <cognome>Rossi</cognome>
+    <qnt>99</qnt>
+    <esito>1</esito>
+  </richiesta>
 </storico_cre>

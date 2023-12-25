@@ -34,4 +34,15 @@
       </recensione>
     </recensioni>
   </pianta>
+  <pianta>
+    <nome>Pyracantha</nome>
+    <recensioni>
+      <recensione>
+        <autore>Mario Rossi</autore>
+        <commento>Ottima pianta, non necessita di molte cure, perfetta per chi ama le piante con non troppa attenzione alle cure!</commento>
+        <utilita/>
+        <supporto/>
+      </recensione>
+    </recensioni>
+  </pianta>
 </recensioni_piante>

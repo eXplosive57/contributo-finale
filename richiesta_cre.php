@@ -1,5 +1,5 @@
 <?php
-include('config.php');
+include('Script/config.php');
 $con = new mysqli($host,$userName,$password,$dbName);
 session_start();
 if(!isset($_SESSION['loggato']) || $_SESSION['loggato'] !== true){
@@ -56,7 +56,7 @@ if(isset($_SESSION['carrello']))
 <a href="index.php">
 <img src="foto/leaf.png" alt="Logo" class="logo" >
 </a>
-<b style='margin-left:0px;' class='green'>GREEN HOUSE</b>
+<b style='margin-left:-100px;' class='green'>GREEN HOUSE</b>
 <?php
 }else if($_SESSION['tipo'] == 0){
   ?><div class='header'>
@@ -120,7 +120,7 @@ if(isset($_SESSION['carrello']))
    
 
 <div class="wrapper">
-<form action="script_richiestacre.php" method="post">
+<form action="Script/script_richiestacre.php" method="post">
     <h1 class="titolo2">RICHIEDI CREDITI</h1>
     <div class="input-box">
     <label for="mail">Numero crediti richiesti</label>

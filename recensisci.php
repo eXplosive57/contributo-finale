@@ -3,7 +3,7 @@
 <?php
 
 
-include('config.php');
+include('Script/config.php');
 $con = new mysqli($host,$userName,$password,$dbName);
 session_start();
 if(!isset($_SESSION['loggato']) || $_SESSION['loggato'] !== true){
@@ -118,9 +118,9 @@ if(isset($_SESSION['carrello']))
         ?> 
       </nav>
     </div>
-    <!-- nome della categoria ottenuta dal bottone premuto in basa alla categoria scelta -->
+    
 <div class="wrapper">
-<form action="script_add_recensione.php" method="post">
+<form action="Script/script_add_recensione.php" method="post">
     <h1 class='titolo2'><?php echo $nome_pianta ?></h1>
     <div class="input-box">
     <label for="nome">Scrivi la tua recensione</label>

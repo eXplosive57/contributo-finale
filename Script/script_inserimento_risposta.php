@@ -12,7 +12,7 @@ $nome_da_inserire = $con->real_escape_string($_POST['nome']);
 $data_da_inserire = $con->real_escape_string($_POST['data']);
 $risposta_da_inserire = $con->real_escape_string($_POST['risposta']);
  
-$xmlFile = "faqs.xml";
+$xmlFile = "../XML/faqs.xml";
 $xmlstring = "";
 
 foreach(file($xmlFile) as $nodo){   //Leggo il contenuto del file XML
@@ -59,7 +59,7 @@ $xmlDoc->formatOutput = true;
 $xml = $xmlDoc->saveXML();
 file_put_contents($xmlFile, $xml);  //sovrascrive il contenuto del vecchio file XML con quello nuovo
 
-$xmlFile2 = "domande_da_valutare.xml";
+$xmlFile2 = "../XML/domande_da_valutare.xml";
 $xmlstring = "";
 
 foreach(file($xmlFile2) as $nodo){   //Leggo il contenuto del file XML
@@ -92,4 +92,4 @@ file_put_contents($xmlFile2, $xml2);
  
 
 
-header("location: faq.php");
+header("location: ../faq.php");

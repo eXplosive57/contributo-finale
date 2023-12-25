@@ -1,7 +1,7 @@
 <?php
 
 
-include('config.php');
+include('Script/config.php');
 $con = new mysqli($host,$userName,$password,$dbName);
 
 session_start();

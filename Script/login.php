@@ -52,18 +52,18 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
  
                 
-                header("location: index.php");
+                header("location: ../index.php");
                 
                 
             } else {
                 $_SESSION['pass'] = 'Password errata!';
-                header("location: accesso.php");
+                header("location: ./accesso.php");
                 
 
             }
         } else {
             $_SESSION['ko'] = "Attenzione! Username non presente.";
-            header("location: accesso.php");
+            header("location: ../accesso.php");
         }
     } else {
         echo "Errore login.";
@@ -90,12 +90,12 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                 $row3 = mysqli_fetch_array($result3);
                 $_SESSION['id'] = $row3['id'];
 
-                header("location: index.php");
+                header("location: ../index.php");
                 
                 
             } else {
                 $_SESSION['pass'] = 'Password errata!';
-                header("location: accesso.php");
+                header("location: ../accesso.php");
                 
 
             }

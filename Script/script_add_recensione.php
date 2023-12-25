@@ -16,7 +16,7 @@ $rec = $con->real_escape_string($_POST['rec']);
 
 $nome_completo = $nome . " " . $cognome;
 
-$xmlFile = "recensioni_piante.xml";
+$xmlFile = "../XML/recensioni_piante.xml";
 $xmlstring = "";
 
 foreach(file($xmlFile) as $nodo){   //Leggo il contenuto del file XML
@@ -85,5 +85,5 @@ if (!$pianta_esistente) {
 
 
 
-header("location: recensioni.php");
+header("location: ../recensioni.php");
 ?>

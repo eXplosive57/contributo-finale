@@ -19,7 +19,7 @@
 <body>
 
 <?php
-include('config.php');
+include('Script/config.php');
 $con = new mysqli($host,$userName,$password,$dbName);
 session_start();
 
@@ -40,7 +40,7 @@ if (isset($_SESSION['pass'])) {
 ?>
 
 <div class="wrapper">
-<form action="login.php" method="post" name="form2">
+<form action="Script/login.php" method="post" name="form2">
 <input type="hidden" name="form_name" value="form2">
     <h1 class="titolo2">ACCEDI</h1>
     <div class="input-box">

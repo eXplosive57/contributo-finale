@@ -1,6 +1,6 @@
 <?php
 
-include('config.php');
+include('Script/config.php');
 $con = new mysqli($host,$userName,$password,$dbName);
 session_start();
 if(!isset($_SESSION['loggato']) || $_SESSION['loggato'] !== true){
@@ -57,7 +57,7 @@ if(isset($_SESSION['carrello']))
 <a href="index.php">
 <img src="foto/leaf.png" alt="Logo" class="logo" >
 </a>
-<b style='margin-left:0px;' class='green'>GREEN HOUSE</b>
+<b style='margin-left:-100px;' class='green'>GREEN HOUSE</b>
 <?php
 }else if($_SESSION['tipo'] == 0 OR $_SESSION['tipo'] == 2){
   ?><div class='header'>
@@ -130,7 +130,7 @@ if(isset($_SESSION['carrello']))
     $dataCorrente = date('Y-m-d H:i:s');
 
     $xmlDoc = new DOMDocument();
-    $xmlDoc->load("faqs.xml");
+    $xmlDoc->load("XML/faqs.xml");
 
     $domande = $xmlDoc->getElementsByTagName("faq");
 
@@ -184,7 +184,7 @@ foreach ($domande as $faq) {
 if($_SESSION['tipo'] == 1) {
 ?>
 <div class="wrapper">
-<form action="script_faq.php" method="post">
+<form action="Script/script_faq.php" method="post">
     <h1 class='titolo2'>Domanda alla Community!</h1>
     <div class="input-box">
     <label for="nome"></label>

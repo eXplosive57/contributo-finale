@@ -1,6 +1,6 @@
 <?php
 
-include('config.php');
+include('Script/config.php');
 $con = new mysqli($host,$userName,$password,$dbName);
 session_start();
 if(!isset($_SESSION['loggato']) || $_SESSION['loggato'] !== true || $_SESSION['tipo'] == 1){
@@ -32,7 +32,7 @@ if(!isset($_SESSION['loggato']) || $_SESSION['loggato'] !== true || $_SESSION['t
   <a href="index.php">
     <img src="foto/leaf.png" alt="Logo" class="logo" >
   </a>
-    <b style='margin-left:-480px' class='green'>GREEN HOUSE</b>
+    <b style='margin-left:-500px' class='green'>GREEN HOUSE</b>
   
       <nav class='navbar'>
         <a href="form_inserimento_pianta.php">INSERISCI PIANTA</a>
@@ -53,7 +53,7 @@ if(!isset($_SESSION['loggato']) || $_SESSION['loggato'] !== true || $_SESSION['t
 
 
 $xmlDoc = new DOMDocument();
-$xmlDoc->load("storico_cre.xml");
+$xmlDoc->load("XML/storico_cre.xml");
 
 $richieste = $xmlDoc->getElementsByTagName("richiesta");
 ?>
