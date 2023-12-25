@@ -1,2 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<domande xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="domande_da_valutare.xsd"/>
+<domande xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="domande_da_valutare.xsd">
+  <domanda>
+    <id>1</id>
+    <nome>Quanto spesso dovrei innaffiare le mie piante d\'appartamento?</nome>
+    <creata_da>Mario Rossi</creata_da>
+    <data>2023-12-25</data>
+  </domanda>
+</domande>

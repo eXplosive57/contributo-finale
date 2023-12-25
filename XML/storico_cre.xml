@@ -1,123 +1,75 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <storico_cre xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="storico_cre.xsd">
   <richiesta>
+    <id>1</id>
+    <id_utente>4</id_utente>
+    <nome>Mario</nome>
+    <cognome>Rossi</cognome>
+    <qnt>20</qnt>
+    <esito>1</esito>
+  </richiesta>
+  <richiesta>
+    <id>2</id>
+    <id_utente>3</id_utente>
+    <nome>Luca</nome>
+    <cognome>Verdi</cognome>
+    <qnt>40</qnt>
+    <esito>2</esito>
+  </richiesta>
+  <richiesta>
     <id>3</id>
-    <id_utente>16</id_utente>
-    <nome>Luigi</nome>
-    <cognome>Lucio</cognome>
-    <qnt>120</qnt>
-    <esito>0</esito>
+    <id_utente>3</id_utente>
+    <nome>Luca</nome>
+    <cognome>Verdi</cognome>
+    <qnt>90</qnt>
+    <esito>1</esito>
   </richiesta>
   <richiesta>
     <id>4</id>
-    <id_utente>15</id_utente>
-    <nome>Luca</nome>
-    <cognome>Verdi</cognome>
-    <qnt>2323</qnt>
+    <id_utente>5</id_utente>
+    <nome>Fabio</nome>
+    <cognome>Mollura</cognome>
+    <qnt>25</qnt>
     <esito>2</esito>
   </richiesta>
   <richiesta>
     <id>5</id>
-    <id_utente>15</id_utente>
-    <nome>Luca</nome>
-    <cognome>Verdi</cognome>
-    <qnt>12</qnt>
-    <esito>0</esito>
-  </richiesta>
-  <richiesta>
-    <id>6</id>
-    <id_utente>15</id_utente>
-    <nome>Luca</nome>
-    <cognome>Verdi</cognome>
-    <qnt>232342342423</qnt>
-    <esito>0</esito>
-  </richiesta>
-  <richiesta>
-    <id>7</id>
-    <id_utente>15</id_utente>
-    <nome>Luca</nome>
-    <cognome>Verdi</cognome>
-    <qnt>99</qnt>
-    <esito>2</esito>
-  </richiesta>
-  <richiesta>
-    <id>8</id>
-    <id_utente>3</id_utente>
-    <nome>Mario</nome>
-    <cognome>Rossi</cognome>
-    <qnt>976</qnt>
-    <esito>0</esito>
-  </richiesta>
-  <richiesta>
-    <id>9</id>
-    <id_utente>4</id_utente>
-    <nome>Luca</nome>
-    <cognome>Verdi</cognome>
-    <qnt>566</qnt>
-    <esito>0</esito>
-  </richiesta>
-  <richiesta>
-    <id>10</id>
     <id_utente>5</id_utente>
-    <nome>emanuele</nome>
-    <cognome>par</cognome>
-    <qnt>500</qnt>
+    <nome>Fabio</nome>
+    <cognome>Mollura</cognome>
+    <qnt>45</qnt>
     <esito>0</esito>
   </richiesta>
-  <richiesta>
-    <id>11</id>
-    <id_utente>3</id_utente>
-    <nome>Mario</nome>
-    <cognome>Rossi</cognome>
-    <qnt>66</qnt>
-    <esito>0</esito>
-  </richiesta>
-  <richiesta>
-    <id>12</id>
-    <id_utente>3</id_utente>
-    <nome>Mario</nome>
-    <cognome>Rossi</cognome>
-    <qnt>32</qnt>
-    <esito>0</esito>
-  </richiesta>
-  <richiesta>
-    <id>13</id>
-    <id_utente>3</id_utente>
-    <nome>Mario</nome>
-    <cognome>Rossi</cognome>
-    <qnt>145</qnt>
-    <esito>0</esito>
-  </richiesta>
-  <richiesta>
-    <id>14</id>
-    <id_utente>3</id_utente>
-    <nome>Mario</nome>
-    <cognome>Rossi</cognome>
-    <qnt>120</qnt>
-    <esito>0</esito>
-  </richiesta>
-  <richiesta>
-    <id>15</id>
-    <id_utente>3</id_utente>
-    <nome>Mario</nome>
-    <cognome>Rossi</cognome>
-    <qnt>24</qnt>
+    <richiesta>
+    <id>6</id>
+    <id_utente>5</id_utente>
+    <nome>Fabio</nome>
+    <cognome>Mollura</cognome>
+    <qnt>70</qnt>
     <esito>1</esito>
   </richiesta>
-  <richiesta>
-    <id>16</id>
+    <richiesta>
+    <id>7</id>
     <id_utente>3</id_utente>
+    <nome>Luca</nome>
+    <cognome>Verdi</cognome>
+    <qnt>15</qnt>
+    <esito>1</esito>
+  </richiesta>
+    <richiesta>
+    <id>8</id>
+    <id_utente>4</id_utente>
     <nome>Mario</nome>
     <cognome>Rossi</cognome>
-    <qnt>99</qnt>
+    <qnt>250</qnt>
     <esito>2</esito>
   </richiesta>
-  <richiesta>
-    <id>17</id>
-    <id_utente>4</id_utente>
-    <nome>Lucio</nome>
-    <cognome>Verdi</cognome>
-    <qnt>90</qnt>
-    <esito>0</esito>
+      <richiesta>
+      <id>9</id>
+      <id_utente>4</id_utente>
+      <nome>Mario</nome>
+      <cognome>Rossi</cognome>
+      <qnt>500</qnt>
+      <esito>2</esito>
   </richiesta>
 </storico_cre>

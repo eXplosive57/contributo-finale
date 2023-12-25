@@ -14,7 +14,7 @@
     <nome_prodotto>Ariel</nome_prodotto>
     <data_acquisto>2020-05-13</data_acquisto>
     <prezzo>49.99</prezzo>
-    <qnt>1</qnt>
+    <qnt>2</qnt>
   </acq>
   <acq>
     <id>3</id>
@@ -34,15 +34,7 @@
   </acq>
   <acq>
     <id>5</id>
-    <nome>Mario Rossi</nome>
-    <nome_prodotto>Camelia</nome_prodotto>
-    <data_acquisto>2023-12-24</data_acquisto>
-    <prezzo>65</prezzo>
-    <qnt>1</qnt>
-  </acq>
-  <acq>
-    <id>6</id>
-    <nome>Lucio Verdi</nome>
+    <nome>Luca Verdi</nome>
     <nome_prodotto>Aloe Vera</nome_prodotto>
     <data_acquisto>2023-12-25</data_acquisto>
     <prezzo>37.99</prezzo>

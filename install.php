@@ -45,9 +45,12 @@ if ($con->query($utente) === FALSE) {
 
 
 
-$insert_utente = "INSERT INTO `Utenti` (`id`,`nome`, `cognome`,`mail`,`cf`,`telefono`,`indirizzo`, `crediti`,`password`,`data_iscrizione`, `Tipo`) VALUES
-('1','Admin', NULL, NULL,NULL,NULL,NULL,NULL,'" . password_hash('Admin', PASSWORD_DEFAULT) . "', NULL, 0),
-('2','Gestore', NULL, NULL,NULL,NULL,NULL,NULL,'" . password_hash('Gestore', PASSWORD_DEFAULT) . "', NULL, 2)";
+$insert_utente = "INSERT INTO `Utenti` (`id`,`nome`, `cognome`,`mail`,`reputazione`,`cf`,`telefono`,`indirizzo`, `crediti`,`password`,`data_iscrizione`, `Tipo`) VALUES
+('1','Admin', NULL, NULL,NULL,NULL,NULL,NULL,NULL,'" . password_hash('Admin', PASSWORD_DEFAULT) . "', NULL, 0),
+('2','Gestore', NULL, NULL,NULL,NULL,NULL,NULL,NULL,'" . password_hash('Gestore', PASSWORD_DEFAULT) . "', NULL, 2),
+('3','Luca', 'Verdi', 'lucaverdi@gmail.com', 2,'LRVNNA94M08F333L','392582099','Via Napoli',40,'" . password_hash('Luca', PASSWORD_DEFAULT) . "', '2021-10-21', 1),
+('4','Mario', 'Rossi', 'mariorossi@gmail.com', 2,'RSSMRA91T05L211X','390562991','Via Roma',32,'" . password_hash('Mario', PASSWORD_DEFAULT) . "', '2021-03-11', 1),
+('5','Fabio', 'Mollura', 'fabiomollu@gmail.com', 4,'FNCMRA88P03A202Q','333592240','Via Milano',180,'" . password_hash('Fabio', PASSWORD_DEFAULT) . "', '2022-11-21', 1)";
 
 if ($con->query($insert_utente) === FALSE) {
     echo "Errore nell'inserimento degli utenti " . $con->error;

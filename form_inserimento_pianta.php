@@ -4,7 +4,7 @@ include('Script/config.php');
 $con = new mysqli($host,$userName,$password,$dbName);
 session_start();
 if(!isset($_SESSION['loggato']) || $_SESSION['loggato'] !== true || $_SESSION['tipo'] == 1){
-  header('location:accesso.php');
+  header('location:Accesso_Registrazione/accesso.php');
 }
 ?>
 
@@ -43,15 +43,18 @@ if(!isset($_SESSION['loggato']) || $_SESSION['loggato'] !== true || $_SESSION['t
   <a href="index.php">
     <img src="foto/leaf.png" alt="Logo" class="logo" >
   </a>
-    <b style='margin-left:-500px' class='green'>GREEN HOUSE</b>
+    <b style='margin-left:-1350px' class='green'>GREEN HOUSE</b>
   
       <nav class='navbar'>
-        <a href="form_inserimento_pianta.php">INSERISCI PIANTA</a>
-        <a href="loadrichieste.php">VISUALIZZA RICHIESTE</a>
-        
-        <a href="utenti.php">LISTA UTENTI</a>
-        <a href="index.php">CATEGORIE</a>
-        <a href="faq.php">FAQ</a>
+      <div class="dropdown">
+      <button class="dropbtn">SERVIZI</button>
+      <div class="dropdown-content">
+       <a href="form_inserimento_pianta.php">INSERISCI PIANTA</a>
+       <a href="loadrichieste.php">RICHIESTE CREDITI</a>
+       <a href="utenti.php">LISTA UTENTI</a>
+       <a href="faq.php">FAQ</a>
+       <a href="domande_da_valutare.php">DOMANDE IN PENDING</a>
+            </div>
         <a href="logout.php">LOGOUT</a>
       </nav>
     </div>

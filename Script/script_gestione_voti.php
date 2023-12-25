@@ -1,5 +1,7 @@
 <?php
+include('config.php');
 
+$con = new mysqli($host,$userName,$password,$dbName);
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     
 //tale file serve per inserire il voto e la utilita della recensione
@@ -19,12 +21,17 @@ $xmlDoc->loadXML($xmlstring);
         $supporto = $_POST['supporto'];
         $pianta_form = $_POST['pianta'];
         $rece = $_POST['rec'];
-        $nome_form = $_POST['nome'];
-        $cognome_form = $_POST['cognome'];
+        $nome_completo = $_POST['nome_comp'];
 
-        $nome_completo = $nome_form . " " . $cognome_form;
 
-        
+        // Utilizza explode() per dividere la stringa in un array
+        $partiNomeCognome = explode(" ", $nome_completo);
+
+// Ora $partiNomeCognome è un array contenente il nome e il cognome
+        $nome = $partiNomeCognome[0];    // "Mario"
+        $cognome = $partiNomeCognome[1];
+
+        // questo script inserisce il valore numerico dalla utilita e supporto nei campi XML
         foreach ($xmlDoc->getElementsByTagName('pianta') as $pianta) {
             $nome_pianta = $pianta->getElementsByTagName('nome')->item(0)->nodeValue;
 
@@ -61,9 +68,38 @@ $xmlDoc->loadXML($xmlstring);
         $xmlDoc->formatOutput = true;
         $xml = $xmlDoc->saveXML();
         file_put_contents($xmlFile, $xml);
+        
 
-       
-         header("Location: ../recensioni.php");
+        //il seguente script calcola la reputazione dell'utente
+        $reputazione_totale = 0;
+        $recensioni_totali = 0;
+
+    foreach ($xmlDoc->getElementsByTagName('pianta') as $pianta) {
+        $recensioni = $pianta->getElementsByTagName('recensione');
+        foreach ($recensioni as $recensione) {
+            $autore = $recensione->getElementsByTagName('autore')->item(0)->nodeValue;
+            if ($autore == $nome_completo) {
+                $utilita_recensione = $recensione->getElementsByTagName('utilita')->item(0)->nodeValue;
+                $supporto_recensione = $recensione->getElementsByTagName('supporto')->item(0)->nodeValue;
+                $reputazione_totale += ($utilita_recensione + $supporto_recensione) / 2;
+                $recensioni_totali++;
+            }
+        }
     }
+
+    if ($recensioni_totali > 0) {
+        $reputazione_media = $reputazione_totale / $recensioni_totali;
+
+        $update_query = "UPDATE utenti SET reputazione = '$reputazione_media' WHERE nome='$nome' AND cognome='$cognome'";
+        $con->query($update_query);
+    }
+
+    $con->close();
+
+
+    
+    header("Location: ../recensioni.php");
+}
+
 
 ?>

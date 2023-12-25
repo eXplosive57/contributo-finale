@@ -92,4 +92,4 @@ file_put_contents($xmlFile2, $xml2);
  
 
 
-header("location: ../faq.php");
+header("location: ../domande_da_valutare.php");

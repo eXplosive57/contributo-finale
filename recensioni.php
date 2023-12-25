@@ -184,8 +184,7 @@ foreach ($piante as $pianta) {
               <input type="number" name="supporto" id="supporto" min="1" max="3">
               <input type="hidden" id="pianta" name="pianta" value="<?php echo $nomePianta ?>">
               <input type="hidden" id="rec" name="rec" value="<?php echo $commento ?>">
-              <input type="hidden" id="nome" name="nome" value="<?php echo $_SESSION['nome'] ?>">
-              <input type="hidden" id="cognome" name="cognome" value="<?php echo $_SESSION['cognome'] ?>">
+              <input type="hidden" id="nome_comp" name="nome_comp" value="<?php echo $autore ?>">
               <br><br>
               <input type="submit" value="Vota">
         </form><?php

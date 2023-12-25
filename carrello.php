@@ -8,7 +8,7 @@ session_start();
 $totale= 0;
 //controllo sulla variabile 'loggato'
 if(!isset($_SESSION['loggato']) || $_SESSION['loggato'] !== true){
-    header("location: accesso.php");
+    header('location:Accesso_Registrazione/accesso.php');
 }
 $count = 0;
 if(isset($_SESSION['carrello']))

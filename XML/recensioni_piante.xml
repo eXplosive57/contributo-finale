@@ -5,14 +5,14 @@
     <recensioni>
       <recensione>
         <autore>Mario Rossi</autore>
-        <utilita>3.3754863739014</utilita>
-        <supporto>2.5001239776611</supporto>
+        <utilita>4.0857038847189</utilita>
+        <supporto>2.9981020484125</supporto>
         <commento>Questa pianta è stupenda! Cresce molto bene in giardino.</commento>
       </recensione>
       <recensione>
-        <autore>Lucio Verdi</autore>
-        <utilita>1</utilita>
-        <supporto>1</supporto>
+        <autore>Luca Verdi</autore>
+        <utilita>1.75</utilita>
+        <supporto>2</supporto>
         <commento>Una pianta robusta ma richiede molta acqua.</commento>
       </recensione>
     </recensioni>
@@ -21,13 +21,13 @@
     <nome>Odette</nome>
     <recensioni>
       <recensione>
-        <autore>Luca Bianchi</autore>
-        <utilita>1</utilita>
-        <supporto>1</supporto>
+        <autore>Luca Verdi</autore>
+        <utilita>3.25</utilita>
+        <supporto>2</supporto>
         <commento>Non sono rimasto molto soddisfatto di questa pianta, ha avuto problemi di parassiti.</commento>
       </recensione>
       <recensione>
-        <autore>Franco Russo</autore>
+        <autore>Fabio Mollura</autore>
         <utilita>0</utilita>
         <supporto>0</supporto>
         <commento>Una delle migliori piante che ho mai coltivato. Bellissimi fiori!</commento>
@@ -40,8 +40,8 @@
       <recensione>
         <autore>Mario Rossi</autore>
         <commento>Ottima pianta, non necessita di molte cure, perfetta per chi ama le piante con non troppa attenzione alle cure!</commento>
-        <utilita/>
-        <supporto/>
+        <utilita>4</utilita>
+        <supporto>2</supporto>
       </recensione>
     </recensioni>
   </pianta>

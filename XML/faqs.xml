@@ -2,30 +2,30 @@
 <faqs xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="faqs.xsd">
   <faq>
     <id>1</id>
-    <domanda>Quanta acqua serve per le piante da fiore?</domanda>
-    <risposta>devono essere bagnate ogni giorno perché, a differenza delle piante in giardino, non possono sviluppare radici profonde</risposta>
-    <creata_da>Mario Rossi</creata_da>
-    <data>21-04-2023</data>
+    <domanda>Quali sono le piante ideali per un ambiente con poca luce?</domanda>
+    <risposta>Alcune piante adatte per ambienti con poca luce includono la Sansevieria, la Zamioculcas Zamiifolia (ZZ), e la Dracaena Marginata.</risposta>
+    <creata_da>Fabio Mollura</creata_da>
+    <data>2023-06-12</data>
   </faq>
   <faq>
     <id>2</id>
-    <domanda>Quanta acqua serve per le piante da fiore?</domanda>
-    <risposta>devono essere bagnate ogni giorno perché, a differenza delle piante in giardino, non possono sviluppare radici profonde</risposta>
-    <creata_da>GSFGSD BB</creata_da>
-    <data>21-04-2023</data>
+    <domanda>Come posso prendere cura delle piante grasse?</domanda>
+    <risposta>Le piante grasse richiedono un terreno ben drenato, una luce solare diretta e innaffiature moderate. Assicurati che il vaso abbia fori di drenaggio e lascia asciugare completamente il terreno tra un\'innaffiatura e l\'altra.</risposta>
+    <creata_da>Mario Rossi</creata_da>
+    <data>2023-10-20</data>
   </faq>
   <faq>
     <id>3</id>
-    <domanda>aaa</domanda>
-    <risposta>Circa 200 ml ogni 4 giorni.</risposta>
+    <domanda>Quanto spesso dovrei innaffiare le mie piante d'appartamento?</domanda>
+    <risposta>La frequenza di innaffiatura dipende dalla pianta e dalle condizioni ambientali. In linea di massima, aspetta che il terreno si asciughi leggermente prima di innaffiare.</risposta>
     <creata_da>Mario Rossi</creata_da>
-    <data>2023-11-30</data>
+    <data>2022-05-11</data>
   </faq>
   <faq>
     <id>4</id>
-    <domanda>Una pianta da esterno necessita di tante cure?</domanda>
-    <risposta>Il minimo indispensabile!</risposta>
-    <creata_da>Mario Rossi</creata_da>
-    <data>2023-12-04</data>
+    <domanda>Come posso prevenire le malattie delle piante?</domanda>
+    <risposta>Mantieni un\'adeguata circolazione d\'aria, evita il ristagno d\'acqua, pulisci regolarmente le foglie, e ispeziona le piante per rilevare eventuali segni di parassiti o malattie.</risposta>
+    <creata_da>Luca Verdi</creata_da>
+    <data>2022-02-21</data>
   </faq>
 </faqs>
