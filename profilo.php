@@ -15,7 +15,7 @@ if(!isset($_SESSION['loggato']) || $_SESSION['loggato'] !== true){
 
 <head>
 
-    <title>Faq</title>
+    <title>Richieste</title>
     <link rel="stylesheet" href="index.css" />
     <style>
       body {
@@ -29,10 +29,11 @@ if(!isset($_SESSION['loggato']) || $_SESSION['loggato'] !== true){
 
 <body>
 <?php
+//controllo sulla variabile 'loggato'
 if(!isset($_SESSION['loggato']) || $_SESSION['loggato'] !== true){
   //se non sono loggato mpstro una navbar diversa
   ?>
-<div class='header'>
+  <div class='header'>
   <a href="index.php">
     <img src="foto/leaf.png" alt="Logo" class="logo" >
   </a>
@@ -59,12 +60,12 @@ if(isset($_SESSION['carrello']))
 </a>
 <b style='margin-left:-100px;' class='green'>GREEN HOUSE</b>
 <?php
-}else if($_SESSION['tipo'] == 0 OR $_SESSION['tipo'] == 2){
+}else if($_SESSION['tipo'] == 0){
   ?><div class='header'>
 <a href="index.php">
 <img src="foto/leaf.png" alt="Logo" class="logo" >
 </a>
-<b style='margin-left:-1350px' class='green'>GREEN HOUSE</b>
+<b style='margin-left:-650px' class='green'>GREEN HOUSE</b>
 <?php }
     
      if($_SESSION['tipo'] == 1){
@@ -98,18 +99,13 @@ if(isset($_SESSION['carrello']))
 
     <?php
             
-            if ($_SESSION['tipo'] == 0 OR $_SESSION['tipo'] == 2 ) {
+            if ($_SESSION['tipo'] == 0) {
     
     ?>
-<div class="dropdown">
-      <button class="dropbtn">SERVIZI</button>
-      <div class="dropdown-content">
        <a href="form_inserimento_pianta.php">INSERISCI PIANTA</a>
-       <a href="loadrichieste.php">RICHIESTE CREDITI</a>
+       <a href="loadrichieste.php">VISUALIZZA RICHIESTE</a>
        <a href="utenti.php">LISTA UTENTI</a>
        <a href="faq.php">FAQ</a>
-       <a href="domande_da_valutare.php">DOMANDE IN PENDING</a>
-            </div>
 <?php } ?>
 
         <a href="logout.php">LOGOUT</a>
@@ -124,86 +120,48 @@ if(isset($_SESSION['carrello']))
     </div><?php
   }?>
 
+<?php
 
 
-   <?php
 
-    $dataCorrente = date('Y-m-d');
+$sql = "SELECT * FROM utenti WHERE id = '{$_SESSION['id']}'";
+$result = $con->query($sql);
+$row = mysqli_fetch_array($result);
+$_SESSION['nome_tab'] = $row['nome'];
+$_SESSION['cognome_tab'] = $row['cognome'];
+$_SESSION['mail_tab'] = $row['mail'];
+$_SESSION['rep'] = $row['reputazione'];
 
-    $xmlDoc = new DOMDocument();
-    $xmlDoc->load("XML/faqs.xml");
+?>
 
-    $domande = $xmlDoc->getElementsByTagName("faq");
-
-    ?>
-
-    <div class='centro_tab'>
+<div class='centro_tab'>
     <main class='table'>
       <section class='table_header'>
-        <h1>FAQ'S</h1>
+        <h1>PROFILO UTENTE</h1>
       </section>
           <section class="table__body">
                       <table>
                           <thead>
                               <tr>
-                                  <th>CREATA DA</th>
-                                  <th>DOMANDA</th>
-                                  <th>RISPOSTA</th>
-                                  <th>DATA</th>
+                                  <th>NOME</th>
+                                  <th>COGNOME</th>
+                                  <th>MAIL</th>
+                                  <th>REPUTAZIONE</th>
                               </tr>
                           </thead>
                           </tbody>
                       
             </section>
-<?php
-foreach ($domande as $faq) {
 
-    $risposta = $faq->getElementsByTagName("risposta")->item(0)->textContent;
-    $domanda = $faq->getElementsByTagName("domanda")->item(0)->textContent;
-    $creata = $faq->getElementsByTagName("creata_da")->item(0)->textContent;
-    $data = $faq->getElementsByTagName("data")->item(0)->textContent;
-    
-
-?>
 
     
     <tr>
-      <td><?php echo $creata ?></td>
-      <td><?php echo $domanda ?></td>
-      <td>Paolo:<br><?php echo $risposta ?></td>
-      <td style='width:20%'><?php echo $data ?></td>
+      <td style='width:170px'><?php echo$_SESSION['nome_tab'] ?></td>
+      <td style='width:20%'><?php echo$_SESSION['cognome_tab'] ?></td>
+      <td><?php echo$_SESSION['mail_tab'] ?></td>
+      <td style='width:20%'><?php echo$_SESSION['rep'] ?></td>
     </tr>
-<?php }?>
-</tbody>
-                </table>
-            </section>
-        </main>
 </div>
-
-
-<?php 
-if($_SESSION['tipo'] == 1) {
-?>
-<div class="wrapper">
-<form action="Script/script_faq.php" method="post">
-    <h1 class='titolo2'>Domanda alla Community!</h1>
-    <div class="input-box">
-    <label for="nome"></label>
-    <input type="text" name="domanda" id="domanda" required>
-    <input type="hidden" id="nome" name="nome" value="<?php echo $_SESSION['nome'] ?>">
-    <input type="hidden" id="cognome" name="cognome" value="<?php echo $_SESSION['cognome'] ?>">
-    <input type="hidden" id="data" name="data" value="<?php echo $dataCorrente ?>">
-    </div>
-
-    <button style='margin-left:170px;' type="submit" value="invia">Invia</button>
-
-</form>
-<?php } ?>
-
-</div>    
-
-</body>
-</html>
-
+</table>
 
 </body>

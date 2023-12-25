@@ -110,6 +110,7 @@ if(isset($_SESSION['carrello']))
         <div class="dropdown">
       <button class="dropbtn">SERVIZI</button>
       <div class="dropdown-content">
+      <a class="testo" href="profilo.php">PROFILO</a>
         <a class="testo" href="richiesta_cre.php">RICHIEDI CREDITI</a>
         <a class="testo" href="recensioni.php">RECENSIONI</a>
         <a class="testo" href="faq.php">FAQ</a>
