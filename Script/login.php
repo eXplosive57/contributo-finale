@@ -98,7 +98,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                 
             } else {
                 $_SESSION['pass'] = 'Password errata!';
-                header("location: ../accesso.php");
+                header("location: ../Accesso_Registrazione/accesso_admin.php");
                 
 
             }

@@ -24,7 +24,7 @@
       <descrizione>L’Aloe vera ha origini africane e cresce spontaneamente in diverse parti del mondo.Un must che tutti dovremmo avere in casa: oltre alla sua bellezza e all’autonomia tipica delle piante succulenti, il gel che si può estrarre dalle sue foglie ha innumerevoli benefici. Tra i più rinomati, l’azione cicatrizzante che permette di diminuire i tempi di ricostituzione dei tessuti. Proprio per queste sue proprietà terapeutiche, l’Aloe vera è chiamata anche “pianta dei miracoli” e per questo è simbolo di guarigione, salute e vita.</descrizione>
       <prezzo>37.99</prezzo>
       <img>foto_piante/aloe.jpg</img>
-      <quantita>7</quantita>
+      <quantita>6</quantita>
       <sconto>
         <N>50</N>
         <M>0</M>
@@ -244,7 +244,7 @@
       <descrizione>È una delle piante più diffuse, conosciute ed acquistate per decorare gli interni in modo sofisticato. Quest’orchidea tropicale si adatta facilmente a tutti gli ambienti domestici ma, seppur sia molto facile da curare, richiede alcune attenzioni per poter essere così decorativa e splendente. </descrizione>
       <prezzo>119</prezzo>
       <img>foto_piante/prez.jpg</img>
-      <quantita>5</quantita>
+      <quantita>4</quantita>
       <sconto>
         <N>99</N>
         <M>214</M>
@@ -346,7 +346,15 @@ Non fatevi ingannare dalla semplicità di questo bouquet di margherite! Dietro l
 Donare o donarsi questo bouquet senza tempo, simboleggia ancora la promessa di un amore leale, un gesto di un nobile animo per una candida creatura.</descrizione>
       <prezzo>36.99</prezzo>
       <img>foto_piante/atena.avif</img>
-      <quantita>15</quantita>
+      <quantita>14</quantita>
+      <sconto>
+        <N>99</N>
+        <M>155</M>
+        <O/>
+        <R>2</R>
+        <X>4</X>
+        <Y>1</Y>
+      </sconto>
     </pianta>
     <pianta>
       <nome_pianta>Come</nome_pianta>

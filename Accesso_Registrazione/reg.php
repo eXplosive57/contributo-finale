@@ -62,7 +62,7 @@ if (isset($_SESSION['errore'])) {
             <div class="container">
                 <div class="signup-content">
                     <div class="signup-form">
-                        <h2 class="form-title">Sign up</h2>
+                        <h2 class="form-title">Registrati</h2>
                         <form method="POST" class="register-form" id="register-form"  action="../Script/script_registrazione.php">
                             <div class="form-group">
                                 <label for="name"><i class="zmdi zmdi-account material-icons-name"></i></label>
@@ -97,7 +97,7 @@ if (isset($_SESSION['errore'])) {
                                 <input type="hidden" id="data" name="data" value="<?php echo $dataCorrente ?>">
                             <div class="form-group">
                                 <input type="checkbox" name="agree-term" id="agree-term" class="agree-term" />
-                                <label for="agree-term" class="label-agree-term"><span><span></span></span>I agree all statements in  <a href="#" class="term-service">Terms of service</a></label>
+                                <label for="agree-term" class="label-agree-term"><span><span></span></span>Accetto tutte le dichiarazioni nei  <a href="#" class="term-service">Termini di servizio</a></label>
                             </div>
                             <div class="form-group form-button">
                                 <input type="submit" name="signup" id="signup" class="form-submit" value="Registrati"/>

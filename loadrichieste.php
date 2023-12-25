@@ -4,7 +4,7 @@ include('Script/config.php');
 $con = new mysqli($host,$userName,$password,$dbName);
 session_start();
 if(!isset($_SESSION['loggato']) || $_SESSION['loggato'] !== true || $_SESSION['tipo'] == 1){
-  header('location:accesso.php');
+  header('location:Accesso_Registrazione/accesso.php');
 }
 ?>
 
@@ -97,14 +97,14 @@ foreach ($richieste as $richiesta) {
     <tr>
       <td style='width:200px;'><?php echo $nome . " " .  $cognome ?></td>
       <td><?php echo $qnt ?> Crediti</td>
-      <td><form action="accetta_cre.php" method="POST"name="form1   ">
+      <td><form action="Script/accetta_cre.php" method="POST"name="form1   ">
             <input type="hidden" name="form_name" value="form1">
             <input type="hidden" id="qnt" name="qnt" value="<?php echo $qnt; ?>">
             <input type="hidden" id="nome" name="nome" value="<?php echo $nome; ?>">
             <input type="hidden" id="id" name="id" value="<?php echo $id; ?>">
             <button class="blu" type="submit">ACCETTA</button></button></td>
           </form>
-      <td><form action="accetta_cre.php" method="POST" name="form2">
+      <td><form action="Script/accetta_cre.php" method="POST" name="form2">
             <input type="hidden" name="form_name" value="form2">
             <input type="hidden" id="qnt" name="qnt" value="<?php echo $qnt; ?>">
             <input type="hidden" id="nome" name="nome" value="<?php echo $nome; ?>">

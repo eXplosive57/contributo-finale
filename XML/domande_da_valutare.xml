@@ -2,8 +2,20 @@
 <domande xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="domande_da_valutare.xsd">
   <domanda>
     <id>1</id>
-    <nome>Quanto spesso dovrei innaffiare le mie piante d\'appartamento?</nome>
+    <nome>Quanto spesso dovrei innaffiare le mie piante d'appartamento?</nome>
     <creata_da>Mario Rossi</creata_da>
+    <data>2023-12-25</data>
+  </domanda>
+  <domanda>
+    <id>2</id>
+    <nome>Quali sono le piante adatte a un giardino ombreggiato?</nome>
+    <creata_da>Fabio Mollura</creata_da>
+    <data>2023-12-25</data>
+  </domanda>
+  <domanda>
+    <id>3</id>
+    <nome> Come posso identificare e trattare le piante con parassiti?</nome>
+    <creata_da>Fabio Mollura</creata_da>
     <data>2023-12-25</data>
   </domanda>
 </domande>

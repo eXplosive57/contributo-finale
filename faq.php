@@ -15,7 +15,7 @@ if(!isset($_SESSION['loggato']) || $_SESSION['loggato'] !== true){
 
 <head>
 
-    <title>Richieste</title>
+    <title>Faq</title>
     <link rel="stylesheet" href="index.css" />
     <style>
       body {

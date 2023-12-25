@@ -132,7 +132,7 @@ $_SESSION['ind'] = $row3['indirizzo'];
                             </div>
                             <hr class="border-light m-0">
                             <div class="card-body">
-                                <form action='script_mod_profilo.php' method='POST' name="form1">
+                                <form action='Script/script_mod_profilo.php' method='POST' name="form1">
                                 <input type="hidden" name="form_name" value="form1">
                                 <div class="form-group">
                                     <label class="form-label">Nome</label>
@@ -165,7 +165,7 @@ $_SESSION['ind'] = $row3['indirizzo'];
                         </div>
                         <div class="tab-pane fade" id="account-change-password">
                             <div class="card-body pb-2">
-                                <form action='script_mod_profilo.php' method='POST' name="form2">
+                                <form action='Script/script_mod_profilo.php' method='POST' name="form2">
                                 <input type="hidden" name="form_name" value="form2">
                                 
                                 <div class="form-group">

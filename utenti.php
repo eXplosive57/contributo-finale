@@ -4,7 +4,7 @@ include('Script/config.php');
 $con = new mysqli($host,$userName,$password,$dbName);
 session_start();
 if(!isset($_SESSION['loggato']) || $_SESSION['loggato'] !== true || $_SESSION['tipo'] == 1){
-  header('location:accesso.php');
+  header('location:Accesso_Registrazione/accesso.php');
 }
 ?>
 
@@ -16,7 +16,7 @@ if(!isset($_SESSION['loggato']) || $_SESSION['loggato'] !== true || $_SESSION['t
 
 <head>
 
-    <title>Richieste</title>
+    <title>Utenti</title>
     <link rel="stylesheet" href="index.css" />
     <style>
       body {

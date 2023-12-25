@@ -16,7 +16,7 @@ if(!isset($_SESSION['loggato']) || $_SESSION['loggato'] !== true || $_SESSION['t
 
 <head>
 
-    <title>Richieste</title>
+    <title>Inserimento Pianta</title>
     <link rel="stylesheet" href="index.css" />
     <style>
       body {

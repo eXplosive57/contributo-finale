@@ -40,4 +40,20 @@
     <prezzo>37.99</prezzo>
     <qnt>1</qnt>
   </acq>
+  <acq>
+    <id>6</id>
+    <nome>Fabio Mollura</nome>
+    <nome_prodotto>Preziosa Orchidea</nome_prodotto>
+    <data_acquisto>2023-12-25</data_acquisto>
+    <prezzo>36.99</prezzo>
+    <qnt>1</qnt>
+  </acq>
+  <acq>
+    <id>7</id>
+    <nome>Fabio Mollura</nome>
+    <nome_prodotto>Atena</nome_prodotto>
+    <data_acquisto>2023-12-25</data_acquisto>
+    <prezzo>36.99</prezzo>
+    <qnt>1</qnt>
+  </acq>
 </storico_acq>

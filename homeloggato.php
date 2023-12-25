@@ -7,7 +7,7 @@ $con = new mysqli($host,$userName,$password,$dbName);
 session_start();
 //controllo sulla variabile 'loggato'
 if(!isset($_SESSION['loggato']) || $_SESSION['loggato'] !== true){
-  header("location: accesso.php");
+  header('location:Accesso_Registrazione/accesso.php');
 }
 
 $count = 0;
