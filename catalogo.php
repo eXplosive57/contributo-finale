@@ -118,7 +118,29 @@ $xmlDoc->load("catalogo.xml");
 $categorie = $xmlDoc->getElementsByTagName("categoria");
 
 
+
+$frasi = array(
+  "Porta la natura a casa tua con le nostre meravigliose piante!",
+  "Scopri il verde che fa la differenza nel nostro negozio online di piante.",
+  "Crea un angolo di serenità con le nostre piante da interno.",
+  "Le nostre piante sono la chiave per una casa più fresca e vibrante.",
+  "Aggiungi un tocco verde al tuo spazio vitale con le nostre piante selezionate.",
+  "Esplora il nostro vasto assortimento di piante e trasforma il tuo ambiente.",
+  "Regala vita con le nostre piante, il regalo perfetto per ogni occasione.",
+  "La bellezza della natura consegnata direttamente a casa tua.",
+  "Dai un'occhiata alle nostre offerte speciali e rendi la tua casa più verde oggi!",
+);
+
+
+$fraseCasuale = $frasi[array_rand($frasi)];
 ?>
+
+<div class="headline">
+    <h1 style='margin-top:100px;' class="typing"><?php echo $nome; ?></h1>
+    <p style='margin-top:140px;color:black;'><?php echo $fraseCasuale; ?></p>
+</div>
+
+
 
 
   <div id='catalogo' class='secondo'>
@@ -145,53 +167,41 @@ $categorie = $xmlDoc->getElementsByTagName("categoria");
     ?>
 
 
-    <div class="card" style="position: relative;">
-        <img src="<?php echo $foto ?>" alt="">
-        
-        
-            <h1><?php echo $nomePianta?></h1>
-            <p class="descrizione-testo"><?php echo $descrizione?></p>
-            <h3 style='position: absolute; bottom:90px;margin-left:100px'>Disponibiltá: <?php echo $qnt?></h3>
-            <h2><?php echo $prezzo?> Cr</h2>
-            <form action='recensisci.php' method="POST">
-              <a><button style='bottom:90px; margin-left:130px;text-align:center;' type="submit" name="recensione" title="">Recensisci</button></a>
-              <input name="nome" hidden value = "<?php echo $nomePianta; ?>">
-            </form>
-            
-            <form style='position: absolute; bottom: 10px;' action="gestionecarrello.php" method="POST">
-              <input name="nome" hidden value = "<?php echo $nomePianta; ?>">
-              <input name="foto" hidden value = "<?php echo $foto; ?>">
-              <input name="prezzo" hidden value = "<?php echo $prezzo; ?>">
-              
-              
+<div class="card">
+    <img src="<?php echo $foto ?>" alt="">
+    <h1><?php echo $nomePianta?></h1>
+    <p class="descrizione-testo"><?php echo $descrizione?></p>
+    <h3>Disponibilità: <?php echo $qnt?></h3>
+    <h2><?php echo $prezzo?> Cr</h2>
+
+    <div class="card-buttons">
+        <form action='recensisci.php' method="POST">
+            <button type="submit" name="recensione" title="">Recensisci</button>
+            <input name="nome" hidden value="<?php echo $nomePianta; ?>">
+        </form>
+
+        <form action="gestionecarrello.php" method="POST">
+            <input name="nome" hidden value="<?php echo $nomePianta; ?>">
+            <input name="foto" hidden value="<?php echo $foto; ?>">
+            <input name="prezzo" hidden value="<?php echo $prezzo; ?>">
+
             <?php
-            
-              if($_SESSION['tipo'] == 1) {
-                if($qnt>0){
-                  ?>
-              
-            <br>
+            if ($_SESSION['tipo'] == 1 && $qnt > 0) {
+                if ($prezzo > ($_SESSION['crediti'])) {
+            ?>
+                    <button type="submit" name="aggiungi" title="" disabled>Crediti Insufficienti</button>
             <?php
-            if($_SESSION['tipo'] == 1){
-              if($prezzo > ($_SESSION['crediti']))
-              {?>
-                <button class='nascosto'style='margin-top:10px; margin-left:100px' type="submit" name="aggiungi" title="" disabled >Crediti Insufficienti</button>
-                <?php
-              }
-              else{?>
-                <button style='margin-top:10px; margin-left:130px;text-align:center;' type="submit" name="aggiungi" title="">AGGIUNGI</button>
-                <?php
-              }}
-              }
+                } else {
+            ?>
+                    <button type="submit" name="aggiungi" title="">AGGIUNGI</button>
+            <?php
+                }
             }
-              
-              ?>
-              
-              
-            
-            </form>
-            
-        </div>
+            ?>
+        </form>
+    </div>
+</div>
+
   <?php
     }
   }

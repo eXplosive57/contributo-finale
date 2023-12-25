@@ -14,6 +14,7 @@ session_start();
 
     <title>HOME</title>
     <link rel="stylesheet" href="index.css" />
+
 </head>
 
 <body>
@@ -74,10 +75,10 @@ if(isset($_SESSION['carrello']))
                 <div class="dropdown">
       <button class="dropbtn">SERVIZI</button>
       <div class="dropdown-content">
-        <a class="testo" href="richiesta_cre.php">RICHIEDI CREDITI</a>
-        <a class="testo" href="recensioni.php">RECENSIONI</a>
-        <a class="testo" href="faq.php">FAQ</a>
-        <a class="testo" href="stato_richieste.php">Stato richieste</a>
+        <p style='text-align:center;' href="richiesta_cre.php">RICHIEDI CREDITI</p>
+        <p style='text-align:center;' href="recensioni.php">RECENSIONI</p>
+        <p style='text-align:center;' href="faq.php">FAQ</p>
+        <p style='text-align:center;' href="stato_richieste.php">Stato richieste</p>
       </div>
     </div>
                 <a href="#catalogo">CATALOGO</a>
@@ -111,12 +112,27 @@ if(isset($_SESSION['carrello']))
         ?> 
       </nav>
     </div><?php
-  }?>
+  }
+  
+  $frasi = array(
+    "Porta la natura a casa tua con le nostre meravigliose piante!",
+    "Scopri il verde che fa la differenza nel nostro negozio online di piante.",
+    "Crea un angolo di serenità con le nostre piante da interno.",
+    "Le nostre piante sono la chiave per una casa più fresca e vibrante.",
+    "Aggiungi un tocco verde al tuo spazio vitale con le nostre piante selezionate.",
+    "Esplora il nostro vasto assortimento di piante e trasforma il tuo ambiente.",
+    "Regala vita con le nostre piante, il regalo perfetto per ogni occasione.",
+    "La bellezza della natura consegnata direttamente a casa tua.",
+    "Dai un'occhiata alle nostre offerte speciali e rendi la tua casa più verde oggi!",
+  );
+  
+  
+  $fraseCasuale = $frasi[array_rand($frasi)];?>
   <div class='centro'>
 
   <div class="headline">
     <h1>LA TUA OASI VERDE CON UN CLICK</h1>
-    <p style='color:green;'>RIGENERA LA TUA VITA CON LA BELLEZZA DELLE PIANTE</p>
+    <p style='color:black;'><?php echo $fraseCasuale; ?></p>
   </div>
   <?php
 $xmlDoc = new DOMDocument();
@@ -133,7 +149,7 @@ $categorie = $xmlDoc->getElementsByTagName("categoria");
   foreach ($categorie as $categoria) {
     $nome = $categoria->getElementsByTagName("nome")->item(0)->nodeValue;
     $foto = $categoria->getElementsByTagName("foto")->item(0)->nodeValue;
-    $desc = $categoria->getElementsByTagName("descrizione")->item(0)->nodeValue;
+    $desc = $categoria->getElementsByTagName("descrizione")->item(0)->textContent;
     ?>
     <div class="card" >
         <img src="<?php echo $foto ?>" alt="">
@@ -142,6 +158,7 @@ $categorie = $xmlDoc->getElementsByTagName("categoria");
             <p><?php echo $desc ?></p>
             <form style='text-align:center;style="position: absolute; bottom: 70px;' action="catalogo.php" method="post">
               <button ' class="verde" name='valore' value='<?php echo$nome?>'>Esplora<span>&#10230;</span></button>
+              <input type="hidden" id="desc" name="desc" value='<?php echo$desc ?>'>
             </form>
         </div>
     </div>
