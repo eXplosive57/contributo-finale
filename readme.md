@@ -4,7 +4,7 @@ Componenti gruppo:
 - Ahmed Ilyas Kerrouche
 
 - Indirizzo Repository:
-- https://github.com/eXplosive57/Contributo-3-Kerrouche.XML-DOM
+- https://github.com/eXplosive57/contributo-finale/tree/main
 
   Per poter utilizzare questo sito, bisognerá installare il file ' install.php '.
 
