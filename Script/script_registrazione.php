@@ -25,7 +25,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
     if (mysqli_num_rows($result) > 0) {
         $_SESSION['errore'] = "Utente già presente!";
-        header("location: ../reg.php");
+        header("location: ../Accesso_Registrazione/reg.php");   
 
 
     } else {
@@ -38,7 +38,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         if ($con->query($sql) === TRUE) {
 
             $_SESSION['reg'] = "REGISTRAZIONE EFFETTUATA!";
-            header("location: ../accesso.php");
+            header("location: ../Accesso_Registrazione/accesso.php");
         } else {
             echo "REGISTRAZIONE FALLITA $sql. ";
         }

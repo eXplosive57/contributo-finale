@@ -31,7 +31,7 @@ if(!isset($_SESSION['loggato']) || $_SESSION['loggato'] !== true){
   
       <nav class='navbar'>
     <a href="#catalogo">CATALOGO</a>
-    <a href="accesso.php">ACCEDI</a>
+    <a href="./Accesso_Registrazione/accesso.php">ACCEDI</a>
       </nav>
     </div>
     <?php

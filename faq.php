@@ -64,7 +64,7 @@ if(isset($_SESSION['carrello']))
 <a href="index.php">
 <img src="foto/leaf.png" alt="Logo" class="logo" >
 </a>
-<b style='margin-left:-650px' class='green'>GREEN HOUSE</b>
+<b style='margin-left:-1350px' class='green'>GREEN HOUSE</b>
 <?php }
     
      if($_SESSION['tipo'] == 1){
@@ -127,7 +127,7 @@ if(isset($_SESSION['carrello']))
 
    <?php
 
-    $dataCorrente = date('Y-m-d H:i:s');
+    $dataCorrente = date('Y-m-d');
 
     $xmlDoc = new DOMDocument();
     $xmlDoc->load("XML/faqs.xml");
