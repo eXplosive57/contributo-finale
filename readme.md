@@ -23,7 +23,7 @@ Per accedere con l'utente Mario Rossi usare: <br>
 Per accedere con l'utente Luca Verdi usare: <br>
   > Mail: lucaverdi@gmail.com <br>
   > Password: Luca <br>
-Per accedere con l'utente Fabio Mollu usare: <br>
+Per accedere con l'utente Fabio Mollura usare: <br>
   > Mail: fabiomollu@gmail.com <br>
   > Password: Fabio <br>
   
