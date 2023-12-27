@@ -40,7 +40,7 @@
     <qnt>45</qnt>
     <esito>0</esito>
   </richiesta>
-    <richiesta>
+  <richiesta>
     <id>6</id>
     <id_utente>5</id_utente>
     <nome>Fabio</nome>
@@ -48,7 +48,7 @@
     <qnt>70</qnt>
     <esito>1</esito>
   </richiesta>
-    <richiesta>
+  <richiesta>
     <id>7</id>
     <id_utente>3</id_utente>
     <nome>Luca</nome>
@@ -56,7 +56,7 @@
     <qnt>15</qnt>
     <esito>1</esito>
   </richiesta>
-    <richiesta>
+  <richiesta>
     <id>8</id>
     <id_utente>4</id_utente>
     <nome>Mario</nome>
@@ -64,12 +64,20 @@
     <qnt>250</qnt>
     <esito>2</esito>
   </richiesta>
-      <richiesta>
-      <id>9</id>
-      <id_utente>4</id_utente>
-      <nome>Mario</nome>
-      <cognome>Rossi</cognome>
-      <qnt>500</qnt>
-      <esito>2</esito>
+  <richiesta>
+    <id>9</id>
+    <id_utente>4</id_utente>
+    <nome>Mario</nome>
+    <cognome>Rossi</cognome>
+    <qnt>500</qnt>
+    <esito>2</esito>
+  </richiesta>
+  <richiesta>
+    <id>10</id>
+    <id_utente>6</id_utente>
+    <nome>Sara</nome>
+    <cognome>Bernassola</cognome>
+    <qnt>120</qnt>
+    <esito>0</esito>
   </richiesta>
 </storico_cre>

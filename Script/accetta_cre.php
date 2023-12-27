@@ -1,10 +1,10 @@
 <?php 
 
-include('Script/config.php');
+include('config.php');
 $con = new mysqli($host,$userName,$password,$dbName);
 session_start();
 if(!isset($_SESSION['loggato']) || $_SESSION['loggato'] !== true || $_SESSION['tipo'] == 1){
-    header('location:Accesso_Registrazione/accesso.php');
+    header('location:../Accesso_Registrazione/accesso.php');
   }
 
 $qnt = $con->real_escape_string($_POST['qnt']);
@@ -22,7 +22,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             $_SESSION['cre'] = "CREDITI CARICATI!";
 
             $xmlDoc = new DOMDocument();
-            $xmlDoc->load("XML/storico_cre.xml");
+            $xmlDoc->load("../XML/storico_cre.xml");
 
             $richieste = $xmlDoc->getElementsByTagName("richiesta");
             foreach ($richieste as $richiesta) {
@@ -34,11 +34,11 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                 }
 
 
-            $xmlDoc->save("XML/storico_cre.xml");
+            $xmlDoc->save("../XML/storico_cre.xml");
 
             
 
-            header("location: loadrichieste.php");
+            header("location: ../loadrichieste.php");
             
         }
     }
@@ -50,7 +50,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
 
             $xmlDoc = new DOMDocument();
-            $xmlDoc->load("XML/storico_cre.xml");
+            $xmlDoc->load("../XML/storico_cre.xml");
 
             $richieste = $xmlDoc->getElementsByTagName("richiesta");
             foreach ($richieste as $richiesta) {
@@ -61,11 +61,11 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                     //esito = 2 indica che la richiestra é stata rifiutata
                     $campo_da_aggiornare->nodeValue = "2";
                 }
-            $xmlDoc->save("XML/storico_cre.xml");
+            $xmlDoc->save("../XML/storico_cre.xml");
 
             
 
-            header("location: loadrichieste.php");
+            header("location: ../loadrichieste.php");
             
         }
     }
