@@ -56,4 +56,20 @@
     <prezzo>36.99</prezzo>
     <qnt>1</qnt>
   </acq>
+  <acq>
+    <id>8</id>
+    <nome>Sara Bernassola</nome>
+    <nome_prodotto>Sansevieria</nome_prodotto>
+    <data_acquisto>2023-12-27</data_acquisto>
+    <prezzo>49.99</prezzo>
+    <qnt>5</qnt>
+  </acq>
+  <acq>
+    <id>9</id>
+    <nome>Sara Bernassola</nome>
+    <nome_prodotto>Ariel</nome_prodotto>
+    <data_acquisto>2023-12-27</data_acquisto>
+    <prezzo>49.99</prezzo>
+    <qnt>5</qnt>
+  </acq>
 </storico_acq>

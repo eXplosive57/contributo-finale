@@ -9,7 +9,7 @@
       <descrizione>La Sansevieria, appartenente alla famiglia delle Liliaceae, è una pianta ornamentale per interni molto diffusa. È conosciuta anche come lingua di suocera, per la punta acuminata delle foglie. Queste, infatti, hanno una bellissima forma allungata verticalmente di colore verde scuro con bordi tendenti al giallo.</descrizione>
       <prezzo>32.99</prezzo>
       <img>foto_piante/nagini.jpg</img>
-      <quantita>10</quantita>
+      <quantita>5</quantita>
       <sconto>
         <N>2</N>
         <M>320</M>
@@ -229,7 +229,7 @@
       <descrizione>È una delle piante più diffuse, conosciute ed acquistate per decorare gli interni e si adatta facilmente a tutti gli ambienti domestici.Un must per gli appassionati delle orchidee che vogliono sperimentare questa nuova tecnica e, allo stesso tempo, valorizzare l’appartamento. </descrizione>
       <prezzo>49.99</prezzo>
       <img>foto_piante/ariel.jpg</img>
-      <quantita>5</quantita>
+      <quantita>0</quantita>
       <sconto>
         <N>88</N>
         <M>133</M>

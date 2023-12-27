@@ -174,15 +174,15 @@ foreach ($piante as $pianta) {
       <td><?php echo $autore ?></td>
       <td><?php echo $nomePianta ?></td>
       <td><?php echo $commento ?></td>
-      <td>
+      <td style='width:20%'>
         <?php 
             if($nome_completo <> $autore){
               ?>
               
               <form action="Script/script_gestione_voti.php" name='voto' method="post">
-              <input type="number" name="utilita" id="utilita" min="1" max="5">
+              <input style='width:60px' type="number" name="utilita" id="utilita" min="1" max="5" placeholder="Utilita">
               <br><br>
-              <input type="number" name="supporto" id="supporto" min="1" max="3">
+              <input style='width:80px' type="number" name="supporto" id="supporto" min="1" max="3" placeholder="Supporto">
               <input type="hidden" id="pianta" name="pianta" value="<?php echo $nomePianta ?>">
               <input type="hidden" id="rec" name="rec" value="<?php echo $commento ?>">
               <input type="hidden" id="nome_comp" name="nome_comp" value="<?php echo $autore ?>">
